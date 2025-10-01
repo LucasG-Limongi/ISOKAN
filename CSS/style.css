@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial;
 }
 
 .header {
     width: 100%;
     height: 90px;
-    background-color: #274c72;
+    background-color: #264653;
     display: flex;
     justify-content: space-between;
     justify-items: center;
@@ -16,16 +17,76 @@
     align-items: center;
 }
 
+.header a.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header img {
+    height: 40px;
+    width: auto;
+}
+
+.header a.logo:hover {
+    opacity: 50%;
+    transition: all 0.3s ease;
+}
+
+.nav .en {
+    display: none;
+}
+
+.nav .pt-br {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav a {
     color: white;
     font-size: larger;
-    font-weight: bold;
-    /* padding: 5px; */
+    padding: 5px;
     margin: 15px;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 .nav a:hover {
-    text-decoration: underline;
-    text-shadow: 3px 3px 5px black;
+    color: #ffba48 ;
+    transition: all 0.3s ease;
+}
+
+.header div.config {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header .config div {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: white;
+    outline: solid 2px black;
+}
+
+.config .idioma {
+    background-image: url(../IMG/brasil.jpg);
+    background-size: cover;
+    /* background-image: url(../IMG/eua.png);
+    background-size: 160%; */
+    background-position: center;
+    cursor: pointer;
+}
+
+.config .darkmode {
+    background-image: url(../IMG/lua.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.fundo img {
 }
