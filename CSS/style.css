@@ -88,7 +88,20 @@
     cursor: pointer;
 }
 
+.corpo {
+    margin: 0;
+    padding: 0;
+}
+
 .fundo img {
     width: 100%;
     height: auto;
+    display: block;
+}
+
+.about-us {
+    width: 100%;
+    height: 700px;
+    background-color: #264653;
+    
 }
