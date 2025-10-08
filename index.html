@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
     </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+        </style>
     <title>ISOKAN</title>
 </head>
 
@@ -19,14 +23,20 @@
             <!-- a -->
         </a>
 
-        <nav class="nav">
-            <div class="en">
+        <div class="menu-mobile">
+            <i class="material-icons">menu</i>
+        </div>
+        <div class="nav-mobile">
+            <div class="pt-br">
                 <a href="./index.html">Home</a>
-                <a href="./about-us.html">About Us</a>
-                <a href="./galery.html">Galery</a>
-                <a href="./contacts.html">Contacts</a>
-                <a href="./self-evaluation.html">Self-Evaluation</a>
+                <a href="./about-us.html">Sobre nós</a>
+                <a href="./galery.html">Galeria</a>
+                <a href="./contacts.html">Contatos</a>
+                <a href="./self-evaluation.html">Autoavaliação</a>
             </div>
+        </div>
+
+        <nav class="nav">
             <div class="pt-br">
                 <a href="./index.html">Home</a>
                 <a href="./about-us.html">Sobre nós</a>
@@ -52,30 +62,64 @@
         </div>
 
         <section class="about-us">
-            <div id="imagem">
-                <!-- Imagem aqui -->
+            <div id="sobre-nos">
+                <div id="imagem">
+                    <!-- Imagem aqui -->
+                </div>
+
+                <div id="about-us-text">
+                    <div id="titulo">
+                        Sobre nós
+                    </div>
+
+                    <div id="texto">
+                        <p>Através deste projeto, buscamos oferecer informações sobre as relações étnico-raciais a fim de
+                            ensinar, conscientizar e apoiar a luta de grupos sociais, além de promover a inclusão social e o
+                            reconhecimento da diversidade étnica e racial por meio do mundo digital.</p>
+
+                        <button id="saiba-mais" >
+                            <a href="about-us.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <div id="titulo">
-                Sobre nós
+
+            
+            
+
+        </section>
+        <div class="ondas">
+            <img src="./IMG/ondas.png">
+        </div>
+        <section class="our-mission">
+            <div id="nossa-missao">
+                <div id="imagem2">
+                    <!-- Imagem aqui -->
+                </div>
+
+                <div id="about-us-text">
+                    <div id="titulo">
+                        Sobre nós
+                    </div>
+
+                    <div id="texto">
+                        <p>Através deste projeto, buscamos oferecer informações sobre as relações étnico-raciais a fim de
+                            ensinar, conscientizar e apoiar a luta de grupos sociais, além de promover a inclusão social e o
+                            reconhecimento da diversidade étnica e racial por meio do mundo digital.</p>
+
+                        <button id="saiba-mais" >
+                            <a href="about-us.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </div>
             </div>
-
-            <div id="texto">
-                <p>Através deste projeto, buscamos oferecer informações sobre as relações étnico-raciais a fim de
-                    ensinar, conscientizar e apoiar a luta de grupos sociais, além de promover a inclusão social e o
-                    reconhecimento da diversidade étnica e racial por meio do mundo digital.</p>
-
-                <button id="saiba-mais" >
-                    <a href="about-us.html">Saiba mais</a>
-                </button>
-            </div>
-
         </section>
 
     </main>
 
-
-    <script src="./JS/index.js="></script>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <script src="./JS/index.js"></script>
 </body>
 
 </html>
