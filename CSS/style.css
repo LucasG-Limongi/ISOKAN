@@ -68,9 +68,13 @@ body {
 }
 
 .nav-mobile {
+    background-color: #264653;
     display: none;
     position: absolute;
     top: 90px;
+    width: 100%;
+    right: 0;
+    text-align: center;
 }
 
 .header div.config {
@@ -108,16 +112,19 @@ body {
     nav {
         display: none;
     }
-    .nav-mobile, .menu-mobile {
+    .menu-mobile {
         display: block;
     }
 }
 
 .corpo {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     width: 100%;
     background-color: #264653;
+    gap: 0;
 }
 
 .fundo img {
@@ -190,6 +197,20 @@ body {
     color: whitesmoke;
 }
 
+.our-mission {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+    align-items: center;
+    background-color: #ffba48;
+    margin-top: -5px;
+}
+
 .ondas img {
     width: 100%;
+    height: auto;
 }
