@@ -137,6 +137,39 @@ body {
     height: auto;
     display: block;
 }
+
+#texto button:hover {
+    cursor: pointer;
+    opacity: 70%;
+    box-shadow: 0px 9px 18px black;
+    transition: all 0.3s ease-in-out;
+}
+
+.botao-amarelo {
+    background-color: #eba743;
+}
+
+.botao-azul {
+    background-color: #264653;
+}
+
+#texto .botao-amarelo:hover {
+    color: #264653;
+}
+
+#texto .botao-amarelo:hover {
+    color: #eba743;
+}
+
+#texto button.saiba-mais {
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px black;
+    width: 130px;
+    height: 40px;
+    margin: 40px;
+}
 /* FIM corpo da pagina */
 
 /* INICIO section about-us */
@@ -178,36 +211,15 @@ body {
 }
 
 .about-us #texto {
-    text-align: justify;
+    text-align: left;
     color: whitesmoke;
     width: 100%;
     height: auto;
-}
-
-#texto button#saiba-mais-amarelo {
-    background-color: #eba743;
-    font-size: larger;
-    font-weight: bold;
-    border-radius: 15px;
-    box-shadow: 0px 8px 16px black;
-    width: 130px;
-    height: 40px;
-    margin: 40px;
+    line-height: 24px;
 }
 /* FIM section about-us */
 
 /* INICIO section our-mission */
-#texto button#saiba-mais-azul {
-    background-color: #264653;
-    font-size: larger;
-    font-weight: bold;
-    border-radius: 15px;
-    box-shadow: 0px 8px 16px black;
-    width: 130px;
-    height: 40px;
-    margin: 40px;
-}
-
 #texto a {
     text-decoration: none;
     color: whitesmoke;
@@ -229,28 +241,23 @@ body {
 #our-mission-text {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 30px;
     justify-content: center;
 }
 
 .our-mission #titulo {
-    display: flex;
-    flex-direction: column;
-    color: black;
-    font-family: "Funnel Display", roboto;
-    font-weight: bold;
-    font-size: 4rem;
-    text-align: center;
-    text-align: left;
     width: 50%;
-}
-
-.our-mission #titulo img {
-    width: 100%;
+    position: relative;
+    top: 0;
+    transform: translateY(-30%);
 }
 
 .our-mission #texto {
+    text-align: left;
+    color: black;
     width: 30%;
+    height: auto;
+    line-height: 24px;
 }
 
 .ondas img {
@@ -258,14 +265,36 @@ body {
     height: auto;
 }
 
+.wave-container {  
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+}
+
+.wave-container::before {   
+    content: "";
+    width: 100%;
+    height: 87px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 42vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  117' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 86L50 81C100 76 200 65 300 44C400 23 500 -9 600 2C700 12 800 65 900 86C1000 107 1100 97 1150 91L1200 86V118H1150C1100 118 1000 118 900 118C800 118 700 118 600 118C500 118 400 118 300 118C200 118 100 118 50 118H0V86Z' fill='%23eba743'/></svg>");
+}
+
+@media(max-width:850px) {
+    .wave-container::before {    
+        height: 43.5px
+}  
+}
+
 @media screen and (max-width: 900px) {
     .our-mission #titulo {
         width: 30%;
     }
-    .our-mission #titulo img {
-        width: 100%;
-    }
     .our-mission #texto {
-        width: 70%;
+        width: 50%;
     }
 }
