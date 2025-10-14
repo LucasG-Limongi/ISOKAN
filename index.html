@@ -17,6 +17,8 @@
 </head>
 
 <body>
+
+    <!-- Inicio header -->
     <header class="header">
         <a class="logo" href="./index.html">
             <img src="./IMG/logo.png">
@@ -57,6 +59,10 @@
         </div>
     </header>
 
+    <!-- fim header -->
+
+
+    <!-- Inicio corpo do site -->
     <main class="corpo">
         <div class="fundo">
             <img src="IMG/diversidade.jpg">
@@ -123,15 +129,62 @@
                             <a href="about-us.html">Saiba mais</a>
                         </button>
                     </div>
+
                 </div>
                 
             </div>
+
+        </section>
+
+        <section class="galery">
+            <div class="galery-titulo">
+                <h1>Galeria</h1>
+            </div>
+
+            <div class="galery-text">
+                <p>Clique em “Books” para acessar nossa galeria e veja nossos diversos conteúdos e recomendções.</p>
+            </div>
+
+            <div class="container-slider">
+                <button id="voltar"><img src="./IMG/arrow.png" alt="prev-button"></button>
+                <div class="container-img">
+                    <img src="./IMG/lua.png" alt="Livros" class="slider on">
+                    <img src="./IMG/eua.png" alt="Livros" class="slider">
+                    <img src="./IMG/lua.png" alt="Livros" class="slider">
+                    <img src="./IMG/eua.png" alt="Livros" class="slider">
+                    <img src="./IMG/lua.png" alt="Livros" class="slider">
+                </div>
+                <button id="avancar"><img src="./IMG/arrow.png" alt="next-button"></button>
+            </div>
+
         </section>
 
     </main>
 
+    <footer>
+        <div id="parte-1">
+            <div id="cadastro">
+                <h3>Faça parte da nossa história
+                    
+                </h3>
+            </div>
+            <hr>
+            <div id="isokan">
+
+            </div>
+            <hr>
+            <div id="redes-sociais">
+
+            </div>
+        </div>
+
+        <div id="parte-2">
+            <p>&copy; 2025 ISOKAN. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
     <script src="./JS/jquery-3.6.0.min.js"></script>
-    <script src="./JS/index.js"></script>
+    <script src="./JS/index.js" defer></script>
 </body>
 
 </html>

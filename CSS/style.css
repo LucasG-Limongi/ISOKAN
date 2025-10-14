@@ -229,7 +229,7 @@ body {
     width: 100%;
     height: auto;
     display: flex;
-    gap: 50px;
+    gap: 25px;
     justify-content: center;
     flex-direction: column;
     padding: 5%;
@@ -290,6 +290,7 @@ body {
 }  
 }
 
+
 @media screen and (max-width: 900px) {
     .our-mission #titulo {
         width: 30%;
@@ -297,4 +298,76 @@ body {
     .our-mission #texto {
         width: 50%;
     }
+}
+
+/* Inicio section galeria */
+
+.galery {
+    width: 100%;
+    height: auto;
+    background-color: #655f55;
+    display: inline;
+    justify-content: center;
+    height: auto;
+    padding: 5%;
+    text-align: center;
+}
+
+.galery h1 {
+    color: white;
+    font-family: 'Funnel Display', roboto;
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: center;
+    
+}
+
+.galery-text {
+    /* Colocar algo aqui posteriormente */
+}
+
+.container-slider {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+    gap: 1rem;
+}
+
+.container-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+}
+
+.slider {
+    opacity: 0;
+    transition: opacity .2seg;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.on {
+    opacity: 1;
+}
+
+#voltar, #avancar {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#voltar img, #avancar img {
+    width: 100%;
+    height: 100%;
+}
+
+#voltar {
+    transform: rotate(180deg);
 }
