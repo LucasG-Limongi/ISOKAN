@@ -328,6 +328,7 @@ body {
 
 .container-slider {
     display: flex;
+    flex-direction: row;
     width: 100%;
     align-items: center;
     justify-items: center;
@@ -335,24 +336,27 @@ body {
     gap: 1rem;
 }
 
-.container-img {
-    position: relative;
+#container-img {
     display: flex;
+    flex-direction: row;
+    gap: 20px;
     align-items: center;
     justify-content: center;
-    width: 700px;
 }
 
 .slider {
-    opacity: 0;
+    display: none;
     transition: opacity .2seg;
-    position: absolute;
-    width: 100%;
     border-radius: 10px;
+    width: 30%;
+    background-color: white;
+    aspect-ratio: 4/5;
+    outline: solid 2px black;
+    padding: 5px;
 }
 
-.on {
-    opacity: 1;
+.slider.on {
+    display: block;
 }
 
 #voltar, #avancar {
