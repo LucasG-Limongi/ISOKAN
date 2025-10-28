@@ -2,7 +2,7 @@ $('.menu-mobile i').click(function () {
     $('.nav-mobile').slideToggle();
 })
 
-$(window).resize(function() {
+$(window).resize(function () {
     if ($(window).width < 900) {
         $('.nav-mobile, .menu-mobile').css('display', 'none')
         $('.nav').css('display', 'flex')
@@ -11,43 +11,54 @@ $(window).resize(function() {
 
 // Carrosel do index 
 
-const slider = document.querySelectorAll('.slider')
-const btnPrev = document.getElementById('voltar')
-const btnNext = document.getElementById('avancar')
+/* Adicionamos um 'DOMContentLoaded' para garantir que o script
+  só rode depois que todo o HTML foi carregado.
+*/
 
-let slideAtivo = 0
+const track = document.querySelector('.slider-track');
+const slides = Array.from(document.querySelectorAll('.slider'));
+const btnPrev = document.getElementById('voltar');
+const btnNext = document.getElementById('avancar');
 
-function esconderSlide() {
-    slider.forEach(item => item.classList.remove('on'))
+let currentIndex = 0;
+const slidesPorVez = 3; // número de slides visíveis
+const totalSlides = slides.length;
+
+// Função que calcula o deslocamento exato
+function getSlideWidth() {
+    return slides[0].getBoundingClientRect().width;
 }
 
-function mostrarSlide() {
-    slider[slideAtivo].classList.add('on')
+// Atualiza a posição do trilho
+function updateSlider() {
+    const distancia = getSlideWidth() * currentIndex;
+    track.style.transform = `translateX(-${distancia}px)`;
 }
 
-function nextSlide() {
-    esconderSlide()
-    if(slideAtivo == slider.length - 1) {
-        slideAtivo = 0
-    } else {
-        slideAtivo++
+// Avançar (com looping infinito)
+btnNext.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex > totalSlides - slidesPorVez) {
+        currentIndex = 0; // volta pro início
     }
-    mostrarSlide()
-}
+    updateSlider();
+});
 
-function prevSlide() {
-    esconderSlide()
-    if(slideAtivo == 0) {
-        slideAtivo = slider.length -1
-    } else {
-        slideAtivo--
+// Voltar (com looping infinito)
+btnPrev.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = totalSlides - slidesPorVez; // volta pro final
     }
-    mostrarSlide()
-}
+    updateSlider();
+});
 
-btnNext.addEventListener('click', function(){proxSlide(slide)}) // como passar o slideAtivoAtual aqui?
-// o que devo fazer é escrever da seguinte forma: '
-btnPrev.addEventListener('click', function(){antSlide(slide)})
+// Redimensionamento dinâmico (mantém proporção)
+window.addEventListener('resize', updateSlider);
+
+
+
+// O nome da função e prevSlide e não antSlide
 
 
 
@@ -113,25 +124,25 @@ function proxSlide(slideAtivoAtual) {
 
 function antSlide(slideAtivoAtual) {
     if (slideAtivoAtual <= document.getElementById('container-img').querySelectorAll('slider').length - 4) {
-        document.getElementById('container-img')[slideAtivoAtual+2].classList.remove('on')
+        document.getElementById('container-img')[slideAtivoAtual + 2].classList.remove('on')
         if (slideAtivoAtual == 0) {
             document.getElementById('container-img').lastElementChild.classList.add('on')
             slide = document.getElementById('container-img').querySelectorAll('slider').length - 1
         } else {
-            document.getElementById('container-img')[slideAtivoAtual-1].classList.add('on')
+            document.getElementById('container-img')[slideAtivoAtual - 1].classList.add('on')
             slide = slideAtivoAtual - 1
         }
     } else if (slideAtivoAtual == document.getElementById('container-img').querySelectorAll('slider').length - 3) {
         document.getElementById('container-img').lastElementChild.classList.remove('on')
-        document.getElementById('container-img')[slideAtivoAtual-1].classList.add('on')
+        document.getElementById('container-img')[slideAtivoAtual - 1].classList.add('on')
         slide = slideAtivoAtual - 1
     } else if (slideAtivoAtual == document.getElementById('container-img').querySelectorAll('slider').length - 2) {
         document.getElementById('container-img').firstElementChild.classList.remove('on')
-        document.getElementById('container-img')[slideAtivoAtual-1].classList.add('on')
+        document.getElementById('container-img')[slideAtivoAtual - 1].classList.add('on')
         slide = slideAtivoAtual - 1
     } else if (slideAtivoAtual == document.getElementById('container-img').querySelectorAll('slider').length - 1) {
         document.getElementById('container-img').firstElementChild.nextElementSibling.classList.remove('on')
-        document.getElementById('container-img')[slideAtivoAtual-1].classList.add('on')
+        document.getElementById('container-img')[slideAtivoAtual - 1].classList.add('on')
         slide = slideAtivoAtual - 1
     }
 }

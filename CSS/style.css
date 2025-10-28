@@ -319,12 +319,11 @@ body {
 .galery {
     width: 100%;
     height: auto;
-    background-color: #264653;
-    display: inline;
-    justify-content: center;
-    height: auto;
+    background-color: #264653; /* Seu estilo original */
+    display: block;
     padding: 5%;
     text-align: center;
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
 }
 
 .galery h1 {
@@ -333,45 +332,130 @@ body {
     font-weight: bold;
     font-size: 4rem;
     text-align: center;
-    
 }
 
 .galery-text {
-    /* Colocar algo aqui posteriormente */
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+/* --- Estilos do Componente Slider (Carrossel) --- */
 
 .container-slider {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    justify-items: center;
-    min-height: 100vh;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  gap: 10px;
 }
 
-#container-img {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+.slider-viewport {
+  overflow: hidden;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .slider {
-    display: none;
-    transition: opacity .2seg;
-    border-radius: 10px;
-    width: 30%;
-    background-color: white;
-    aspect-ratio: 4/5;
-    outline: solid 2px black;
-    padding: 5px;
+  flex: 0 0 calc(33.333% - 1rem);
+  box-sizing: border-box;
+  margin: 0 0.5rem;
+  background-color: white;
+  border-radius: 10px;
+  outline: solid 2px black;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
 }
 
-.slider.on {
-    display: block;
+.slider img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
+
+/* Botões */
+#voltar,
+#avancar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+#voltar {
+  left: -50px;
+}
+
+#voltar img {
+  transform: rotate(180deg); /* seta invertida */
+}
+
+#avancar {
+  right: -50px;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .slider {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .slider {
+    flex: 0 0 100%;
+    margin: 0;
+  }
+}
+
+/* --- ESTILIZAÇÃO DA DESCRIÇÃO (Melhorada) --- */
+
+.descricao-livro {
+    text-align: left; /* Mais legível para parágrafos */
+}
+
+.descricao-livro h4 {
+    font-family: 'Funnel Display', sans-serif; /* Fonte do título */
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #264653; /* Cor primária do site */
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.descricao-livro p {
+    font-family: 'Quicksand', sans-serif;
+    color: #333; /* Cor de texto padrão */
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+
+/* --- Botões do Slider --- */
 
 #voltar, #avancar {
     width: 30px;
@@ -379,13 +463,23 @@ body {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+    transition: opacity 0.3s;
 }
 
 #voltar img, #avancar img {
     width: 100%;
     height: 100%;
+    filter: invert(1); /* Deixa a seta branca */
 }
 
 #voltar {
     transform: rotate(180deg);
+}
+
+/* Estilo para botões desativados */
+#voltar:disabled, #avancar:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }

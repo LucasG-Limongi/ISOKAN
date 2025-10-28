@@ -12,18 +12,97 @@
     </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-        </style>
+    </style>
+
+    <style>
+        .container-slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+            /* Ajuste a largura máxima conforme necessário */
+            margin: 0 auto;
+        }
+
+        .container-slider-wrapper {
+            width: 100%;
+            overflow: hidden;
+            /* Garante que apenas um slide seja visível */
+            position: relative;
+            min-height: 400px;
+            /* Altura mínima para evitar colapso */
+        }
+
+        .slider {
+            display: none;
+            /* Esconde todos os slides por padrão */
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .slider.on {
+            display: flex;
+            /* Mostra apenas o slide ativo */
+            animation: fadeIn 0.5s ease-in-out;
+            /* Efeito suave de transição */
+        }
+
+        .slider img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 1rem;
+            /* Espaço entre a imagem e o texto */
+            max-height: 300px;
+            /* Limita a altura da imagem */
+            object-fit: contain;
+        }
+
+        .slider p {
+            font-family: 'Quicksand', sans-serif;
+            color: #333;
+            /* Cor do texto da descrição */
+            padding: 0 1rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Animação de Fade */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Estilo dos botões */
+        #voltar,
+        #avancar {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        #voltar img {
+            transform: rotate(180deg);
+            /* Gira a seta "avançar" para "voltar" */
+        }
+    </style>
     <title>ISOKAN</title>
 </head>
 
 <body>
 
-    <!-- Inicio header -->
     <header class="header">
         <a class="logo" href="./index.html">
             <img src="./IMG/logo.png">
             <img src="./IMG/isokan-branco.png">
-            <!-- a -->
         </a>
 
         <div class="menu-mobile">
@@ -59,10 +138,6 @@
         </div>
     </header>
 
-    <!-- fim header -->
-
-
-    <!-- Inicio corpo do site -->
     <main class="corpo">
         <div class="fundo">
             <img src="IMG/diversidade.jpg">
@@ -71,7 +146,6 @@
         <section class="about-us">
             <div id="sobre-nos">
                 <div id="imagem">
-                    <!-- Imagem aqui -->
                 </div>
 
                 <div id="about-us-text">
@@ -80,58 +154,48 @@
                     </div>
 
                     <div id="texto">
-                        <p>Somos uma instituição que busca oferecer informações e promover reflexões sobre as relações étnico-raciais, principalmente no Brasil. Nosso objetivo é educar, conscientizar e apoiar a luta de grupos sociais historicamente marginalizados, valorizando a diversidade étnica e racial.
+                        <p>Somos uma instituição que busca oferecer informações e promover reflexões sobre as relações
+                            étnico-raciais, principalmente no Brasil. Nosso objetivo é educar, conscientizar e apoiar a
+                            luta de grupos sociais historicamente marginalizados, valorizando a diversidade étnica e
+                            racial.
                         </p>
 
-                        <button class="saiba-mais botao-amarelo" >
+                        <button class="saiba-mais botao-amarelo">
                             <a href="about-us.html">Saiba mais</a>
                         </button>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- <div class="w-full h-[57px]">
-            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M0 43.9999C106.667 43.9999 213.333 7.99994 320 7.99994C426.667 7.99994 533.333 43.9999 640 43.9999C746.667 43.9999 853.333 7.99994 960 7.99994C1066.67 7.99994 1173.33 43.9999 1280 43.9999C1386.67 43.9999 1440 19.0266 1440 9.01329V100H0V43.9999Z"
-                    class="fill-current text-[#eba743]"></path>
-            </svg>
-        </div> -->
         <div class="wave-container yellow"></div>
-        <!-- <div class="ondas">
-            <img src="./IMG/ondas.png">
-        </div> -->
         <section class="our-mission">
             <div id="nossa-missao">
                 <div id="imagem2">
-                    <!-- Imagem aqui -->
                 </div>
 
                 <div id="our-mission-text">
                     <div id="titulo">
                         <img src="./IMG/nossa-missao.png" style="width: 100%;">
-                        <!-- <div style="width: 100%; text-align: right;">
-                            Nossa missão como
-                        </div>
-                        <div style="display: flex;">
-                            <img src="./IMG/isokan-preto.png" style="margin-left: 20px;">
-                        </div> -->
                     </div>
 
                     <div id="texto">
-                        <p>Através deste site, buscamos não apenas informar, mas também incentivar a inclusão social e a valorização da diversidade étnica e racial. Aqui você encontrará indicações de filmes, livros, e muitos outros materiais que te ajudam a expandir seu conhecimento sobre o tema.
+                        <p>Através deste site, buscamos não apenas informar, mas também incentivar a inclusão social e a
+                            valorização da diversidade étnica e racial. Aqui você encontrará indicações de filmes,
+                            livros, e muitos outros materiais que te ajudam a expandir seu conhecimento sobre o tema.
                         </p>
                         <br>
-                        <p>Além disso, somos como uma ponte entre o público e algumas ONGs que trabalham diretamente com causas étnico-raciais, ajudando essas organizações a arrecadar recursos e ampliar seu alcance.
+                        <p>Além disso, somos como uma ponte entre o público e algumas ONGs que trabalham diretamente com
+                            causas étnico-raciais, ajudando essas organizações a arrecadar recursos e ampliar seu
+                            alcance.
                         </p>
 
-                        <button class="saiba-mais botao-azul" >
+                        <button class="saiba-mais botao-azul">
                             <a href="about-us.html">Saiba mais</a>
                         </button>
                     </div>
 
                 </div>
-                
+
             </div>
 
         </section>
@@ -149,15 +213,57 @@
 
             <div class="container-slider">
                 <button id="voltar"><img src="./IMG/arrow.png" alt="prev-button"></button>
-                <div id="container-img">
-                    <img src="./IMG/lua.png" alt="Livros" class="slider on">
-                    <img src="./IMG/eua.png" alt="Livros" class="slider on">
-                    <img src="./IMG/lua.png" alt="Livros" class="slider on">
-                    <img src="./IMG/eua.png" alt="Livros" class="slider">
-                    <img src="./IMG/lua.png" alt="Livros" class="slider">
+
+                <div class="slider-viewport">
+                    <div class="slider-track">
+                        <div class="slider on">
+                            <img src="./IMG/Aterradaaterraquer.png" alt="Livro A terra dá, A terra quer">
+                            <div class="descricao-livro">
+                                <h4>A terra dá, A terra quer</h4>
+                                <p>Uma história sobre a relação de uma menina com sua avó e a terra...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider">
+                            <img src="./IMG/ComoSerUmEducadorantirracista.png"
+                                alt="Livro Como ser um educador antirracista">
+                            <div class="descricao-livro">
+                                <h4>Como Ser Um Educador Antirracista</h4>
+                                <p>Um convite para repensar a educação...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider">
+                            <img src="./IMG/relacoesetinicosraciaislivro.png" alt="Livro Relações Étnico-Raciais">
+                            <div class="descricao-livro">
+                                <h4>Relações Étnico-Raciais</h4>
+                                <p>Coletânea que aborda conceitos e práticas...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider">
+                            <img src="./IMG/Linguaediscursos.png"
+                                alt="Livro Língua, Discursos, Relações Étnico-Raciais E De Gênero">
+                            <div class="descricao-livro">
+                                <h4>Língua, Discursos, Relações Étnico-Raciais E De Gênero</h4>
+                                <p>Material de formação que analisa os discursos no ensino da língua...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider">
+                            <img src="./IMG/RelacoeseMarcadoresdaDiferenca.JPEG"
+                                alt="Livro Relações Étnico-Raciais E outros Marcadores Sociais Da Diferença">
+                            <div class="descricao-livro">
+                                <h4>Relações Étnico-Raciais E outros Marcadores Sociais Da Diferença</h4>
+                                <p>Obra interdisciplinar que analisa os marcadores sociais...</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <button id="avancar"><img src="./IMG/arrow.png" alt="next-button"></button>
             </div>
+
 
         </section>
 
@@ -167,7 +273,7 @@
         <div id="parte-1">
             <div id="cadastro">
                 <h3>Faça parte da nossa história
-                    
+
                 </h3>
             </div>
             <hr>
