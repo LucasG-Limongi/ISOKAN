@@ -51,7 +51,8 @@ body {
     align-items: center;
 }
 
-.nav a, .nav-mobile a {
+.nav a,
+.nav-mobile a {
     color: white;
     font-size: larger;
     padding: 5px;
@@ -59,7 +60,8 @@ body {
     text-decoration: none;
 }
 
-.nav a:hover, .nav-mobile a:hover {
+.nav a:hover,
+.nav-mobile a:hover {
     color: #ffba48;
     transition: all 0.3s ease-in-out;
 }
@@ -82,10 +84,12 @@ body {
     nav {
         display: none;
     }
+
     .menu-mobile {
         display: block;
     }
 }
+
 /* FIM estilo universal */
 
 /* INICIO header config */
@@ -119,6 +123,7 @@ body {
     background-position: center;
     cursor: pointer;
 }
+
 /* FIM header config */
 
 /* INICIO corpo da pagina */
@@ -170,6 +175,7 @@ body {
     height: 40px;
     margin: 40px;
 }
+
 /* FIM corpo da pagina */
 
 /* INICIO section about-us */
@@ -217,6 +223,7 @@ body {
     height: auto;
     line-height: 24px;
 }
+
 /* FIM section about-us */
 
 /* INICIO section our-mission */
@@ -265,13 +272,13 @@ body {
     height: auto;
 }
 
-.wave-container {  
+.wave-container {
     height: 5vh;
     background-color: rgba(255, 255, 255, 0);
     position: relative;
 }
 
-.wave-container.yellow::before {   
+.wave-container.yellow::before {
     content: "";
     width: 100%;
     height: 87px;
@@ -283,7 +290,8 @@ body {
     background-position: 42vw bottom;
     background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  117' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 86L50 81C100 76 200 65 300 44C400 23 500 -9 600 2C700 12 800 65 900 86C1000 107 1100 97 1150 91L1200 86V118H1150C1100 118 1000 118 900 118C800 118 700 118 600 118C500 118 400 118 300 118C200 118 100 118 50 118H0V86Z' fill='%23eba743'/></svg>");
 }
-.wave-container.blue::before {   
+
+.wave-container.blue::before {
     content: "";
     width: 100%;
     height: 130px;
@@ -299,9 +307,9 @@ body {
 }
 
 @media(max-width:850px) {
-    .wave-container::before {    
+    .wave-container::before {
         height: 43.5px
-}  
+    }
 }
 
 
@@ -309,6 +317,7 @@ body {
     .our-mission #titulo {
         width: 30%;
     }
+
     .our-mission #texto {
         width: 50%;
     }
@@ -319,11 +328,13 @@ body {
 .galery {
     width: 100%;
     height: auto;
-    background-color: #264653; /* Seu estilo original */
+    background-color: #264653;
+    /* Seu estilo original */
     display: block;
     padding: 5%;
     text-align: center;
-    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+    box-sizing: border-box;
+    /* Garante que o padding não estoure a largura */
 }
 
 .galery h1 {
@@ -347,109 +358,114 @@ body {
 /* --- Estilos do Componente Slider (Carrossel) --- */
 
 .container-slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    gap: 10px;
 }
 
 .slider-viewport {
-  overflow: hidden;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
+    overflow: hidden;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .slider-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
 }
 
 .slider {
-  flex: 0 0 calc(33.333% - 1rem);
-  box-sizing: border-box;
-  margin: 0 0.5rem;
-  background-color: white;
-  border-radius: 10px;
-  outline: solid 2px black;
-  min-height: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 15px;
+    flex: 0 0 calc(33.333% - 1rem);
+    box-sizing: border-box;
+    margin: 0 0.5rem;
+    background-color: white;
+    border-radius: 10px;
+    outline: solid 2px black;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
 }
 
 .slider img {
-  width: 100%;
-  height: 250px;
-  object-fit: contain;
-  margin-bottom: 1rem;
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    margin-bottom: 1rem;
 }
 
 /* Botões */
 #voltar,
 #avancar {
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 40px;
-  height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
 }
 
 #voltar {
-  left: -50px;
+    left: -50px;
 }
 
 #voltar img {
-  transform: rotate(180deg); /* seta invertida */
+    transform: rotate(180deg);
+    /* seta invertida */
 }
 
 #avancar {
-  right: -50px;
+    right: -50px;
 }
 
 /* Responsivo */
 @media (max-width: 900px) {
-  .slider {
-    flex: 0 0 calc(50% - 1rem);
-  }
+    .slider {
+        flex: 0 0 calc(50% - 1rem);
+    }
 }
 
 @media (max-width: 600px) {
-  .slider {
-    flex: 0 0 100%;
-    margin: 0;
-  }
+    .slider {
+        flex: 0 0 100%;
+        margin: 0;
+    }
 }
 
 /* --- ESTILIZAÇÃO DA DESCRIÇÃO (Melhorada) --- */
 
 .descricao-livro {
-    text-align: left; /* Mais legível para parágrafos */
+    text-align: left;
+    /* Mais legível para parágrafos */
 }
 
 .descricao-livro h4 {
-    font-family: 'Funnel Display', sans-serif; /* Fonte do título */
+    font-family: 'Funnel Display', sans-serif;
+    /* Fonte do título */
     font-size: 1.15rem;
     font-weight: 600;
-    color: #264653; /* Cor primária do site */
+    color: #264653;
+    /* Cor primária do site */
     margin-bottom: 0.5rem;
     line-height: 1.2;
 }
 
 .descricao-livro p {
     font-family: 'Quicksand', sans-serif;
-    color: #333; /* Cor de texto padrão */
+    color: #333;
+    /* Cor de texto padrão */
     font-size: 0.9rem;
     line-height: 1.4;
 }
@@ -457,7 +473,8 @@ body {
 
 /* --- Botões do Slider --- */
 
-#voltar, #avancar {
+#voltar,
+#avancar {
     width: 30px;
     height: 30px;
     border: none;
@@ -468,10 +485,12 @@ body {
     transition: opacity 0.3s;
 }
 
-#voltar img, #avancar img {
+#voltar img,
+#avancar img {
     width: 100%;
     height: 100%;
-    filter: invert(1); /* Deixa a seta branca */
+    filter: invert(1);
+    /* Deixa a seta branca */
 }
 
 #voltar {
@@ -479,7 +498,28 @@ body {
 }
 
 /* Estilo para botões desativados */
-#voltar:disabled, #avancar:disabled {
+#voltar:disabled,
+#avancar:disabled {
     opacity: 0.3;
     cursor: not-allowed;
+}
+
+/* Animação de Fade */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo dos botões */
+#voltar,
+#avancar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
 }
