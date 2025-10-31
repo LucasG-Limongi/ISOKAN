@@ -119,7 +119,7 @@ body {
 }
 
 .config .darkmode {
-    background-image: url(../IMG/lua.png);
+    background-image: url(../IMG/darkmode.png);
     background-size: cover;
     background-position: center;
     cursor: pointer;
