@@ -30,6 +30,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     gap: 10px;
+    transition: all 0.3s ease;
 }
 
 .header img {
@@ -39,7 +40,6 @@ body {
 
 .header a.logo:hover {
     opacity: 50%;
-    transition: all 0.3s ease;
 }
 
 .nav .en {
@@ -59,12 +59,13 @@ body {
     padding: 5px;
     margin: 15px;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav a:hover,
 .nav-mobile a:hover {
     color: #ffba48;
-    transition: all 0.3s ease-in-out;
+    font-size: xx-large;
 }
 
 .menu-mobile {
@@ -116,6 +117,15 @@ body {
     background-size: 160%; */
     background-position: center;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.config .idioma:hover {
+    background-color: green;
+    background-image: url(../IMG/eua.png);
+    background-size: 160%;
+    background-position: center;
+    cursor: pointer;
 }
 
 .config .darkmode {
@@ -123,6 +133,15 @@ body {
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.config .darkmode:hover {
+    background-image: url(../IMG/darkmode-branco.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    background-color: black;
 }
 
 /* FIM header config */
@@ -149,11 +168,14 @@ button a {
     color: white;
 }
 
+#texto button {
+    transition: all 0.3s ease-in-out;
+}
+
 #texto button:hover {
     cursor: pointer;
     opacity: 70%;
     box-shadow: 0px 9px 18px black;
-    transition: all 0.3s ease-in-out;
 }
 
 button.botao-amarelo {
@@ -621,8 +643,17 @@ footer #parte-1 div {
 }
 
 footer #parte-1 #cadastro form input {
+    color: black;
     background-color: rgba(0, 0, 0, 0);
     outline: rgba(100, 100, 100, 0.7) solid 1px;
+    border-radius: 5px;
+    padding: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+footer #parte-1 #cadastro form input:focus {
+    background-color: #ef9c13;
+    outline: rgba(38, 70, 83, 0.7) solid 3px;
 }
 
 footer #parte-1 #cadastro form button {
@@ -631,11 +662,11 @@ footer #parte-1 #cadastro form button {
     border: none;
     padding: 10px 20px;
     color: black;
+    transition: all 0.3s ease-in-out;
 }
 
 footer #parte-1 #cadastro form button:hover {
     opacity: 0.5;
-    transition: all 0.3s ease-in-out;
 }
 
 footer #cadastroIndex {
@@ -651,12 +682,14 @@ footer #parte-1 #isokan {
 footer #parte-1 #isokan button {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
+    transition: all 0.2s ease-in-out;
 }
 
 footer #parte-1 #isokan button:hover {
-    border-top: 2px solid black;
+    /* border-top: 2px solid black;
     border-bottom: 2px solid black;
-    color: black;
+    color: black; */
+    opacity: 0.5;
 }
 
 footer #parte-1 #redes-sociais div {
@@ -666,9 +699,12 @@ footer #parte-1 #redes-sociais div {
     gap: 50px;
 }
 
+footer #parte-1 #redes-sociais div * {
+    transition: all 0.2s ease-in-out;
+}
+
 footer #parte-1 #redes-sociais div *:hover {
     opacity: 0.7;
-    transition: all 0.2s ease-in-out;
 }
 
 footer #parte-2 {
