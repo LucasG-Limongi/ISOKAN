@@ -238,9 +238,10 @@ button.botao-amarelo a {
     color: whitesmoke;
     font-family: "Funnel Display", roboto;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 7rem;
     text-align: center;
     text-align: left;
+    margin-top: -25px;
 }
 
 .about-us #texto {
@@ -249,6 +250,7 @@ button.botao-amarelo a {
     width: 100%;
     height: auto;
     line-height: 24px;
+    font-size: rem;
 }
 
 #imagem {
@@ -312,15 +314,16 @@ button.botao-amarelo a {
 }
 
 .self-evaluation #autoavaliacao #self-evaluation-text #titulo h2 {
-    color: white;
+    color: #264653;
     font-weight: 900;
     font-size: xxx-large;
     text-align: center;
     margin-bottom: -15px;
+    font-family: 'Funnel Display', roboto;
 }
 
 .self-evaluation #autoavaliacao #self-evaluation-text #titulo p {
-    color: #264653;
+    color: white;
     font-weight: 900;
     font-size: x-large;
     text-align: center;
@@ -332,6 +335,17 @@ button.botao-amarelo a {
     font-weight: 400;
     font-size: large;
 }
+
+#self-evaluation-text #texto button.botao-azul a {
+    color: #e9c46a;
+    
+}
+
+#self-evaluation-text #texto button.botao-azul {
+    margin-left: 45%;
+}
+
+
 
 /* FIM section self-evaluation */
 
@@ -679,6 +693,10 @@ footer #parte-1 #isokan {
     align-items: center;
 }
 
+footer #parte-1 #isokan img {
+    height: 50%;
+}
+
 footer #parte-1 #isokan button {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
@@ -701,10 +719,15 @@ footer #parte-1 #redes-sociais div {
 
 footer #parte-1 #redes-sociais div * {
     transition: all 0.2s ease-in-out;
+    max-width: 80px;
 }
 
 footer #parte-1 #redes-sociais div *:hover {
     opacity: 0.7;
+}
+
+footer #parte-1 #redes-sociais {
+    font-size: x-large;
 }
 
 footer #parte-2 {
@@ -712,4 +735,11 @@ footer #parte-2 {
     background-color: #ef9c13;
     color: black;
     padding: 5px 0;
+}
+
+@media screen and (max-width: 900px) {
+    footer #parte-1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
 }
