@@ -157,28 +157,53 @@ body {
     gap: 0;
 }
 
-.fundo img {
+.fundo {
+    background-repeat: no-repeat;
     width: 100%;
-    height: auto;
+    height: 900px;
+    background-image: url('../IMG/banner1.jpg');
+    background-size: cover;
     display: block;
     transition: all 0.4s ease-in-out;
 }
 
 .fundo div {
+    margin-top: 447.5px;
+    height: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3px;
     background-color: #264653;
 }
 
+#botoesFundo {
+    background-color: #264653;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 5%;
+}
+
+#botoesFundo :is(#btnBanner1, #btnBanner2) {
+    background-color: rgba(0, 0, 0, 0);
+    outline: #071a22 solid 3px;
+    border-radius: 100%;
+}
+
+#botoesFundo #btnBanner1 {
+    transform: scaleX(-1);
+}
+
 .fundo div div {
     height: 5px;
     width: 100%;
     background-color: gray;
+    opacity: 0.7;
 }
 
 .fundo div .on {
     background-color: greenyellow;
+    opacity: 0.7;
 }
 
 button a {
@@ -674,8 +699,13 @@ footer #parte-1 div {
     flex-direction: column;
 }
 
+footer #parte-1 #cadastro h3 {
+    font-size: x-large;
+}
+
 footer #parte-1 #cadastro form input {
-    color: black;
+    color: white;
+    font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
     outline: rgba(100, 100, 100, 0.7) solid 1px;
     border-radius: 5px;
@@ -685,6 +715,7 @@ footer #parte-1 #cadastro form input {
 
 footer #parte-1 #cadastro form input:focus {
     background-color: #ef9c13;
+    color: black;
     outline: rgba(38, 70, 83, 0.7) solid 3px;
 }
 
@@ -694,6 +725,7 @@ footer #parte-1 #cadastro form button {
     border: none;
     padding: 10px 20px;
     color: black;
+    font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
 
@@ -732,16 +764,24 @@ footer #parte-1 :is(#isokan, #isokan-2) button:hover {
     opacity: 0.5;
 }
 
+/* footer #parte-1 :is(#redes-sociais, #redes-sociais-2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
 footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 50px;
+    gap: 10px;
 }
 
 footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div * {
     transition: all 0.2s ease-in-out;
-    max-width: 80px;
+    max-width: 50px;
+    justify-self: center;
 }
 
 footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div *:hover {

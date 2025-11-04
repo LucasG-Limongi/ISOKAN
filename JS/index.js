@@ -11,18 +11,21 @@ $(window).resize(function () {
 
 // Carrosel do banner
 function proxBan() {
-    if (document.querySelector('.fundo').querySelector('div').querySelector('div').classList.contains('on')) {
-        document.querySelector('.fundo').querySelector('div').querySelector('div').classList.remove('on')
-        document.querySelector('.fundo').querySelector('div').querySelector('div').nextElementSibling.classList.add('on')
-        document.getElementById('banner').setAttribute('src', './IMG/banner2.jpg')
-    } else if (document.querySelector('.fundo').querySelector('div').querySelector('div').nextElementSibling.classList.contains('on')) {
-        document.querySelector('.fundo').querySelector('div').querySelector('div').nextElementSibling.classList.remove('on')
-        document.querySelector('.fundo').querySelector('div').querySelector('div').nextElementSibling.nextElementSibling.classList.add('on')
-        document.getElementById('banner').setAttribute('src', './IMG/banner3.jpg')
+    if (document.querySelector('.fundo').querySelector('div').firstElementChild.classList.contains('on')) {
+        document.querySelector('.fundo').querySelector('div').firstElementChild.classList.remove('on')
+        document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.add('on')
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner2.jpg')"
+        // document.getElementById('banner').setAttribute('src', './IMG/banner2.jpg')
+    } else if (document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.contains('on')) {
+        document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.remove('on')
+        document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.nextElementSibling.classList.add('on')
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner3.jpg')"
+        // document.getElementById('banner').setAttribute('src', './IMG/banner3.jpg')
     } else {
-        document.querySelector('.fundo').querySelector('div').querySelector('div').nextElementSibling.nextElementSibling.classList.remove('on')
-        document.querySelector('.fundo').querySelector('div').querySelector('div').classList.add('on')
-        document.getElementById('banner').setAttribute('src', './IMG/banner1.jpg')
+        document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.nextElementSibling.classList.remove('on')
+        document.querySelector('.fundo').querySelector('div').firstElementChild.classList.add('on')
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner1.jpg')"
+        // document.getElementById('banner').setAttribute('src', './IMG/banner1.jpg')
     }
 }
 // function proxBan() {
@@ -44,6 +47,24 @@ function proxBan() {
 //         banner.src = './IMG/banner1.jpg';
 //     }
 // }
+function prevBan() {
+    if (document.querySelector('.fundo').querySelector('div').firstElementChild.classList.contains('on')) {
+        document.querySelector('.fundo').querySelector('div').firstElementChild.classList.remove('on')
+        document.querySelector('.fundo').querySelector('div').lastElementChild.classList.add('on')
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner3.jpg')"
+        // document.getElementById('banner').setAttribute('src', './IMG/banner2.jpg')
+    } else if (document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.contains('on')) {
+        document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.remove('on')
+        document.querySelector('.fundo').querySelector('div').firstElementChild.classList.add('on')
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner1.jpg')"
+        // document.getElementById('banner').setAttribute('src', './IMG/banner3.jpg')
+    } else {
+        document.querySelector('.fundo').querySelector('div').lastElementChild.classList.remove('on')
+        document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.add('on')
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner2.jpg')"
+        // document.getElementById('banner').setAttribute('src', './IMG/banner1.jpg')
+    }
+}
 const trocaBanner = setInterval(proxBan, 20000)
 
 
