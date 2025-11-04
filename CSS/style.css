@@ -161,6 +161,24 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    transition: all 0.4s ease-in-out;
+}
+
+.fundo div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    background-color: #264653;
+}
+
+.fundo div div {
+    height: 5px;
+    width: 100%;
+    background-color: gray;
+}
+
+.fundo div .on {
+    background-color: greenyellow;
 }
 
 button a {
@@ -437,7 +455,7 @@ button.botao-amarelo a {
 }
 
 .galery ul {
-    list-style-type: disc;
+    list-style-type: none;
     color: #071a22;
     font-size: 300%;
     font-weight: bold;
@@ -687,47 +705,55 @@ footer #cadastroIndex {
     border-radius: 10px;
 }
 
-footer #parte-1 #isokan {
+footer #parte-1 :is(#isokan, #isokan-2) {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-footer #parte-1 #isokan img {
+footer #parte-1 #isokan-2 {
+    display: none;
+}
+
+footer #parte-1 :is(#isokan, #isokan-2) img {
     height: 50%;
 }
 
-footer #parte-1 #isokan button {
+footer #parte-1 :is(#isokan, #isokan-2) button {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     transition: all 0.2s ease-in-out;
 }
 
-footer #parte-1 #isokan button:hover {
+footer #parte-1 :is(#isokan, #isokan-2) button:hover {
     /* border-top: 2px solid black;
     border-bottom: 2px solid black;
     color: black; */
     opacity: 0.5;
 }
 
-footer #parte-1 #redes-sociais div {
+footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 50px;
 }
 
-footer #parte-1 #redes-sociais div * {
+footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div * {
     transition: all 0.2s ease-in-out;
     max-width: 80px;
 }
 
-footer #parte-1 #redes-sociais div *:hover {
+footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div *:hover {
     opacity: 0.7;
 }
 
-footer #parte-1 #redes-sociais {
+footer #parte-1 :is(#redes-sociais, #redes-sociais-2) {
     font-size: x-large;
+}
+
+footer #parte-1 #redes-sociais-2 {
+    display: none;
 }
 
 footer #parte-2 {
@@ -741,5 +767,13 @@ footer #parte-2 {
     footer #parte-1 {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
+    }
+
+    footer #parte-1 :is(#isokan-2, #redes-sociais-2) {
+        display: flex;
+    }
+
+    footer #parte-1 :is(#isokan, #redes-sociais) {
+        display: none;
     }
 }

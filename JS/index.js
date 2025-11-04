@@ -9,6 +9,44 @@ $(window).resize(function () {
     }
 }) // tentativa de corrigir o bug do menu mobile que aparece no desktop
 
+// Carrosel do banner
+function proxBan() {
+    if (document.querySelector('.fundo').querySelector('div').querySelector('div').classList.contains('on')) {
+        document.querySelector('.fundo').querySelector('div').querySelector('div').classList.remove('on')
+        document.querySelector('.fundo').querySelector('div').querySelector('div').nextElementSibling.classList.add('on')
+        document.getElementById('banner').setAttribute('src', './IMG/banner2.jpg')
+    } else if (document.querySelector('.fundo').querySelector('div').querySelector('div').nextElementSibling.classList.contains('on')) {
+        document.querySelector('.fundo').querySelector('div').querySelector('div').nextElementSibling.classList.remove('on')
+        document.querySelector('.fundo').querySelector('div').querySelector('div').nextElementSibling.nextElementSibling.classList.add('on')
+        document.getElementById('banner').setAttribute('src', './IMG/banner3.jpg')
+    } else {
+        document.querySelector('.fundo').querySelector('div').querySelector('div').nextElementSibling.nextElementSibling.classList.remove('on')
+        document.querySelector('.fundo').querySelector('div').querySelector('div').classList.add('on')
+        document.getElementById('banner').setAttribute('src', './IMG/banner1.jpg')
+    }
+}
+// function proxBan() {
+//     const fundo = document.querySelector('.fundo');
+//     const indicadores = fundo.querySelector('div').querySelectorAll('div');
+//     const banner = document.getElementById('banner');
+
+//     if (indicadores[0].classList.contains('on')) {
+//         indicadores[0].classList.remove('on');
+//         indicadores[1].classList.add('on');
+//         banner.src = './IMG/banner2.jpg';
+//     } else if (indicadores[1].classList.contains('on')) {
+//         indicadores[1].classList.remove('on');
+//         indicadores[2].classList.add('on');
+//         banner.src = './IMG/banner3.jpg';
+//     } else {
+//         indicadores[2].classList.remove('on');
+//         indicadores[0].classList.add('on');
+//         banner.src = './IMG/banner1.jpg';
+//     }
+// }
+const trocaBanner = setInterval(proxBan, 20000)
+
+
 // Carrosel do index 
 
 /* Adicionamos um 'DOMContentLoaded' para garantir que o script
