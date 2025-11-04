@@ -2,12 +2,28 @@ $('.menu-mobile i').click(function () {
     $('.nav-mobile').slideToggle();
 })
 
-$(window).resize(function () {
-    if ($(window).width < 900) {
-        $('.nav-mobile, .menu-mobile').css('display', 'none')
-        $('.nav').css('display', 'flex')
+// $(window).resize(function () {
+//     if ($(window).width < 900) {
+//         $('.nav-mobile, .menu-mobile').css('display', 'none')
+//         $('.nav').css('display', 'flex')
+//     } else {
+//         $('.menu-mobile').css('display', 'block')
+//         $('.nav').css('display', 'none')
+//     }
+// }) // tentativa de corrigir o bug do menu mobile que aparece no desktop
+window.addEventListener('resize', function(){
+    if (window.innerWidth > 900) {
+        document.querySelector('.nav-mobile').style.display = 'none'
+        document.querySelector('.menu-mobile').style.display = 'none'
+        document.querySelector('.nav').style.display = 'flex'
+        console.log('ok1')
+    } else {
+        document.querySelector('.menu-mobile').style.display = 'block'
+        document.querySelector('.nav').style.display = 'none'
+        console.log('ok2')
     }
-}) // tentativa de corrigir o bug do menu mobile que aparece no desktop
+})
+
 
 // Carrosel do banner
 function proxBan() {
