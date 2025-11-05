@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial;
+    cursor: default;
 }
 
 body {
@@ -22,6 +23,10 @@ body {
     color: white;
     padding: 15px;
     align-items: center;
+}
+
+.header .logo * {
+    cursor: pointer;
 }
 
 .header a.logo {
@@ -54,6 +59,7 @@ body {
 
 .nav a,
 .nav-mobile a {
+    cursor: pointer;
     color: white;
     font-size: larger;
     padding: 5px;
@@ -74,6 +80,7 @@ body {
 }
 
 .menu-mobile {
+    cursor: pointer;
     display: none;
 }
 
@@ -107,6 +114,10 @@ body {
     gap: 15px;
 }
 
+.header .config * {
+    cursor: pointer;
+}
+
 .header .config div {
     height: 40px;
     width: 40px;
@@ -116,6 +127,7 @@ body {
 }
 
 .config .idioma {
+    cursor: pointer;
     background-image: url(../IMG/brasil.jpg);
     background-size: cover;
     /* background-image: url(../IMG/eua.png);
@@ -202,6 +214,10 @@ body {
     align-items: center;
 }
 
+#botoesFundo * {
+    cursor: pointer;
+}
+
 #botoesFundo #btnBanner1 {
     transform: scaleX(-1);
 }
@@ -219,11 +235,13 @@ body {
 }
 
 button a {
+    cursor: pointer;
     text-decoration: none;
     color: white;
 }
 
 #texto button {
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
@@ -510,6 +528,12 @@ button.botao-amarelo a {
     margin-right: auto;
 }
 
+.galery-text a {
+    cursor: pointer;
+    color: #264653;
+    text-decoration: underline;
+}
+
 /* --- Estilos do Componente Slider (Carrossel) --- */
 
 .container-slider {
@@ -559,13 +583,21 @@ button.botao-amarelo a {
 #voltar, #avancar {
     background: none;
     border: none;
-    cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     width: 40px;
     height: 40px;
+}
+
+:is(#voltar, #avancar) * {
+    cursor: pointer;
+}
+
+:is(#voltar, #avancar) img {
+    width: 100%;
+    height: auto;
 }
 
 #voltar {
@@ -716,6 +748,7 @@ footer #parte-1 #cadastro h3 {
 }
 
 footer #parte-1 #cadastro form input {
+    cursor: pointer;
     color: white;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
@@ -732,6 +765,7 @@ footer #parte-1 #cadastro form input:focus {
 }
 
 footer #parte-1 #cadastro form button {
+    cursor: pointer;
     background-color: #ef9c13;
     box-shadow: 0px 9px 18px black;
     border: none;
@@ -764,6 +798,7 @@ footer #parte-1 :is(#isokan, #isokan-2) img {
 }
 
 footer #parte-1 :is(#isokan, #isokan-2) button {
+    cursor: pointer;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     transition: all 0.2s ease-in-out;
@@ -791,6 +826,7 @@ footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div {
 }
 
 footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div * {
+    cursor: pointer;
     transition: all 0.2s ease-in-out;
     max-width: 50px;
     justify-self: center;

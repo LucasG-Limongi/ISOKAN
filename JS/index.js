@@ -16,11 +16,11 @@ window.addEventListener('resize', function(){
         document.querySelector('.nav-mobile').style.display = 'none'
         document.querySelector('.menu-mobile').style.display = 'none'
         document.querySelector('.nav').style.display = 'flex'
-        console.log('ok1')
+        // console.log('ok1')
     } else {
         document.querySelector('.menu-mobile').style.display = 'block'
         document.querySelector('.nav').style.display = 'none'
-        console.log('ok2')
+        // console.log('ok2')
     }
 })
 
