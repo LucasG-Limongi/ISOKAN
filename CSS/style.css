@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial;
+    cursor: default;
 }
 
 body {
@@ -24,12 +25,17 @@ body {
     align-items: center;
 }
 
+.header .logo * {
+    cursor: pointer;
+}
+
 .header a.logo {
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
     gap: 10px;
+    transition: all 0.3s ease;
 }
 
 .header img {
@@ -39,7 +45,6 @@ body {
 
 .header a.logo:hover {
     opacity: 50%;
-    transition: all 0.3s ease;
 }
 
 .nav .en {
@@ -54,20 +59,28 @@ body {
 
 .nav a,
 .nav-mobile a {
+    cursor: pointer;
     color: white;
     font-size: larger;
     padding: 5px;
     margin: 15px;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-mobile .pt-br {
+    display: flex;
+    flex-direction: column;
 }
 
 .nav a:hover,
 .nav-mobile a:hover {
     color: #ffba48;
-    transition: all 0.3s ease-in-out;
+    font-size: xx-large;
 }
 
 .menu-mobile {
+    cursor: pointer;
     display: none;
 }
 
@@ -101,6 +114,10 @@ body {
     gap: 15px;
 }
 
+.header .config * {
+    cursor: pointer;
+}
+
 .header .config div {
     height: 40px;
     width: 40px;
@@ -110,19 +127,38 @@ body {
 }
 
 .config .idioma {
+    cursor: pointer;
     background-image: url(../IMG/brasil.jpg);
     background-size: cover;
     /* background-image: url(../IMG/eua.png);
     background-size: 160%; */
     background-position: center;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.config .idioma:hover {
+    background-color: green;
+    background-image: url(../IMG/eua.png);
+    background-size: 160%;
+    background-position: center;
+    cursor: pointer;
 }
 
 .config .darkmode {
-    background-image: url(../IMG/lua.png);
+    background-image: url(../IMG/darkmode.png);
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.config .darkmode:hover {
+    background-image: url(../IMG/darkmode-branco.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    background-color: black;
 }
 
 /* FIM header config */
@@ -138,22 +174,81 @@ body {
     gap: 0;
 }
 
-.fundo img {
+.fundo {
+    background-repeat: no-repeat;
     width: 100%;
-    height: auto;
+    height: 900px;
+    background-image: url('../IMG/banner1.jpg');
+    background-size: cover;
     display: block;
+    transition: all 0.4s ease-in-out;
+}
+
+.fundo div {
+    margin-top: 447.5px;
+    height: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    background-color: #264653;
+}
+
+#botoesFundo {
+    background-color: #264653;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 5%;
+}
+
+#botoesFundo :is(#btnBanner1, #btnBanner2) {
+    background-color: rgba(196, 57, 2, 0.815);
+    outline: white solid 3px;
+    border-radius: 100%;
+    position: relative;
+    top: -475px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botoesFundo * {
+    cursor: pointer;
+}
+
+#botoesFundo #btnBanner1 {
+    transform: scaleX(-1);
+}
+
+.fundo div div {
+    height: 5px;
+    width: 100%;
+    background-color: gray;
+    opacity: 0.7;
+}
+
+.fundo div .on {
+    background-color: greenyellow;
+    opacity: 0.7;
 }
 
 button a {
+    cursor: pointer;
     text-decoration: none;
     color: white;
+}
+
+#texto button {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 #texto button:hover {
     cursor: pointer;
     opacity: 70%;
     box-shadow: 0px 9px 18px black;
-    transition: all 0.3s ease-in-out;
 }
 
 button.botao-amarelo {
@@ -216,9 +311,10 @@ button.botao-amarelo a {
     color: whitesmoke;
     font-family: "Funnel Display", roboto;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 7rem;
     text-align: center;
     text-align: left;
+    margin-top: -25px;
 }
 
 .about-us #texto {
@@ -227,6 +323,7 @@ button.botao-amarelo a {
     width: 100%;
     height: auto;
     line-height: 24px;
+    font-size: rem;
 }
 
 #imagem {
@@ -290,15 +387,16 @@ button.botao-amarelo a {
 }
 
 .self-evaluation #autoavaliacao #self-evaluation-text #titulo h2 {
-    color: white;
+    color: #264653;
     font-weight: 900;
     font-size: xxx-large;
     text-align: center;
     margin-bottom: -15px;
+    font-family: 'Funnel Display', roboto;
 }
 
 .self-evaluation #autoavaliacao #self-evaluation-text #titulo p {
-    color: #264653;
+    color: white;
     font-weight: 900;
     font-size: x-large;
     text-align: center;
@@ -310,6 +408,17 @@ button.botao-amarelo a {
     font-weight: 400;
     font-size: large;
 }
+
+#self-evaluation-text #texto button.botao-azul a {
+    color: #e9c46a;
+    
+}
+
+#self-evaluation-text #texto button.botao-azul {
+    margin-left: 45%;
+}
+
+
 
 /* FIM section self-evaluation */
 
@@ -401,7 +510,7 @@ button.botao-amarelo a {
 }
 
 .galery ul {
-    list-style-type: disc;
+    list-style-type: none;
     color: #071a22;
     font-size: 300%;
     font-weight: bold;
@@ -417,6 +526,12 @@ button.botao-amarelo a {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.galery-text a {
+    cursor: pointer;
+    color: #264653;
+    text-decoration: underline;
 }
 
 /* --- Estilos do Componente Slider (Carrossel) --- */
@@ -468,13 +583,21 @@ button.botao-amarelo a {
 #voltar, #avancar {
     background: none;
     border: none;
-    cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     width: 40px;
     height: 40px;
+}
+
+:is(#voltar, #avancar) * {
+    cursor: pointer;
+}
+
+:is(#voltar, #avancar) img {
+    width: 100%;
+    height: auto;
 }
 
 #voltar {
@@ -620,55 +743,105 @@ footer #parte-1 div {
     flex-direction: column;
 }
 
+footer #parte-1 #cadastro h3 {
+    font-size: x-large;
+}
+
 footer #parte-1 #cadastro form input {
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
     outline: rgba(100, 100, 100, 0.7) solid 1px;
+    border-radius: 5px;
+    padding: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+footer #parte-1 #cadastro form input:focus {
+    background-color: #ef9c13;
+    color: black;
+    outline: rgba(38, 70, 83, 0.7) solid 3px;
 }
 
 footer #parte-1 #cadastro form button {
+    cursor: pointer;
     background-color: #ef9c13;
     box-shadow: 0px 9px 18px black;
     border: none;
     padding: 10px 20px;
     color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 
 footer #parte-1 #cadastro form button:hover {
     opacity: 0.5;
-    transition: all 0.3s ease-in-out;
 }
 
 footer #cadastroIndex {
     border-radius: 10px;
 }
 
-footer #parte-1 #isokan {
+footer #parte-1 :is(#isokan, #isokan-2) {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-footer #parte-1 #isokan button {
+footer #parte-1 #isokan-2 {
+    display: none;
+}
+
+footer #parte-1 :is(#isokan, #isokan-2) img {
+    height: 50%;
+}
+
+footer #parte-1 :is(#isokan, #isokan-2) button {
+    cursor: pointer;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
+    transition: all 0.2s ease-in-out;
 }
 
-footer #parte-1 #isokan button:hover {
-    border-top: 2px solid black;
+footer #parte-1 :is(#isokan, #isokan-2) button:hover {
+    /* border-top: 2px solid black;
     border-bottom: 2px solid black;
-    color: black;
+    color: black; */
+    opacity: 0.5;
 }
 
-footer #parte-1 #redes-sociais div {
+/* footer #parte-1 :is(#redes-sociais, #redes-sociais-2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 50px;
+    gap: 10px;
 }
 
-footer #parte-1 #redes-sociais div *:hover {
-    opacity: 0.7;
+footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div * {
+    cursor: pointer;
     transition: all 0.2s ease-in-out;
+    max-width: 50px;
+    justify-self: center;
+}
+
+footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div *:hover {
+    opacity: 0.7;
+}
+
+footer #parte-1 :is(#redes-sociais, #redes-sociais-2) {
+    font-size: x-large;
+}
+
+footer #parte-1 #redes-sociais-2 {
+    display: none;
 }
 
 footer #parte-2 {
@@ -676,4 +849,19 @@ footer #parte-2 {
     background-color: #ef9c13;
     color: black;
     padding: 5px 0;
+}
+
+@media screen and (max-width: 900px) {
+    footer #parte-1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    footer #parte-1 :is(#isokan-2, #redes-sociais-2) {
+        display: flex;
+    }
+
+    footer #parte-1 :is(#isokan, #redes-sociais) {
+        display: none;
+    }
 }
