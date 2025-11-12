@@ -128,7 +128,8 @@ body {
 
 .config .idioma {
     cursor: pointer;
-    background-image: url(/ISOKAN/IMG/brasil.jpg);
+    /* background-image: url(/ISOKAN/IMG/brasil.jpg); */
+    background-image: url('../IMG/brasil.jpg');
     background-size: cover;
     /* background-image: url(../IMG/eua.png);
     background-size: 160%; */
@@ -139,14 +140,16 @@ body {
 
 .config .idioma:hover {
     background-color: green;
-    background-image: url(/ISOKAN/IMG/eua.png);
+    /* background-image: url(/ISOKAN/IMG/eua.png); */
+    background-image: url('../IMG/eua.png');
     background-size: 160%;
     background-position: center;
     cursor: pointer;
 }
 
 .config .darkmode {
-    background-image: url(/ISOKAN/IMG/darkmode.png);
+    /* background-image: url(/ISOKAN/IMG/darkmode.png); */
+    background-image: url('../IMG/darkmode.png');
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -154,7 +157,8 @@ body {
 }
 
 .config .darkmode:hover {
-    background-image: url(/ISOKAN/IMG/darkmode-branco.png);
+    /* background-image: url(/ISOKAN/IMG/darkmode-branco.png); */
+    background-image: url('../IMG/darkmode-branco.png');
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -178,7 +182,8 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     height: 900px;
-    background-image: url('/ISOKAN/IMG/banner1.jpg');
+    /* background-image: url('/ISOKAN/IMG/banner1.jpg'); */
+    background-image: url('../IMG/banner1.jpg');
     background-size: cover;
     display: block;
     transition: all 0.4s ease-in-out;
@@ -194,11 +199,12 @@ body {
 }
 
 #botoesFundo {
+    height: 0;
     background-color: #264653;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 5px 5%;
+    padding: 0 5%;
 }
 
 #botoesFundo :is(#btnBanner1, #btnBanner2) {
@@ -343,7 +349,7 @@ button.botao-amarelo a {
     padding: 5%;
     gap: 25px;
     align-items: center;
-    background-color: #eba743;
+    background-color: #e9c46a;
     margin-top: -5px;
 }
 
@@ -376,7 +382,7 @@ button.botao-amarelo a {
 /* INICIO section self-evaluation */
 
 .self-evaluation {
-    background-color: #e9c46a;
+    background-color: #264653;
 }
 
 .self-evaluation #autoavaliacao #self-evaluation-text  {
@@ -387,7 +393,7 @@ button.botao-amarelo a {
 }
 
 .self-evaluation #autoavaliacao #self-evaluation-text #titulo h2 {
-    color: #264653;
+    color: #ef9c13;
     font-weight: 900;
     font-size: xxx-large;
     text-align: center;
@@ -436,14 +442,14 @@ button.botao-amarelo a {
 .wave-container.yellow::before {
     content: "";
     width: 100%;
-    height: 87px;
+    height: 130px;
     position: absolute;
     bottom: -0.3%;
     left: 0;
     background-size: auto;
     background-repeat: repeat no-repeat;
-    background-position: 42vw bottom;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  117' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 86L50 81C100 76 200 65 300 44C400 23 500 -9 600 2C700 12 800 65 900 86C1000 107 1100 97 1150 91L1200 86V118H1150C1100 118 1000 118 900 118C800 118 700 118 600 118C500 118 400 118 300 118C200 118 100 118 50 118H0V86Z' fill='%23eba743'/></svg>");
+    background-position: 20vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23e9c46a'/></svg>");
 }
 
 .wave-container.blue::before {
@@ -460,20 +466,49 @@ button.botao-amarelo a {
     background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23264653'/></svg>"); */
     content: "";
     width: 100%;
-    height: 87px;
+    height: 130px;
     position: absolute;
     bottom: -0.3%;
     left: 0;
     background-size: auto;
     background-repeat: repeat no-repeat;
     background-position: 20vw bottom;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23e9c46a'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23264653'/></svg>");
+}
+
+.wave-container.dark-blue::before {
+    content: "";
+    width: 100%;
+    height: 130px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 20vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23071a22'/></svg>");
 }
 
 @media(max-width:850px) {
     .wave-container::before {
         height: 43.5px
     }
+}
+
+#parallax {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../IMG/banner3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 500%;
+    color: white;
+    -webkit-text-stroke: 3px black;
 }
 
 
@@ -536,7 +571,7 @@ button.botao-amarelo a {
 
 /* --- Estilos do Componente Slider (Carrossel) --- */
 
-.container-slider {
+.container-slider, .container-slider1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -546,20 +581,20 @@ button.botao-amarelo a {
     gap: 10px;
 }
 
-.slider-viewport {
+.slider-viewport, .slider-viewport1 {
     overflow: hidden;
     width: 90%;
     margin: 0 auto;
     position: relative;
 }
 
-.slider-track {
+.slider-track, .slider-track1 {
     display: flex;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
 }
 
-.slider {
+.slider, .slider1 {
     display: flex;
     flex: 0 0 calc(33.333% - 1rem);
     box-sizing: border-box;
@@ -572,7 +607,7 @@ button.botao-amarelo a {
     padding: 15px;
 }
 
-.slider img {
+.slider img, .slider1 img{
     /* width: 100%;
     height: 400px; */
     object-fit: contain;

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/resenhas.css">
+    <title>ISOKAN</title>
+</head>
+
+<body>
+
+    <!-- Plano de Fundo -->
+    <img src="" alt="">
+
+    <header class="header">
+        <a class="logo" href="./index.html">
+            <img src="./IMG/logo.png">
+            <img src="./IMG/isokan-branco.png">
+        </a>
+        <div class="menu-mobile">
+            <i class="material-icons">menu</i>
+        </div>
+        <div class="nav-mobile">
+            <div class="pt-br">
+                <a href="./index.html">Início</a>
+                <hr>
+                <a href="./about-us.html">Sobre nós</a>
+                <hr>
+                <a href="./galery.html">Galeria</a>
+                <hr>
+                <!-- <a href="./contacts.html">Contatos</a> -->
+                <a href="./resenhas.html">Resenhas</a>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="pt-br">
+                <a href="./index.html">Início</a>
+                <a href="./about-us.html">Sobre nós</a>
+                <a href="./galery.html">Galeria</a>
+                <!-- <a href="./contacts.html">Contatos</a> -->
+                <a href="./resenhas.html">Resenhas</a>
+            </div>
+        </nav>
+        <div class="config">
+            <div class="idioma">
+                <img src="">
+            </div>
+            <!-- <div class="darkmode">
+                <img src="">
+            </div> -->
+        </div>
+    </header>
+
+    <h1 class="titulo-pagina">Resenhas</h1>
+    <br>
+    <h4 class="deixe-resenha">Deixe sua resenha:</h4>
+    <br>
+    <div class="container-inputs">
+        <div class="input">
+            <input type="text" id="titulo-resenha" class="titulo-resenha-classe" placeholder="Título">
+        </div>
+
+        <div class="input">
+            <input type="text" id="nome-autor" class="autor-resenha-classe" placeholder="Autor">
+        </div>
+
+        <div class="input">
+            <input type="text" id="texto-resenha" class="texto-resenha-classe" placeholder="Texto">
+        </div>
+
+        <div class="botao-enviar-resenha">
+            <button onclick="enviarResenha()" class="botao">
+                Enviar resenha
+            </button>
+        </div>
+    </div>
+    <div class="container-externo-card">
+        <div class="containerResenhaFicticia">
+            <div class="estilo-card-ficticio">
+                <h3 class="titulo-card-ficticio">Título da Resenha</h3>
+                <p class="autor-card-ficticio">Nome do Autor</p>
+                <p class="texto-card-ficticio">Texto da Resenha</p>
+            </div>
+        </div>
+
+        <div class="containerResenhaFicticia">
+            <div class="estilo-card-ficticio">
+                <h3 class="titulo-card-ficticio">Título da Resenha</h3>
+                <p class="autor-card-ficticio">Nome do Autor</p>
+                <p class="texto-card-ficticio">Texto da Resenha</p>
+            </div>
+        </div>
+
+        <div class="containerResenhaFicticia">
+            <div class="estilo-card-ficticio">
+                <h3 class="titulo-card-ficticio">Título da Resenha</h3>
+                <p class="autor-card-ficticio">Nome do Autor</p>
+                <p class="texto-card-ficticio">Texto da Resenha</p>
+            </div>
+        </div>
+
+        
+        <div id="containerResenha">
+            <div class="estilo-card">
+                <h3 class="titulo-card">Título da Resenha</h3>
+                <p class="autor-card">Nome do Autor</p>
+                <p class="texto-card">Texto da Resenha</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+           
+            
+
+
+            <!-- <div class="wave-container dark-blue" style="background-color: #264653;"></div>                                                                                     -->
+      <!-- <footer>
+        <div id="parte-1-pai">
+            <div id="parte-1">
+                <div id="isokan-2">
+                    <img src="./IMG/tecendo laços branco.png" alt="Logo ISOKAN">
+                    <button>Política de privacidade</button>
+                </div>
+                <div id="redes-sociais-2">
+                    <h3>Nossos contatos e redes sociais</h3>
+                    <div>
+                        <a href="#"><img src="./IMG/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="./IMG/instagram-branco.png" alt="Instagram"></a>
+                        <a href="#"><img src="./IMG/whatsapp-branco (3).png" alt="Whatsapp"></a>
+                        <a href="#"><img src="./IMG/youtube-branco.png" alt="Youtube"></a>
+                        <a href="#"><img src="./IMG/email-branco (2).png" alt="Email"></a>
+                        <a href="#"><img src="./IMG/tiktok-branco.png" alt="TikTok"></a>
+                    </div>
+                </div>
+                <div id="cadastro">
+                    <h3>Faça parte da nossa história</h3>
+                    <form action="">
+                        <label for="name">Nome:</label><br>
+                        <input type="text"><br><br>
+                        <label for="name">E-mail:</label><br>
+                        <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br><br>
+                        <button type="submit" id="cadastroIndex">Cadastre-se</button>
+                    </form>
+                </div>
+                <div id="isokan">
+                    <img src="./IMG/tecendo laços branco.png" alt="Logo ISOKAN">
+                    <button>Política de privacidade</button>
+                </div>
+                <div id="redes-sociais">
+                    <h3>Contate-nos ou nos acompanhe pelas redes sociais</h3>
+                    <div>
+                        <a href="#"><img src="./IMG/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="./IMG/instagram-branco.png" alt="Instagram"></a>
+                        <a href="#"><img src="./IMG/whatsapp-branco (3).png" alt="Whatsapp"></a>
+                        <a href="#"><img src="./IMG/youtube-branco.png" alt="Youtube"></a>
+                        <a href="#"><img src="./IMG/email-branco (2).png" alt="Email"></a>
+                        <a href="#"><img src="./IMG/tiktok-branco.png" alt="TikTok"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="parte-2">
+            <p>&copy; 2025 ISOKAN. Todos os direitos reservados.</p>
+        </div>
+    </footer> -->
+            <script src="./JS/resenhas.js"></script>
+</body>
+
+</html>
