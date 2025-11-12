@@ -1,3 +1,7 @@
+body {
+    background-color: #e9c46a;
+}
+
 .titulo-pagina {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -14,6 +18,14 @@
 
 .input {
     margin-bottom: 1.5rem;
+    background-color: #f9fceb;
+}
+
+.resenha {
+    background-color: #f9fceb;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
 }
 
 .container-inputs {
@@ -25,18 +37,15 @@
 }
 
 .titulo-resenha-classe{
-    width: 400px; 
-    background-color: #f3f4f6;
+    width: 400px;
     padding: 0.5rem; 
     border-width: 1px; 
-    border-color: #d1d5db; 
-    border-radius: 0.25rem; 
+    border-color: #d1d5db;
     box-sizing: border-box; 
 }
 
 .autor-resenha-classe{
     width: 400px;
-    background-color: #f3f4f6;
     padding: 0.5rem; 
     border-width: 1px; 
     border-color: #d1d5db; 
@@ -46,7 +55,6 @@
 
 .texto-resenha-classe{
     width: 400px;
-    background-color: #f3f4f6;
     padding: 0.5rem; 
     border-width: 1px; 
     border-color: #d1d5db; 
@@ -60,24 +68,24 @@
 }
 
 .botao {
-    background-color: #ec4899; 
+    background-color: #eba743; 
     padding-top: 0.5rem; 
     padding-bottom: 0.5rem;
     padding-left: 1rem; 
     padding-right: 1rem;
     color: #ffffff; 
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     cursor: pointer; 
     margin-bottom: 1.25rem; 
     transition: background-color 0.2s ease; 
 }
 
 .botao:hover {
-    background-color: #be185d;
+    background-color: #264653 ;
 }
 
 .estilo-card {
-    background-color: #f3f4f6; 
+    background-color: #f9fceb; 
     border-width: 1px; 
     border-color: #d1d5db; 
     border-style: solid;
@@ -86,15 +94,15 @@
     margin-bottom: 1rem; 
     position: relative; 
     display: none; 
-    width: 80%;
+    width: 100%;
 }
 
 .titulo-card {
-    font-size: 1.125rem; 
-  line-height: 1.75rem; 
-  font-weight: 600; 
-  margin-top: 0; 
-  margin-bottom: 0.5rem; 
+    font-size: 1.25rem; 
+    line-height: 1.75rem; 
+    font-weight: 600; 
+    margin-top: 0; 
+    margin-bottom: 0.5rem; 
 }
 
 .autor-card{
@@ -108,25 +116,25 @@
 .container-externo-card {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
 }
 
 .estilo-card-ficticio {
-    background-color: #f3f4f6; 
+    background-color: #f9fceb; 
     border-width: 1px; 
     border-color: #d1d5db; 
     border-style: solid;
     border-radius: 0.25rem; 
-    padding: 1rem; 
+    padding: 1rem;
     margin-bottom: 1rem; 
     position: relative; 
-    width: 80%;
+    width: 100%;
 }
 
 .titulo-card-ficticio {
-    font-size: 1.125rem; 
+    font-size: 1.25rem; 
     line-height: 1.75rem; 
     font-weight: 600; 
     margin-top: 0; 
@@ -139,4 +147,8 @@
 
 .texto-card-ficticio {
     margin-bottom: 1rem;
+}
+
+.containerResenhaFicticia, #containerResenha {
+    width: 80%;
 }

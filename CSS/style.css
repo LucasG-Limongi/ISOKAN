@@ -379,20 +379,20 @@ button.botao-amarelo a {
 
 /* FIM section our-mission */
 
-/* INICIO section self-evaluation */
+/* INICIO section review */
 
-.self-evaluation {
+.review {
     background-color: #264653;
 }
 
-.self-evaluation #autoavaliacao #self-evaluation-text  {
+.review #autoavaliacao #review-text  {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 5%;
 }
 
-.self-evaluation #autoavaliacao #self-evaluation-text #titulo h2 {
+.review #autoavaliacao #review-text #titulo h2 {
     color: #ef9c13;
     font-weight: 900;
     font-size: xxx-large;
@@ -401,7 +401,7 @@ button.botao-amarelo a {
     font-family: 'Funnel Display', roboto;
 }
 
-.self-evaluation #autoavaliacao #self-evaluation-text #titulo p {
+.review #autoavaliacao #review-text #titulo p {
     color: white;
     font-weight: 900;
     font-size: x-large;
@@ -409,24 +409,24 @@ button.botao-amarelo a {
     margin-bottom: 5px;
 }
 
-.self-evaluation #autoavaliacao #self-evaluation-text #texto {
+.review #autoavaliacao #review-text #texto {
     color: black;
     font-weight: 400;
     font-size: large;
 }
 
-#self-evaluation-text #texto button.botao-azul a {
+#review-text #texto button.botao-azul a {
     color: #e9c46a;
     
 }
 
-#self-evaluation-text #texto button.botao-azul {
+#review-text #texto button.botao-azul {
     margin-left: 45%;
 }
 
 
 
-/* FIM section self-evaluation */
+/* FIM section review */
 
 .ondas img {
     width: 100%;

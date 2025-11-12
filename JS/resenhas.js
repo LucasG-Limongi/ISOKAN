@@ -9,7 +9,7 @@ function enviarResenha() {
     let container = document.getElementById("containerResenha")
 
     let card = document.createElement("div")
-    card.classList.add('input')
+    card.classList.add('resenha')
 
     let cardTitulo = document.createElement("h3")
     cardTitulo.classList.add('titulo-resenha-classe')
@@ -17,7 +17,7 @@ function enviarResenha() {
 
     let cardAutor = document.createElement("p")
     cardAutor.classList.add('autor-resenha-classe')
-    cardAutor.innerText = "Por:" + autor
+    cardAutor.innerText = "Por: " + autor
 
     let cardTexto = document.createElement("p")
     cardTexto.classList.add('texto-resenha-classe')
@@ -29,7 +29,7 @@ function enviarResenha() {
     
     container.appendChild(card)
 
-    document.getElementById('titulo').innerText = ''
-    document.getElementById('autor').innerText = ''
-    document.getElementById('texto').innerText = ''
+    document.getElementById('titulo-resenha').value = ''
+    document.getElementById('nome-autor').value = ''
+    document.getElementById('texto-resenha').value = ''
 }
