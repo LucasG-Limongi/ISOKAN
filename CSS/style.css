@@ -182,6 +182,8 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     height: 900px;
+    /* height: 40%;
+    max-height: 900px; */
     /* background-image: url('/ISOKAN/IMG/banner1.jpg'); */
     background-image: url('../IMG/banner1.jpg');
     background-size: cover;
@@ -213,6 +215,7 @@ body {
     border-radius: 100%;
     position: relative;
     top: -475px;
+    /* solução de top responsivo aqui depois */
     width: 50px;
     height: 50px;
     display: flex;
@@ -549,8 +552,7 @@ button.botao-amarelo a {
     color: #071a22;
     font-size: 300%;
     font-weight: bold;
-    text-align: start;
-    margin-left: 70px;
+    text-align: center;
 }
 
 .galery-text {
@@ -561,6 +563,18 @@ button.botao-amarelo a {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 600px) {
+    .galery h2 {
+        font-size: 300%
+    }
+    .galery ul {
+        font-size: 180%;
+    }
+    .galery-text {
+        font-size: 0.8rem;
+    }
 }
 
 .galery-text a {
