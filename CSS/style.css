@@ -14,6 +14,8 @@ body {
 }
 
 .header {
+    position: relative;
+    z-index: 50;
     width: 100%;
     height: 90px;
     background-color: #264653;
@@ -182,8 +184,6 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     height: 900px;
-    /* height: 40%;
-    max-height: 900px; */
     /* background-image: url('/ISOKAN/IMG/banner1.jpg'); */
     background-image: url('../IMG/banner1.jpg');
     background-size: cover;
@@ -294,6 +294,19 @@ button.botao-amarelo a {
     color: #ef9c13;
 }
 
+@media (max-width: 600px) {
+    .fundo {
+        height: 40%;
+        max-height: 900px;
+    }
+    .fundo .barraBanner {
+        margin-top: 100%;
+    }
+    .fundo :not(.barraBanner) {
+        margin-top: -5px;
+    }
+}
+
 /* FIM corpo da pagina */
 
 /* INICIO section about-us */
@@ -332,7 +345,7 @@ button.botao-amarelo a {
     width: 100%;
     height: auto;
     line-height: 24px;
-    font-size: rem;
+    font-size: 1rem;
 }
 
 #imagem {
@@ -340,6 +353,20 @@ button.botao-amarelo a {
     height: auto;
 }
 
+@media (max-width: 600px) {
+    #sobre-nos {
+        grid-template-columns: 1fr;
+    }
+    #sobre-nos :is(#about-usImage, #about-us-text) {
+        width: 100%;
+    }
+    .about-us #titulo {
+        font-size: 4rem;
+    }
+    .about-us #texto {
+        font-size: 1.2rem;
+    }
+}
 /* FIM section about-us */
 
 /* INICIO section our-mission */
@@ -380,6 +407,17 @@ button.botao-amarelo a {
     text-align: justify;
 }
 
+@media (max-width: 600px) {
+    #our-mission-text {
+        flex-direction: column;
+    }
+    #our-mission-text :is(#titulo, #texto) {
+        width: 100%;
+    }
+    .our-mission #texto {
+        font-size: 1.2rem;
+    }
+}
 /* FIM section our-mission */
 
 /* INICIO section review */
@@ -405,7 +443,7 @@ button.botao-amarelo a {
 }
 
 .review #autoavaliacao #review-text #titulo p {
-    color: white;
+    color: #eba743;
     font-weight: 900;
     font-size: x-large;
     text-align: center;
@@ -413,7 +451,8 @@ button.botao-amarelo a {
 }
 
 .review #autoavaliacao #review-text #texto {
-    color: black;
+    text-align: center;
+    color: white;
     font-weight: 400;
     font-size: large;
 }
@@ -501,7 +540,7 @@ button.botao-amarelo a {
 #parallax {
     width: 100%;
     min-height: 100vh;
-    background-image: url('../IMG/banner3.jpg');
+    background-image: url('../IMG/banner5.jpg');
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -511,7 +550,7 @@ button.botao-amarelo a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 500%;
     color: white;
-    -webkit-text-stroke: 3px black;
+    text-shadow: 3px 3px 3px black;
 }
 
 
@@ -519,9 +558,14 @@ button.botao-amarelo a {
     .our-mission #titulo {
         width: 30%;
     }
-
     .our-mission #texto {
         width: 50%;
+    }
+    #parallax {
+        padding: 5%;
+        text-align: left;
+        font-size: 200%;
+        min-height: 50vh;
     }
 }
 
@@ -574,6 +618,9 @@ button.botao-amarelo a {
     }
     .galery-text {
         font-size: 0.8rem;
+    }
+    :is(.slider, .slider1) .descricao-livro p {
+        font-size: 0;
     }
 }
 
@@ -633,7 +680,7 @@ button.botao-amarelo a {
 #voltar, #avancar {
     background: none;
     border: none;
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
@@ -811,7 +858,7 @@ footer #parte-1 {
 
 footer #parte-1 div {
     position: relative;
-    padding: 0 20px;
+    padding: 10px 10px;
     background-color: #071a22;
     height: 100%;
     width: 100%;
@@ -824,6 +871,12 @@ footer #parte-1 div {
 
 footer #parte-1 #cadastro h3 {
     font-size: x-large;
+}
+
+footer #parte-1 #cadastro form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer #parte-1 #cadastro form input {
@@ -916,6 +969,7 @@ footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div *:hover {
 }
 
 footer #parte-1 :is(#redes-sociais, #redes-sociais-2) {
+    text-align: center;
     font-size: x-large;
 }
 
@@ -942,6 +996,20 @@ footer #parte-2 {
 
     footer #parte-1 :is(#isokan, #redes-sociais) {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    footer #parte-1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 6fr 4fr 6fr;
+    }
+    footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    }
+    footer #parte-1 :is(#redes-sociais, #redes-sociais-2) div a img {
+        width: 30px;
     }
 }
 

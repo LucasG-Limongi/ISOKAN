@@ -2,6 +2,29 @@ $('.menu-mobile i').click(function () {
     $('.nav-mobile').slideToggle();
 })
 
+// #botoesFundo :is(#btnBanner1, #btnBanner2)
+window.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('btnBanner1').style.top = (document.querySelector('.fundo').offsetHeight / 2 * -1) + "px";
+    document.getElementById('btnBanner1').style.transform = 'translateY(-50%) scaleX(-1)'
+    document.getElementById('btnBanner2').style.top = (document.querySelector('.fundo').offsetHeight / 2 * -1) + "px";
+    document.getElementById('btnBanner2').style.transform = 'translateY(-50%)'
+})
+
+window.addEventListener('resize', function(){
+    document.getElementById('btnBanner1').style.top = (document.querySelector('.fundo').offsetHeight / 2 * -1) + "px";
+    document.getElementById('btnBanner1').style.transform = 'translateY(-50%) scaleX(-1)'
+    document.getElementById('btnBanner2').style.top = (document.querySelector('.fundo').offsetHeight / 2 * -1) + "px";
+    document.getElementById('btnBanner2').style.transform = 'translateY(-50%)'
+})
+
+window.addEventListener('load', function(){
+    document.getElementById('btnBanner1').style.top = (document.querySelector('.fundo').offsetHeight / 2 * -1) + "px";
+    document.getElementById('btnBanner1').style.transform = 'translateY(-50%) scaleX(-1)'
+    document.getElementById('btnBanner2').style.top = (document.querySelector('.fundo').offsetHeight / 2 * -1) + "px";
+    document.getElementById('btnBanner2').style.transform = 'translateY(-50%)'
+})
+
+
 window.addEventListener('resize', function(){
     if (window.innerWidth > 900) {
         document.querySelector('.nav-mobile').style.display = 'none'
