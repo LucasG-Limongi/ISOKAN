@@ -573,10 +573,11 @@ button.botao-amarelo a {
 
 .container-slider, .container-slider1 {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     position: relative;
     gap: 10px;
 }
@@ -603,7 +604,7 @@ button.botao-amarelo a {
     border-radius: 10px;
     border: solid 2px black;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     padding: 15px;
 }
 
@@ -648,47 +649,6 @@ button.botao-amarelo a {
 #avancar {
     right: -50px;
 }
-
-/* Responsivo */
-@media (max-width: 900px) {
-    .slider {
-        flex: 0 0 calc(50% - 1rem);
-    }
-}
-
-@media (max-width: 600px) {
-    .slider {
-        flex: 0 0 100%;
-        margin: 0;
-    }
-}
-
-/* --- ESTILIZAÇÃO DA DESCRIÇÃO (Melhorada) --- */
-
-.descricao-livro {
-    text-align: left;
-    /* Mais legível para parágrafos */
-}
-
-.descricao-livro h4 {
-    font-family: 'Funnel Display', sans-serif;
-    /* Fonte do título */
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: #264653;
-    /* Cor primária do site */
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-}
-
-.descricao-livro p {
-    font-family: 'Quicksand', sans-serif;
-    color: #333;
-    /* Cor de texto padrão */
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
 
 /* --- Botões do Slider --- */
 
@@ -739,6 +699,76 @@ button.botao-amarelo a {
     border: none;
     cursor: pointer;
     padding: 10px;
+}
+
+/* --- ESTILIZAÇÃO DA DESCRIÇÃO (Melhorada) --- */
+
+.descricao-livro {
+    text-align: left;
+    /* Mais legível para parágrafos */
+}
+
+.descricao-livro h4 {
+    font-family: 'Funnel Display', sans-serif;
+    /* Fonte do título */
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #264653;
+    /* Cor primária do site */
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.descricao-livro p {
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    /* Cor de texto padrão */
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* --- Responsivo --- */
+
+/* @media (max-width: 900px) {
+    .slider {
+        flex: 0 0 calc(50% - 1rem);
+    }
+} */
+
+@media (max-width: 600px) {
+    .container-slider, .container-slider1 {
+        gap: 2px;
+    }
+    .slider *, .slider1 * {
+        /* flex: 0 0 100%;
+        margin: 0; */
+        animation: diminuirFonte 0s ease-in-out;
+    }
+    .slider, .slider1 {
+        gap: 5px;
+        padding: 5px;
+        flex: 0 0 calc(50% - 1rem);
+    }
+    :is(.container-slider, .container-slider1) :is(#voltar, #avancar) {
+        padding: 0;
+        width: 30px;
+        height: 30px;
+    }
+    #voltar {
+        transform: translateX(100%);
+    }
+    #avancar {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes diminuirFonte {
+    from {
+        font-size: 100%;
+    }
+    to {
+        font-size: 80%;
+    }
 }
 
 /* --- ESTILIZAÇÃO DO FOOTER --- */
@@ -898,5 +928,11 @@ footer #parte-2 {
 
     footer #parte-1 :is(#isokan, #redes-sociais) {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    h1, h2, h3 {
+        animation: diminuirFonte 0s ease-in-out;
     }
 }

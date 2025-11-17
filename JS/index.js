@@ -77,7 +77,25 @@ const btnPrev = document.getElementById('voltar');
 const btnNext = document.getElementById('avancar');
 
 let currentIndex = 0;
-const slidesPorVez = 3; // número de slides visíveis
+let slidesPorVez = 3
+document.addEventListener('DOMContentLoaded', () => {
+    if (Number(window.innerWidth) <= 600) {
+        console.log(Number(window.innerWidth))
+        slidesPorVez = 2; // número de slides visíveis
+    } else {
+        console.log(Number(window.innerWidth))
+        slidesPorVez = 3;
+    }
+})
+window.addEventListener('resize', () => {
+    if (Number(window.innerWidth) <= 600) {
+        console.log(Number(window.innerWidth))
+        slidesPorVez = 2;
+    } else {
+        console.log(Number(window.innerWidth))
+        slidesPorVez = 3;
+    }
+})
 const totalSlides = slides.length;
 
 // Função que calcula o deslocamento exato
