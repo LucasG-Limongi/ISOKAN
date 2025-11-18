@@ -540,17 +540,24 @@ button.botao-amarelo a {
 #parallax {
     width: 100%;
     min-height: 100vh;
-    background-image: url('../IMG/banner5.jpg');
+    background-image: url('../IMG/banner3.jpg');
     background-size: cover;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20%;
+    padding: 10%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 500%;
     color: white;
     text-shadow: 3px 3px 3px black;
+    transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    #parallax {
+        background-image: url('../IMG/banner5\ \(completo\).jpg');
+    }
 }
 
 
