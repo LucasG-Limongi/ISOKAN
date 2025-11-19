@@ -7,6 +7,13 @@ body {
     line-height: 2.5rem;
     font-weight: 700;
     text-align: center;
+    font-family: "Funnel Display", roboto;
+}
+
+.introducao-resenhas{
+    text-align: center;
+    justify-content: center;
+    margin: 35px;
 }
 
 .deixe-resenha{
@@ -131,6 +138,7 @@ body {
     margin-bottom: 1rem; 
     position: relative; 
     width: 100%;
+
 }
 
 .titulo-card-ficticio {

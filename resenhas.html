@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/resenhas.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+    </style>
     <title>ISOKAN</title>
 </head>
 
@@ -54,20 +57,21 @@
     </header>
     <main>
         <h1 class="titulo-pagina">Resenhas</h1>
+        <p class="introducao-resenhas">Nessa página você pode conferir resenhas, opiniões, ideias e propostas deixadas por outros usuários! Além disso, você também pode deixar a sua.</p>
         <br>
         <h4 class="deixe-resenha">Deixe sua resenha:</h4>
         <br>
         <div class="container-inputs">
             <div class="input">
-                <input type="text" id="titulo-resenha" class="titulo-resenha-classe" placeholder="Título">
+                <input type="text" id="titulo-resenha" class="titulo-resenha-classe" placeholder="Título da resenha">
             </div>
 
             <div class="input">
-                <input type="text" id="nome-autor" class="autor-resenha-classe" placeholder="Autor">
+                <input type="text" id="nome-autor" class="autor-resenha-classe" placeholder="Seu nome">
             </div>
 
             <div class="input">
-                <input type="text" id="texto-resenha" class="texto-resenha-classe" placeholder="Texto">
+                <input type="text" id="texto-resenha" class="texto-resenha-classe" placeholder="Suas opiniões">
             </div>
 
             <div class="botao-enviar-resenha">
@@ -83,25 +87,25 @@
 
             <div class="containerResenhaFicticia">
                 <div class="estilo-card-ficticio">
-                    <h3 class="titulo-card-ficticio">Título da Resenha</h3>
-                    <p class="autor-card-ficticio">Nome do Autor</p>
-                    <p class="texto-card-ficticio">Texto da Resenha</p>
+                    <h3 class="titulo-card-ficticio">Adorei o site!!!</h3>
+                    <p class="autor-card-ficticio">Por: Alice</p>
+                    <p class="texto-card-ficticio">Gostei muito do objetivo do site. Está tudo muito bem feito e organizado. O layout do site também está incrível. Com certeza voltarei para ver novas atualizações!</p>
                 </div>
             </div>
 
             <div class="containerResenhaFicticia">
                 <div class="estilo-card-ficticio">
-                    <h3 class="titulo-card-ficticio">Título da Resenha</h3>
-                    <p class="autor-card-ficticio">Nome do Autor</p>
-                    <p class="texto-card-ficticio">Texto da Resenha</p>
+                    <h3 class="titulo-card-ficticio">Poderia ser melhor</h3>
+                    <p class="autor-card-ficticio">Por: Anônimo</p>
+                    <p class="texto-card-ficticio">Não achei o conteúdo relevante e não me senti representado.</p>
                 </div>
             </div>
 
             <div class="containerResenhaFicticia">
                 <div class="estilo-card-ficticio">
-                    <h3 class="titulo-card-ficticio">Título da Resenha</h3>
-                    <p class="autor-card-ficticio">Nome do Autor</p>
-                    <p class="texto-card-ficticio">Texto da Resenha</p>
+                    <h3 class="titulo-card-ficticio">Livros</h3>
+                    <p class="autor-card-ficticio">Por: Márcio</p>
+                    <p class="texto-card-ficticio">Já li a maioria dos livros indicados nesse site e são todos muito bons. Ótimas escolhas!
                 </div>
             </div>
 
@@ -115,19 +119,13 @@
 
         </div>
     </main>
-    
 
-
-
-
-
-
-    <!-- <div class="wave-container dark-blue" style="background-color: #264653;"></div>                                                                                     -->
-    <!-- <footer>
+    <footer>
         <div id="parte-1-pai">
             <div id="parte-1">
                 <div id="isokan-2">
                     <img src="./IMG/tecendo laços branco.png" alt="Logo ISOKAN">
+                    <!-- <p>ISOKAN é uma instituição comprometida com a valorização e difusão da cultura africana e afro-brasileira. Nosso trabalho promove educação, conscientização e inclusão social, fortalecendo identidades e conectando pessoas a informações, recursos e iniciativas que celebram a riqueza cultural africana no Brasil.</p> -->
                     <button>Política de privacidade</button>
                 </div>
                 <div id="redes-sociais-2">
@@ -144,15 +142,16 @@
                 <div id="cadastro">
                     <h3>Faça parte da nossa história</h3>
                     <form action="">
-                        <label for="name">Nome:</label><br>
-                        <input type="text"><br><br>
-                        <label for="name">E-mail:</label><br>
-                        <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br><br>
+                        <label for="name">Nome:</label>
+                        <input type="text"><br>
+                        <label for="name">E-mail:</label>
+                        <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
                         <button type="submit" id="cadastroIndex">Cadastre-se</button>
                     </form>
                 </div>
                 <div id="isokan">
                     <img src="./IMG/tecendo laços branco.png" alt="Logo ISOKAN">
+                    <!-- <p>ISOKAN é uma instituição comprometida com a valorização e difusão da cultura africana e afro-brasileira. Nosso trabalho promove educação, conscientização e inclusão social, fortalecendo identidades e conectando pessoas a informações, recursos e iniciativas que celebram a riqueza cultural africana no Brasil.</p> -->
                     <button>Política de privacidade</button>
                 </div>
                 <div id="redes-sociais">
@@ -173,7 +172,15 @@
         <div id="parte-2">
             <p>&copy; 2025 ISOKAN. Todos os direitos reservados.</p>
         </div>
-    </footer> -->
+    </footer>
+    
+
+
+
+
+
+    <script src="./JS/index.js"></script>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
     <script src="./JS/resenhas.js"></script>
 </body>
 
