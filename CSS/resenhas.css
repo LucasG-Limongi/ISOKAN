@@ -1,9 +1,23 @@
 body {
+    background-color: #ef9c13;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-externo-fullpage{
     background-color: #e9c46a;
+    width: auto;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 40px;
+    padding: 20px;
+
 }
 
 .titulo-pagina {
-    font-size: 2.25rem;
+    font-size: 3rem;
     line-height: 2.5rem;
     font-weight: 700;
     text-align: center;
@@ -28,11 +42,30 @@ body {
     background-color: #f9fceb;
 }
 
+.input:hover{
+    box-shadow: 0 4px 8px #264653, 0 0 10px #264653;
+    /* transform: scale(1.05); */
+    transition: all 0.3s ease;
+}
+
 .resenha {
-    background-color: #f9fceb;
-    margin-bottom: 1.5rem;
-    border-radius: 0.5rem;
+    background-color: #f9fceb; 
+    border-width: 1px; 
+    border-color: #d1d5db; 
+    border-style: solid;
+    border-radius: 20px; 
+    padding: 1rem; 
+    margin-bottom: 1rem; 
+    position: relative; 
+    /* display: none;  */
     width: 100%;
+    
+}
+
+.resenha:hover{
+    box-shadow: 0 4px 8px #264653, 0 0 10px #264653;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 .container-inputs {
@@ -96,13 +129,19 @@ body {
     border-width: 1px; 
     border-color: #d1d5db; 
     border-style: solid;
-    border-radius: 0.25rem; 
+    border-radius: 20px; 
     padding: 1rem; 
     margin-bottom: 1rem; 
     position: relative; 
     display: none; 
     width: 100%;
 }
+
+.estilo-card:hover {
+    box-shadow: 0 4px 8px #264653, 0 0 10px #264653;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+} 
 
 .titulo-card {
     font-size: 1.25rem; 
@@ -128,18 +167,26 @@ body {
     align-items: center;
 }
 
+
 .estilo-card-ficticio {
     background-color: #f9fceb; 
     border-width: 1px; 
     border-color: #d1d5db; 
     border-style: solid;
-    border-radius: 0.25rem; 
+    border-radius: 20px; 
     padding: 1rem;
     margin-bottom: 1rem; 
     position: relative; 
     width: 100%;
 
 }
+
+.estilo-card-ficticio:hover{
+    box-shadow: 0 4px 8px #264653, 0 0 10px #264653;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
 
 .titulo-card-ficticio {
     font-size: 1.25rem; 
@@ -158,5 +205,8 @@ body {
 }
 
 .containerResenhaFicticia, #containerResenha {
-    width: 80%;
+    width: 60%;
 }
+
+
+

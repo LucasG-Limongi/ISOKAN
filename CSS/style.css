@@ -458,7 +458,7 @@ button.botao-amarelo a {
 }
 
 #review-text #texto button.botao-azul a {
-    color: #e9c46a;
+    color: #eba743;
     
 }
 
@@ -684,7 +684,7 @@ button.botao-amarelo a {
 }
 
 /* Botões */
-#voltar, #avancar {
+/* #voltar, #avancar {
     background: none;
     border: none;
     position: relative;
@@ -693,9 +693,9 @@ button.botao-amarelo a {
     z-index: 10;
     width: 40px;
     height: 40px;
-}
+} */
 
-:is(#voltar, #avancar) * {
+/* :is(#voltar, #avancar) * {
     cursor: pointer;
 }
 
@@ -712,41 +712,48 @@ button.botao-amarelo a {
     transform: rotate(180deg);
     transform: scaleX(-100%);
     /* seta invertida */
-}
+/* }
 
 #avancar {
     right: -50px;
-}
+} */ */
 
 /* --- Botões do Slider --- */
 
-#voltar,
-#avancar {
+.btn-voltar, .btn-avancar {
+    background: none;
+    border: none;
+    position: relative; /* Ou absolute, dependendo do seu layout container */
+    z-index: 10;
     width: 60px;
     height: 60px;
-    border: none;
-    background-color: transparent;
     cursor: pointer;
-    flex-shrink: 0;
-    padding: 0;
+    padding: 10px;
     transition: opacity 0.3s;
+    flex-shrink: 0; /* Impede o botão de amassar */
 }
 
-#voltar img:hover,
-#avancar img:hover {
+.btn-voltar img, .btn-avancar img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-voltar img:hover,
+.btn-avancar img:hover {
     filter: invert(1);
-    /* Deixa a seta branca */
 }
 
-#voltar {
-    transform: scaleX(1);
+.btn-voltar img {
+    transform: rotate(180deg) scaleX(-100%); /* Sua inversão original */
 }
 
-/* Estilo para botões desativados */
-#voltar:disabled,
-#avancar:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
+/* Responsivo */
+@media (max-width: 600px) {
+    .btn-voltar, .btn-avancar {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+    }
 }
 
 /* Animação de Fade */
@@ -761,13 +768,7 @@ button.botao-amarelo a {
 }
 
 /* Estilo dos botões */
-#voltar,
-#avancar {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
+
 
 /* --- ESTILIZAÇÃO DA DESCRIÇÃO (Melhorada) --- */
 
@@ -836,6 +837,117 @@ button.botao-amarelo a {
     }
     to {
         font-size: 80%;
+    }
+}
+
+/* --- ESTILOS DO MODAL --- */
+
+/* Torna o slider clicável visualmente */
+.slider, .slider1 {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.slider:hover {
+    transform: scale(1.02); /* Pequeno efeito de zoom ao passar o mouse */
+}
+
+/* Fundo escuro do modal */
+.modal-container {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 9999; /* Fica na frente de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto transparente */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Desfoque no fundo */
+}
+
+/* Conteúdo do modal (caixa branca) */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Centraliza verticalmente dependendo da tela */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Layout interno do modal */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.modal-body img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-info h3 {
+    font-family: 'Funnel Display', sans-serif;
+    color: #264653;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.modal-info p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Botão de fechar (X) */
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsivo do Modal */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+    .modal-info h3 {
+        font-size: 1.5rem;
+    }
+    .modal-info p {
+        font-size: 0.9rem;
     }
 }
 
