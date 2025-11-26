@@ -317,8 +317,8 @@ button.botao-amarelo a {
     font-weight: bold;
 }
 
-.titulo {
-    padding: ;
+.quem-somos-nos {
+    display: flex;
 }
 
 /*Fim Seção quem somos nós*/

@@ -55,7 +55,7 @@ function proxBan() {
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.add('on')
         // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner1.jpg')"
         // document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner1.jpg')"
-        document.querySelector('.fundo').style.backgroundImage = "url('../img1/banner1.jpg')"
+        document.querySelector('.fundo').style.backgroundImage = "url('banner1.jpg')"
         document.querySelector('.fundo').style.backgroundPositionY = '0'
         // document.getElementById('banner').setAttribute('src', './IMG/banner1.jpg')
     }
