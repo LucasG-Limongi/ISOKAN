@@ -540,7 +540,7 @@ button.botao-amarelo a {
 #parallax {
     width: 100%;
     min-height: 100vh;
-    background-image: url('../IMG/banner3.jpg');
+    background-image: url('../IMG/banner2.jpg');
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -683,41 +683,6 @@ button.botao-amarelo a {
     margin-bottom: 1rem;
 }
 
-/* Botões */
-/* #voltar, #avancar {
-    background: none;
-    border: none;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-} */
-
-/* :is(#voltar, #avancar) * {
-    cursor: pointer;
-}
-
-:is(#voltar, #avancar) img {
-    width: 100%;
-    height: auto;
-}
-
-#voltar {
-    left: -50px;
-}
-
-#voltar img {
-    transform: rotate(180deg);
-    transform: scaleX(-100%);
-    /* seta invertida */
-/* }
-
-#avancar {
-    right: -50px;
-} */ */
-
 /* --- Botões do Slider --- */
 
 .btn-voltar, .btn-avancar {
@@ -849,7 +814,8 @@ button.botao-amarelo a {
 }
 
 .slider:hover {
-    transform: scale(1.02); /* Pequeno efeito de zoom ao passar o mouse */
+    transform: scale(1); /* Pequeno efeito de zoom ao passar o mouse */
+    border-radius: 4%;
 }
 
 /* Fundo escuro do modal */
@@ -1137,3 +1103,5 @@ footer #parte-2 {
         animation: diminuirFonte 0s ease-in-out;
     }
 }
+
+
