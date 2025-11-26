@@ -151,7 +151,7 @@ main {
     margin-bottom: 0.5rem; 
 }
 
-.autor-card{
+.estilo-card .autor-card{
     margin-bottom: 1rem;
     font-size: 0.8rem;
 }
@@ -210,5 +210,44 @@ main {
     width: 60%;
 }
 
+
+.label-estrelas {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.container-estrelas {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.estrela {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #d1d5db;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.estrela:hover {
+    transform: scale(1.2);
+}
+
+.estrela.ativa {
+    color: #fbbf24;
+}
+
+.estrela.selecionada {
+    color: #f59e0b;
+}
+
+.estrelas-card {
+    color: #f59e0b;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
 
 

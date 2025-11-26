@@ -71,9 +71,21 @@
             <h4 class="deixe-resenha">Deixe sua resenha:</h4>
             <br>
             <div class="container-inputs">
-                <div class="input">
+                <!-- <div class="input">
                     <input type="text" id="titulo-resenha" class="titulo-resenha-classe"
                         placeholder="Título da resenha">
+                </div> -->
+
+                <div class="input">
+                    <label class="label-estrelas titulo-resenha-classe">Avalie nosso site com estrelas:</label>
+                    <div class="container-estrelas">
+                        <span class="estrela" data-valor="1">★</span>
+                        <span class="estrela" data-valor="2">★</span>
+                        <span class="estrela" data-valor="3">★</span>
+                        <span class="estrela" data-valor="4">★</span>
+                        <span class="estrela" data-valor="5">★</span>
+                    </div>
+                    <input type="hidden" id="avaliacao-estrelas" value="0">
                 </div>
 
                 <div class="input">
@@ -99,35 +111,43 @@
             <h4 class="deixe-resenha">Confira as resenhas anteriores:</h4>
             <br>
             <div class="container-externo-card">
+                
+                <div class="containerResenhaFicticia">
+                    <div class="estilo-card-ficticio">
+                        <div class="estrelas-card">★★★☆☆</div>
+                        <p class="texto-card-ficticio">Gostei do site, porém achei que falta conteúdo!</p>
+                        <p class="autor-card-ficticio">Maria Luíza, 21/12/2024</p>
+                    </div>
+                </div>
 
                 <div class="containerResenhaFicticia">
                     <div class="estilo-card-ficticio">
-                        <h3 class="titulo-card-ficticio">Adorei o site!!!</h3>
+                        <div class="estrelas-card">★★★★★</div>
                         <p class="texto-card-ficticio">Gostei muito do objetivo do site. Está tudo muito bem feito e
                             organizado. O layout do site também está incrível. Com certeza voltarei para ver novas
                             atualizações!</p>
                         <p class="autor-card-ficticio">Alice, 10/02/2025</p>
                     </div>
                 </div>
-
+            
                 <div class="containerResenhaFicticia">
                     <div class="estilo-card-ficticio">
-                        <h3 class="titulo-card-ficticio">Conteúdo ruim</h3>
+                        <div class="estrelas-card">☆☆☆☆☆</div>
                         <p class="texto-card-ficticio">Não achei o conteúdo relevante e não me senti representado.</p>
                         <p class="autor-card-ficticio">Anônimo, 13/04/2025</p>
                     </div>
                 </div>
-
+            
                 <div class="containerResenhaFicticia">
                     <div class="estilo-card-ficticio">
-                        <h3 class="titulo-card-ficticio">Livros</h3>
+                        <div class="estrelas-card">★★★★☆</div>
                         <p class="texto-card-ficticio">Já li a maioria dos livros indicados nesse site e são todos muito
                             bons. Ótimas escolhas! </p>
                         <p class="autor-card-ficticio">Márcio, 29/08/2025</p>
                     </div>
-
+            
                 </div>
-
+            
                 <div id="containerResenha">
                     <div class="estilo-card">
                         <h3 class="titulo-card">Título da Resenha</h3>
@@ -135,7 +155,7 @@
                         <p class="autor-card">Nome do Autor</p>
                     </div>
                 </div>
-
+            
             </div>
         </div>
     </main>

@@ -1,333 +1,42 @@
-/* INICIO estilo universal */
-* {
-    margin: 4px;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial;
-    cursor: default;
-}
+/*Seção quem somos nós*/
 
-body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #264653;
-    color: white;
-}
-
-.header {
-    position: relative;
-    z-index: 50;
-    width: 100%;
-    height: 90px;
-    background-color: #264653;
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    color: white;
-    padding: 15px;
-    align-items: center;
-}
-
-.header .logo * {
-    cursor: pointer;
-}
-
-.header a.logo {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    gap: 10px;
-    transition: all 0.3s ease;
-}
-
-.header img {
-    height: 40px;
-    width: auto;
-}
-
-.header a.logo:hover {
-    opacity: 50%;
-}
-
-.nav .en {
-    display: none;
-}
-
-.nav .pt-br {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav a,
-.nav-mobile a {
-    cursor: pointer;
-    color: white;
-    font-size: larger;
-    padding: 5px;
-    margin: 15px;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-}
-
-.nav-mobile .pt-br {
-    display: flex;
-    flex-direction: column;
-}
-
-.nav a:hover,
-.nav-mobile a:hover {
-    color: #ffba48;
-    font-size: xx-large;
-}
-
-.menu-mobile {
-    cursor: pointer;
-    display: none;
-}
-
-.nav-mobile {
-    background-color: #264653;
-    display: none;
-    position: absolute;
-    top: 90px;
-    width: 100%;
-    right: 0;
-    text-align: center;
-}
-
-@media screen and (max-width: 900px) {
-    nav {
-        display: none;
-    }
-
-    .menu-mobile {
-        display: block;
-    }
-}
-
-/* FIM estilo universal */
-
-/* INICIO header config */
-.header div.config {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.header .config * {
-    cursor: pointer;
-}
-
-.header .config div {
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-    background-color: white;
-    outline: solid 2px black;
-}
-
-.config .idioma {
-    cursor: pointer;
-    /* background-image: url(/ISOKAN/IMG/brasil.jpg); */
-    background-image: url('../IMG/brasil.jpg');
-    background-size: cover;
-    /* background-image: url(../IMG/eua.png);
-    background-size: 160%; */
-    background-position: center;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-}
-
-.config .idioma:hover {
-    background-color: green;
-    /* background-image: url(/ISOKAN/IMG/eua.png); */
-    background-image: url('../IMG/eua.png');
-    background-size: 160%;
-    background-position: center;
-    cursor: pointer;
-}
-
-.config .darkmode {
-    /* background-image: url(/ISOKAN/IMG/darkmode.png); */
-    background-image: url('../IMG/darkmode.png');
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-}
-
-.config .darkmode:hover {
-    /* background-image: url(/ISOKAN/IMG/darkmode-branco.png); */
-    background-image: url('../IMG/darkmode-branco.png');
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    background-color: black;
-}
-
-/* FIM header config */
-
-/* INICIO corpo da pagina */
-.corpo {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: none;
-    gap: 0;
-}
-
-.fundo {
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 900px;
-    /* background-image: url('/ISOKAN/IMG/banner1.jpg'); */
-    background-image: url('../IMG/banner1.jpg');
-    background-size: cover;
-    display: block;
-    transition: all 0.4s ease-in-out;
-}
-
-.fundo div {
-    margin-top: 447.5px;
-    height: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
-    background-color: #264653;
-}
-
-#botoesFundo {
-    height: 0;
-    background-color: #264653;
+.quem-somos-nos {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0 5%;
+    gap: 20px;
+
 }
 
-#botoesFundo :is(#btnBanner1, #btnBanner2) {
-    background-color: rgba(196, 57, 2, 0.815);
-    outline: white solid 3px;
-    border-radius: 100%;
-    position: relative;
-    top: -475px;
-    /* solução de top responsivo aqui depois */
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.quem-somos-nos .container-conteudo {
+    flex: 1;
 }
 
-#botoesFundo * {
-    cursor: pointer;
+.quem-somos-nos .container-imagens {
+    display: grid;
+    grid-template-columns: repeat(10, 5%);
+    grid-template-rows: repeat(20, 5%);
 }
 
-#botoesFundo #btnBanner1 {
-    transform: scaleX(-1);
+.quem-somos-nos .container-imagens #imagem-maior {
+    grid-column: 1 / 8;
+    grid-row: 4 / 9;
 }
 
-.fundo div div {
-    height: 5px;
-    width: 100%;
-    background-color: gray;
-    opacity: 0.7;
+.quem-somos-nos .container-imagens #imagem-menor {
+    grid-column: 5 / 11;
+    grid-row: 14 / 21;
 }
-
-.fundo div .on {
-    background-color: greenyellow;
-    opacity: 0.7;
-}
-
-button a {
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-}
-
-#texto button {
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-#texto button:hover {
-    cursor: pointer;
-    opacity: 70%;
-    box-shadow: 0px 9px 18px black;
-}
-
-button.botao-amarelo {
-    background-color: #eba743;
-}
-
-button.botao-amarelo a {
-    color: black;
-}
-
-.botao-azul {
-    background-color: #264653;
-}
-
-#texto .botao-amarelo:hover {
-    color: #264653;
-}
-
-#texto .botao-amarelo:hover {
-    color: #eba743;
-}
-
-#texto button.saiba-mais {
-    font-size: larger;
-    font-weight: bold;
-    border-radius: 25px;
-    box-shadow: 0px 8px 16px black;
-    width: 130px;
-    height: 40px;
-    margin: 40px;
-}
-
-#our-mission-text #texto button.botao-azul a {
-    color: #ef9c13;
-}
-
-@media (max-width: 600px) {
-    .fundo {
-        height: 40%;
-        max-height: 900px;
-    }
-    .fundo .barraBanner {
-        margin-top: 100%;
-    }
-    .fundo :not(.barraBanner) {
-        margin-top: -5px;
-    }
-}
-/* FIM corpo da pagina */
-
-/*Seção quem somos nós*/
 
 .sobre-nos h1 {
     font-size: 600%;
     font-weight: bold;
 }
 
-.quem-somos-nos {
-    display: flex;
-}
-
 .sobre-nos p {
     font-size: 2rem;
 }
 
-.conteudo {
-    
-}
+
 
 /*Fim Seção quem somos nós*/
 
