@@ -744,7 +744,7 @@ button.botao-amarelo a {
 }
 
 .btn-voltar img {
-    transform: rotate(180deg) scaleX(-100%); /* Sua inversão original */
+    transform: scaleX(-100%); /* Sua inversão original */
 }
 
 /* Responsivo */
