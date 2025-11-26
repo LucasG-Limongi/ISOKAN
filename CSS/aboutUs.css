@@ -312,7 +312,14 @@ button.botao-amarelo a {
 
 /*Seção quem somos nós*/
 
+.sobre-nos h1 {
+    font-size: 600%;
+    font-weight: bold;
+}
 
+.titulo {
+    padding: ;
+}
 
 /*Fim Seção quem somos nós*/
 
