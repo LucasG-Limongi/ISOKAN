@@ -2,6 +2,7 @@ function enviarResenha() {
     let titulo = document.getElementById("titulo-resenha").value
     let autor = document.getElementById("nome-autor").value
     let texto = document.getElementById("texto-resenha").value
+    // let data = document.getElementById("data-resenha").value
 
 
     if (titulo == '' || autor == '' || texto == '') return
@@ -17,7 +18,7 @@ function enviarResenha() {
 
     let cardAutor = document.createElement("p")
     cardAutor.classList.add('autor-resenha-classe')
-    cardAutor.innerText = "Por: " + autor
+    cardAutor.innerText = "Por: " + autor 
 
     let cardTexto = document.createElement("p")
     cardTexto.classList.add('texto-resenha-classe')

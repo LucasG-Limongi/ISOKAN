@@ -1,7 +1,3 @@
-$('.menu-mobile i').click(function () {
-    $('.nav-mobile').slideToggle();
-})
-
 // #botoesFundo :is(#btnBanner1, #btnBanner2)
 window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnBanner1').style.top = (document.querySelector('.fundo').offsetHeight / 2 * -1) + "px";

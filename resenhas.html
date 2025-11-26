@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/resenhas.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="./IMG/logo-contraste.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
     </style>
     <title>ISOKAN</title>
 </head>
@@ -59,13 +65,14 @@
         <div class="container-externo-fullpage">
             <h1 class="titulo-pagina">Resenhas</h1>
             <p class="introducao-resenhas">Nessa página você pode conferir resenhas, opiniões, ideias e propostas
-                deixadas por outros usuários após conhecerem nosso acervo digital! Além disso, você também pode deixar a sua.</p>
+                deixadas por outros usuários após conhecerem nosso acervo digital! Além disso, você também pode deixar a
+                sua.</p>
             <br>
             <h4 class="deixe-resenha">Deixe sua resenha:</h4>
             <br>
             <div class="container-inputs">
                 <div class="input">
-                    <input type="text" id="titulo-resenha" class="titulo-resenha-classe"
+                    <input type="text" id="data-resenha" class="titulo-resenha-classe"
                         placeholder="Título da resenha">
                 </div>
 
@@ -73,7 +80,12 @@
                     <input type="text" id="nome-autor" class="autor-resenha-classe" placeholder="Seu nome">
                 </div>
 
+                <!-- <div class="input">
+                    <input type="date" id="data-resenha" class="titulo-resenha-classe">
+                </div> -->
+
                 <div class="input">
+                    <!-- <textarea id="texto-resenha" class="texto-resenha-classe" placeholder="Suas opiniões"></textarea> -->
                     <input type="text" id="texto-resenha" class="texto-resenha-classe" placeholder="Suas opiniões">
                 </div>
 
@@ -91,28 +103,29 @@
                 <div class="containerResenhaFicticia">
                     <div class="estilo-card-ficticio">
                         <h3 class="titulo-card-ficticio">Adorei o site!!!</h3>
-                        <p class="autor-card-ficticio">Por: Alice</p>
                         <p class="texto-card-ficticio">Gostei muito do objetivo do site. Está tudo muito bem feito e
                             organizado. O layout do site também está incrível. Com certeza voltarei para ver novas
                             atualizações!</p>
+                        <p class="autor-card-ficticio">Alice, 10/02/2025</p>
                     </div>
                 </div>
 
                 <div class="containerResenhaFicticia">
                     <div class="estilo-card-ficticio">
                         <h3 class="titulo-card-ficticio">Conteúdo ruim</h3>
-                        <p class="autor-card-ficticio">Por: Anônimo</p>
                         <p class="texto-card-ficticio">Não achei o conteúdo relevante e não me senti representado.</p>
+                        <p class="autor-card-ficticio">Anônimo, 13/04/2025</p>
                     </div>
                 </div>
 
                 <div class="containerResenhaFicticia">
                     <div class="estilo-card-ficticio">
                         <h3 class="titulo-card-ficticio">Livros</h3>
-                        <p class="autor-card-ficticio">Por: Márcio</p>
                         <p class="texto-card-ficticio">Já li a maioria dos livros indicados nesse site e são todos muito
-                            bons. Ótimas escolhas!
+                            bons. Ótimas escolhas! </p>
+                        <p class="autor-card-ficticio">Márcio, 29/08/2025</p>
                     </div>
+
                 </div>
 
                 <div id="containerResenha">
@@ -185,10 +198,8 @@
 
 
 
-
-    <script src="./JS/index.js"></script>
     <script src="./JS/jquery-3.6.0.min.js"></script>
+    <script src="./JS/menu-mobile.js"></script>
     <script src="./JS/resenhas.js"></script>
 </body>
-
 </html>

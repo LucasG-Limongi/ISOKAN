@@ -1,4 +1,4 @@
-body {
+main {
     background-color: #ef9c13;
     display: flex;
     align-items: center;
@@ -54,7 +54,7 @@ body {
     border-color: #d1d5db; 
     border-style: solid;
     border-radius: 20px; 
-    padding: 1rem; 
+    padding: 0.7rem; 
     margin-bottom: 1rem; 
     position: relative; 
     /* display: none;  */
@@ -130,7 +130,7 @@ body {
     border-color: #d1d5db; 
     border-style: solid;
     border-radius: 20px; 
-    padding: 1rem; 
+    padding: 0.7rem; 
     margin-bottom: 1rem; 
     position: relative; 
     display: none; 
@@ -174,7 +174,7 @@ body {
     border-color: #d1d5db; 
     border-style: solid;
     border-radius: 20px; 
-    padding: 1rem;
+    padding: 0.7rem;
     margin-bottom: 1rem; 
     position: relative; 
     width: 100%;
@@ -198,6 +198,7 @@ body {
 
 .autor-card-ficticio {
     margin-bottom: 1rem;
+    font-size: 0.8rem;
 }
 
 .texto-card-ficticio {

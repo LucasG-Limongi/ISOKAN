@@ -1,33 +1,358 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="../IMG/logo-contraste.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+    </style>
+
+    <!-- /* Animação de Fade */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Estilo dos botões */
+        #voltar,
+        #avancar {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        } -->
     <title>ISOKAN</title>
 </head>
+
 <body>
     <header class="header">
-        <a class="logo" href="./index.html">
-            <img src="./IMG/logo.png">
-            <img src="./IMG/isokan-branco.png">
+        <a class="logo" href="../index.html">
+            <img src="../IMG/logo.png">
+            <img src="../IMG/isokan-branco.png">
         </a>
-
+        <div class="menu-mobile">
+            <i class="material-icons">menu</i>
+        </div>
+        <div class="nav-mobile">
+            <div class="pt-br">
+                <a href="../index.html">Home</a>
+                <hr>
+                <a href="../about-us.html">About Us</a>
+                <hr>
+                <a href="../galery.html">Galeria</a>
+                <hr>
+                <!-- <a href="../contacts.html">Contatos</a> -->
+                <a href="../resenhas.html">Resenhas</a>
+            </div>
+        </div>
         <nav class="nav">
-            <div class="en">
-                <a href="./index.html">Home</a>
-                <a href="./about-us.html">About Us</a>
-                <a href="./galery.html">Galery</a>
-                <a href="./contacts.html">Contacts</a>
-                <a href="./self-evaluation.html">Self-Evaluation</a>
+            <div class="pt-br">
+                <a href="../index.html">Início</a>
+                <a href="../about-us.html">Sobre nós</a>
+                <a href="../galery.html">Galeria</a>
+                <!-- <a href="../contacts.html">Contatos</a> -->
+                <a href="../resenhas.html">Resenhas</a>
             </div>
         </nav>
+        <div class="config">
+            <div class="idioma">
+                <img src="">
+            </div>
+            <!-- <div class="darkmode">
+                <img src="">
+            </div> -->
+        </div>
     </header>
+    <main class="corpo">
+        <div class="fundo">
+            <!-- <img src="../IMG/banner1.jpg" alt="Banner" id="banner"> -->
+            <div class="barraBanner">
+                <div class="on"></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="botoesFundo">
+            <button id="btnBanner1" onclick="prevBan()"><img src="../IMG/arrow2.png" alt="Avançar"></button>
+            <button id="btnBanner2" onclick="proxBan()"><img src="../IMG/arrow2.png" alt="Voltar"></button>
+        </div>
+        <section class="galery">
+            <div class="galery-titulo">
+                <h2><a href="../galery.html">Galeria</a></h2>
+            </div>
+            <div class="galery-text">
+                <p><a href="galery.html">Clique aqui</a> para acessar nossa galeria e veja nossos diversos conteúdos e
+                    recomendações.</p>
 
-    <body>
-        
-    </body>
+            </div>
+            <ul>
+                <li>Livros</li>
+            </ul>
+            <div class="container-slider">
+                <button class="btn-voltar"><img src="../IMG/arrow.png" alt="Voltar"></button>
+                <div class="slider-viewport">
+                    <div class="slider-track">
+                        <div class="slider on" data-descricao="O livro A terra dá, a terra quer evidencia a relação profunda entre território, ancestralidade e identidades negras e indígenas, mostrando a terra como espaço de vida, memória e resistência. A obra discute os impactos históricos da colonização sobre povos tradicionais e valoriza saberes ancestrais como formas de sustentar a vida e o equilíbrio ambiental. Ao mesmo tempo, destaca o pertencimento como elemento central das comunidades. Assim, convida o leitor a refletir sobre o cuidado com os territórios e sua dimensão simbólica.">
+                            <img src="../IMG/Aterradaaterraquer.png" alt="Livro A terra dá, A terra quer">
+                            <div class="descricao-livro">
+                                <h4>A terra dá, A terra quer</h4>
+                                <p>Uma história sobre a relação de uma menina com sua avó e a terra...</p>
+                            </div>
+                        </div>
+                        <div class="slider" data-descricao="Como ser um educador antirracista apresenta fundamentos teóricos essenciais para compreender o racismo estrutural na educação e propõe práticas pedagógicas para promover equidade racial em sala de aula. A obra incentiva a revisão crítica de currículos e materiais didáticos e orienta docentes a adotarem uma postura ética e transformadora. Valoriza a escuta das vivências de estudantes negros e evidencia a importância da representatividade. Com isso, defende que o antirracismo deve ser um compromisso cotidiano de quem educa.">
+                            <img src="../IMG/ComoSerUmEducadorantirracista.png"
+                                alt="Livro Como ser um educador antirracista">
+                            <div class="descricao-livro">
+                                <h4>Como Ser Um Educador Antirracista</h4>
+                                <p>Um convite para repensar a educação...</p>
+                            </div>
+                        </div>
+                        <div class="slider" data-descricao="Em Relações étnico-raciais: práticas, saberes, conceitos…, os autores exploram conceitos-chave sobre raça e racismo no Brasil, articulando teoria e prática. O livro analisa práticas sociais e educativas que reforçam ou combatem desigualdades raciais, trazendo estudos de caso e reflexões críticas. Integra saberes acadêmicos e populares, mostrando como experiências diversas revelam tensões raciais presentes na sociedade. A obra evidencia avanços e desafios no enfrentamento do racismo. Dessa forma, defende a formação crítica como caminho para transformar as relações étnico-raciais.">
+                            <img src="../IMG/relacoesetinicosraciaislivro.png" alt="Livro Relações Étnico-Raciais">
+                            <div class="descricao-livro">
+                                <h4>Relações Étnico-Raciais</h4>
+                                <p>Coletânea que aborda conceitos e práticas...</p>
+                            </div>
+                        </div>
+                        <div class="slider" data-descricao="O livro Língua, discursos e relações étnico-raciais investiga como a linguagem pode tanto reproduzir quanto combater o racismo, analisando discursos, mídias e práticas comunicativas. Mostra que palavras, narrativas e silêncios constroem representações sociais e podem sustentar discriminações. Também valoriza expressões linguísticas de resistência produzidas por grupos racializados. A obra propõe uma abordagem crítica da linguagem para revelar desigualdades simbólicas. Assim, enfatiza práticas discursivas que promovam justiça e igualdade racial.">
+                            <img src="../IMG/Linguaediscursos.png"
+                                alt="Livro Língua, Discursos, Relações Étnico-Raciais E De Gênero">
+                            <div class="descricao-livro">
+                                <h4>Língua, Discursos, Relações Étnico-Raciais E De Gênero
+                                </h4>
+                                <p>Material de formação que analisa os discursos no ensino da língua...</p>
+                            </div>
+                        </div>
+                        <div class="slider" data-descricao="Relações étnico-raciais e outros marcadores sociais da diferença discute como raça, gênero, classe, sexualidade e território se articulam na formação das desigualdades sociais. Utiliza a interseccionalidade como principal instrumento de análise, evidenciando que diferentes opressões se sobrepõem e intensificam injustiças. O livro apresenta pesquisas e reflexões que tornam visíveis essas múltiplas camadas de discriminação. Ao mesmo tempo, destaca a importância de políticas que considerem todos esses marcadores. Assim, defende práticas sociais mais amplas e inclusivas, orientadas pela justiça social.">
+                            <img src="../IMG/RelacoeseMarcadoresdaDiferenca.JPEG"
+                                alt="Livro Relações Étnico-Raciais E outros Marcadores Sociais Da Diferença">
+                            <div class="descricao-livro">
+                                <h4>Relações Étnico-Raciais e outros...
+                                    <!-- Marcadores Sociais Da Diferença -->
+                                </h4>
+                                <p>Obra interdisciplinar que analisa os marcadores sociais...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-avancar"><img src="../IMG/arrow.png" alt="Avançar"></button>
+            </div>
+            <ul>
+                <li>Audio-Visual</li>
+            </ul>
+            <div class="container-slider">
+                
+                <button class="btn-voltar"><img src="../IMG/arrow.png" alt="Voltar"></button>
 
-    <script src="./JS/index.js"></script>
+                <div class="slider-viewport">
+
+                    <div class="slider-track">
+
+                        <div class="slider on" data-descricao="">
+                            <img src="../IMG/Aterradaaterraquer.png" alt="Livro A terra dá, A terra quer">
+                            <div class="descricao-livro">
+                                <h4>A terra dá, A terra quer</h4>
+                                <p>Uma história sobre a relação de uma menina com sua avó e a terra...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider" data-descricao="">
+                            <img src="../IMG/ComoSerUmEducadorantirracista.png"
+                                alt="Livro Como ser um educador antirracista">
+                            <div class="descricao-livro">
+                                <h4>Como Ser Um Educador Antirracista</h4>
+                                <p>Um convite para repensar a educação...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider" data-descricao="">
+                            <img src="../IMG/relacoesetinicosraciaislivro.png" alt="Livro Relações Étnico-Raciais">
+                            <div class="descricao-livro">
+                                <h4>Relações Étnico-Raciais</h4>
+                                <p>Coletânea que aborda conceitos e práticas...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider" data-descricao="">
+                            <img src="../IMG/Linguaediscursos.png"
+                                alt="Livro Língua, Discursos, Relações Étnico-Raciais E De Gênero">
+                            <div class="descricao-livro">
+                                <h4 class="tituloMobile">Língua, Discursos, Rel...
+                                    <!-- ações Étnico-Raciais E De Gênero -->
+                                </h4>
+                                <p>Material de formação que analisa os discursos no ensino da língua...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider" data-descricao="">
+                            <img src="../IMG/RelacoeseMarcadoresdaDiferenca.JPEG"
+                                alt="Livro Relações Étnico-Raciais E outros Marcadores Sociais Da Diferença">
+                            <div class="descricao-livro">
+                                <h4>Relações Étnico-Raciais E outros Marcadores Sociais Da Diferença</h4>
+                                <p>Obra interdisciplinar que analisa os marcadores sociais...</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="btn-avancar"><img src="../IMG/arrow.png" alt="Avançar"></button>
+
+            </div>
+
+            <div id="modal-galeria" class="modal-container">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <div class="modal-body">
+                        <img id="modal-img" src="" alt="">
+                        <div class="modal-info">
+                            <h3 id="modal-titulo"></h3>
+                            <p id="modal-descricao"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="wave-container blue" style="background-color: #eba743;"></div>
+        <section class="review">
+            <div id="autoavaliacao">
+                <div id="review-text">
+                    <div id="titulo">
+                        <h2>Resenhas</h2>
+                        <!-- <p>Dê a sua opinião</p> -->
+                    </div>
+                    <br>
+                    <div id="texto">
+                        <p>Leia as resenhas deixadas por outros usuários e deixe a sua!</p>
+                        <button class="saiba-mais botao-amarelo">
+                            <a href="resenhas.html">Confira</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div style="width: 100%; border: 4px dashed white; background-color: #264653; height: 0;"></div>
+        <div id="parallax">
+            <div class="parallax-text">
+                <h2>“A cultura é a alma de um povo, o fio invisível que conecta gerações e preserva a identidade
+                    através do tempo.”</h2>
+            </div>
+        </div>
+        <div style="width: 100%; border: 4px dashed white; background-color: #264653; height: 0;"></div>
+        <section class="about-us">
+            <div id="sobre-nos">
+                <div id="about-usImage">
+                    <img src="../IMG/imagemAbout-us.jpg" id="imagem">
+                </div>
+                <div id="about-us-text">
+                    <div id="titulo">
+                        Sobre nós
+                    </div>
+                    <div id="texto">
+                        <p>Somos uma instituição dedicada a promover o conhecimento e a valorização da cultura africana
+                            e afro-brasileira, fortalecendo a identidade, a memória e as tradições de povos
+                            historicamente marginalizados. Nosso objetivo é educar, conscientizar e inspirar a sociedade
+                            a reconhecer a riqueza cultural africana presente no Brasil e no mundo.</p>
+                        <button class="saiba-mais botao-amarelo">
+                            <a href="about-us.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="wave-container yellow" style="background-color: #264653;"></div>
+        <section class="our-mission">
+            <div id="nossa-missao">
+                <div id="our-mission-text">
+                    <div id="titulo">
+                        <img src="../IMG/nossa-missao.png" style="width: 100%;" alt="Nossa missão">
+                    </div>
+                    <div id="texto">
+                        <p>Nossa missão é celebrar e divulgar a riqueza da cultura africana e afro-brasileira,
+                            promovendo educação, reflexão e inclusão social. Através de conteúdos, indicações de filmes,
+                            livros e projetos educativos, buscamos fortalecer a identidade cultural e a valorização das
+                            tradições africanas. Atuamos como uma ponte entre o público e organizações comprometidas com
+                            a promoção da cultura africana, contribuindo para ampliar seu impacto e alcance.</p>
+                        <button class="saiba-mais botao-azul">
+                            <a href="about-us.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="parte-1-pai">
+            <div id="parte-1">
+                <div id="isokan-2">
+                    <img src="../IMG/tecendo laços branco.png" alt="Logo ISOKAN">
+                    <!-- <p>ISOKAN é uma instituição comprometida com a valorização e difusão da cultura africana e afro-brasileira. Nosso trabalho promove educação, conscientização e inclusão social, fortalecendo identidades e conectando pessoas a informações, recursos e iniciativas que celebram a riqueza cultural africana no Brasil.</p> -->
+                    <button>Política de privacidade</button>
+                </div>
+                <div id="redes-sociais-2">
+                    <h3>Nossos contatos e redes sociais</h3>
+                    <div>
+                        <a href="#"><img src="../IMG/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="../IMG/instagram-branco.png" alt="Instagram"></a>
+                        <a href="#"><img src="../IMG/whatsapp-branco (3).png" alt="Whatsapp"></a>
+                        <a href="#"><img src="../IMG/youtube-branco.png" alt="Youtube"></a>
+                        <a href="#"><img src="../IMG/email-branco (2).png" alt="Email"></a>
+                        <a href="#"><img src="../IMG/tiktok-branco.png" alt="TikTok"></a>
+                    </div>
+                </div>
+                <div id="cadastro">
+                    <h3>Faça parte da nossa história</h3>
+                    <form action="">
+                        <label for="name">Nome:</label>
+                        <input type="text"><br>
+                        <label for="name">E-mail:</label>
+                        <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
+                        <button type="submit" id="cadastroIndex">Cadastre-se</button>
+                    </form>
+                </div>
+                <div id="isokan">
+                    <img src="../IMG/tecendo laços branco.png" alt="Logo ISOKAN">
+                    <!-- <p>ISOKAN é uma instituição comprometida com a valorização e difusão da cultura africana e afro-brasileira. Nosso trabalho promove educação, conscientização e inclusão social, fortalecendo identidades e conectando pessoas a informações, recursos e iniciativas que celebram a riqueza cultural africana no Brasil.</p> -->
+                    <button>Política de privacidade</button>
+                </div>
+                <div id="redes-sociais">
+                    <h3>Contate-nos ou nos acompanhe pelas redes sociais</h3>
+                    <div>
+                        <a href="#"><img src="../IMG/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="../IMG/instagram-branco.png" alt="Instagram"></a>
+                        <a href="#"><img src="../IMG/whatsapp-branco (3).png" alt="Whatsapp"></a>
+                        <a href="#"><img src="../IMG/youtube-branco.png" alt="Youtube"></a>
+                        <a href="#"><img src="../IMG/email-branco (2).png" alt="Email"></a>
+                        <a href="#"><img src="../IMG/tiktok-branco.png" alt="TikTok"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="parte-2">
+            <p>&copy; 2025 ISOKAN. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+    <script src="../JS/menu-mobile.js"></script>
+    <script src="../JS/index.js" defer></script>
 </body>
+
 </html>
