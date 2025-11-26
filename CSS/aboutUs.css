@@ -1,6 +1,6 @@
 /* INICIO estilo universal */
 * {
-    margin: 0;
+    margin: 4px;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial;
@@ -319,6 +319,14 @@ button.botao-amarelo a {
 
 .quem-somos-nos {
     display: flex;
+}
+
+.sobre-nos p {
+    font-size: 2rem;
+}
+
+.conteudo {
+    
 }
 
 /*Fim Seção quem somos nós*/

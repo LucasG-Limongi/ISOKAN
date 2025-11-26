@@ -39,8 +39,8 @@ function proxBan() {
     if (document.querySelector('.fundo').querySelector('div').firstElementChild.classList.contains('on')) {
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.add('on')
-        // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner2.jpg')"
-        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner2.jpg')"
+        document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner2.jpg')"
+        // document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner2.jpg')"
         document.querySelector('.fundo').style.backgroundPositionY = '0'
         // document.getElementById('banner').setAttribute('src', './IMG/banner2.jpg')
     } else if (document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.contains('on')) {
