@@ -1,0 +1,290 @@
+/* --- RESET E ESTRUTURA BÁSICA --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-container {
+    background-color: #f4ebd0; /* Mantive sua cor bege */
+    width: 100%;
+    min-height: 90vh; /* Alterado de height para min-height para evitar cortes em telas pequenas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o slider verticalmente */
+    padding-bottom: 2rem;
+}
+
+/* --- ESTILIZAÇÃO DO TÍTULO (Adaptado de .galery para .slider-livros) --- */
+
+.slider-livros {
+    width: 100%;
+    display: block;
+    padding: 2% 5%; /* Ajustei o padding */
+    text-align: center;
+}
+
+.slider-livros h2 {
+    color: #071a22;
+    font-family: 'Funnel Display', roboto, sans-serif;
+    font-weight: bold;
+    font-size: 500%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slider-livros ul {
+    list-style-type: none;
+    color: #071a22;
+    font-size: 300%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px; /* Espaço entre o título e o slider */
+}
+
+/* --- COMPONENTE SLIDER (Carrossel) --- */
+
+.container-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    gap: 10px;
+}
+
+.slider-viewport {
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px 0; /* Espaço extra para a sombra/scale não cortar */
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.slider {
+    display: flex;
+    flex: 0 0 calc(33.333% - 1rem); /* 3 itens por vez */
+    box-sizing: border-box;
+    margin: 0 0.5rem;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px black;
+    flex-direction: column;
+    justify-content: start;
+    padding: 15px;
+    
+    /* Interatividade */
+    cursor: pointer;
+    transition: transform 0.2s, border-radius 0.2s;
+}
+
+.slider:hover {
+    transform: scale(1.02); /* Pequeno zoom ao passar o mouse */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.slider img {
+    width: 100%;
+    height: 300px; /* Defini uma altura fixa para alinhar as imagens */
+    object-fit: contain; /* Garante que a imagem não distorça */
+    margin-bottom: 1rem;
+}
+
+/* --- DESCRIÇÃO DENTRO DO CARD --- */
+
+.descricao-livro {
+    text-align: left;
+    margin-top: auto; /* Empurra o texto para baixo se sobrar espaço */
+}
+
+.descricao-livro h4 {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #264653;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.descricao-livro p {
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* --- BOTÕES DO SLIDER --- */
+
+.btn-voltar, .btn-avancar {
+    background: none;
+    border: none;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-voltar img, .btn-avancar img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s;
+}
+
+.btn-voltar img:hover,
+.btn-avancar img:hover {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg); /* Efeito de cor ao passar o mouse */
+}
+
+.btn-voltar img {
+    transform: scaleX(-100%); /* Inverte a seta para esquerda */
+}
+
+/* --- MODAL (Janela Pop-up) --- */
+
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.modal-body img {
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-info h3 {
+    font-family: 'Funnel Display', sans-serif;
+    color: #264653;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.modal-info p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 0.8;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* --- RESPONSIVIDADE (Mobile) --- */
+
+@media (max-width: 900px) {
+    /* Tablet: Mostra 2 livros */
+    .slider {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .body-container {
+        padding-top: 1rem;
+        height: auto;
+    }
+
+    .slider-livros h2 {
+        font-size: 300%;
+    }
+    
+    .slider-livros ul {
+        font-size: 200%;
+    }
+
+    .container-slider {
+        gap: 5px;
+    }
+
+    .slider {
+        flex: 0 0 calc(100% - 1rem); /* Mudei para 100% para celular ficar melhor, se quiser 2 coloque 50% */
+        margin: 0 0.5rem;
+    }
+
+    .btn-voltar, .btn-avancar {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+
+    .descricao-livro p {
+        font-size: 0.9rem; /* Garante que o texto apareça no mobile */
+    }
+    
+    /* Ajustes do Modal no Mobile */
+    .modal-content {
+        width: 95%;
+        margin-top: 15%;
+        padding: 15px;
+    }
+    
+    .modal-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-info p {
+        font-size: 0.95rem;
+    }
+}
