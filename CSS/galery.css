@@ -17,14 +17,14 @@
 
 /* --- ESTILIZAÇÃO DO TÍTULO (Adaptado de .galery para .slider-livros) --- */
 
-.slider-livros {
+.body-container {
     width: 100%;
     display: block;
     padding: 2% 5%; /* Ajustei o padding */
     text-align: center;
 }
 
-.slider-livros h2 {
+.body-container h2 {
     color: #071a22;
     font-family: 'Funnel Display', roboto, sans-serif;
     font-weight: bold;
@@ -33,7 +33,7 @@
     margin-bottom: 20px;
 }
 
-.slider-livros ul {
+.body-container ul {
     list-style-type: none;
     color: #071a22;
     font-size: 300%;
@@ -246,11 +246,11 @@
         height: auto;
     }
 
-    .slider-livros h2 {
+    .body-container h2 {
         font-size: 300%;
     }
     
-    .slider-livros ul {
+    .body-container ul {
         font-size: 200%;
     }
 
