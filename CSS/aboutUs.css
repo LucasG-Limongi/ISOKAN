@@ -1,5 +1,5 @@
 /*Seção quem somos nós*/
-* {
+main {
     background-color: #264653;
 }
 
@@ -13,6 +13,7 @@
     flex-direction: row;
     gap: 20px;
     margin-top: 90px;
+    margin-left: 20px;
 }
 
 .quem-somos-nos .container-conteudo {
@@ -21,30 +22,82 @@
 
 .quem-somos-nos .container-imagens {
     display: grid;
-    grid-template-columns: repeat(10, 5%);
+    grid-template-columns: repeat(10, 10%);
     grid-template-rows: repeat(20, 5%);
+    justify-self: end;
 }
 
-.quem-somos-nos .container-imagens #imagem-maior {
-    grid-column: 1 / 8;
-    grid-row: 4 / 9;
+@media (min-width: 1000px) {
+    .quem-somos-nos .container-imagens #imagem-maior {
+        grid-column: 2 / 9;
+        grid-row: 2 / 7;
+        }
+
+    .quem-somos-nos .container-imagens #imagem-menor {
+        grid-column: 5 / 9;
+        grid-row: 14 / 19;
+    }
 }
 
-.quem-somos-nos .container-imagens #imagem-menor {
-    grid-column: 5 / 11;
-    grid-row: 14 / 21;
+@media (max-width: 1600px) {
+    /* formatação texto Nosso Trabalho */
+}
+
+@media (max-width: 1000px) {
+    .quem-somos-nos .container-imagens #imagem-maior {
+        grid-column: 2 / 9;
+        grid-row: 1 / 6;
+    }
+    
+    .quem-somos-nos .container-imagens #imagem-menor {
+        grid-column: 5 / 9;
+        grid-row: 7 / 12;
+    }
+}
+
+@media (max-width: 800px) {
+    .quem-somos-nos .container-imagens {
+        display: flex;
+        flex-direction: column;
+        align-items: justify;
+        justify-content: stretch;
+        gap: 20px;
+    }
+
+    .quem-somos-nos {
+        flex-direction: column;
+    }
 }
 
 .sobre-nos h1 {
-    font-size: 600%;
+    font-size: 400%;
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .sobre-nos p {
     font-size: 2rem;
+    word-break: normal;
 }
 
+@media screen and (max-width: 800px) {
+    .sobre-nos h1 {
+        font-size: 20px;
+    }
+    .sobre-nos p {
+        font-size: 15px;
+    }
+}
 
+@media screen and (max-width: 400px) {
+    .sobre-nos h1 {
+        font-size: 15px;
+    }
+    .sobre-nos p {
+        font-size: 10px;
+        word-break: break-all;
+    }
+}
 
 /*Fim Seção quem somos nós*/
 
