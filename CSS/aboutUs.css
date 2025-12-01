@@ -1,13 +1,18 @@
 /*Seção quem somos nós*/
+* {
+    background-color: #264653;
+}
+
 .sobre-nos {
-    background-color:  #264653;
     color: white;
+    margin: 10px;
 }
 
 .quem-somos-nos {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    margin-top: 90px;
 }
 
 .quem-somos-nos .container-conteudo {
