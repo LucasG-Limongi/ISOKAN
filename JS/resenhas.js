@@ -96,7 +96,7 @@ function enviarResenha() {
     card.appendChild(cardTexto)
     card.appendChild(cardAutor)
     
-    container.appendChild(card)
+    container.prepend(card)
 
     // Limpar campos
     document.getElementById('avaliacao-estrelas').value = '0'

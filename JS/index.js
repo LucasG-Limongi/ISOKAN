@@ -39,25 +39,21 @@ function proxBan() {
     if (document.querySelector('.fundo').querySelector('div').firstElementChild.classList.contains('on')) {
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner2.jpg')"
-        // document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner2.jpg')"
+        // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner2.jpg')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner2.jpg')"
         document.querySelector('.fundo').style.backgroundPositionY = '0'
-        // document.getElementById('banner').setAttribute('src', './IMG/banner2.jpg')
     } else if (document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.contains('on')) {
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.nextElementSibling.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/ChatGPT Image.png')"
-        // document.querySelector('.fundo').style.backgroundImage = "url('../IMG/ChatGPT Image.png')"
+        // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/ChatGPT Image.png')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/ChatGPT Image.png')"
         document.querySelector('.fundo').style.backgroundPositionY = '20%'
-        // document.getElementById('banner').setAttribute('src', './IMG/banner3.jpg')
     } else {
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.nextElementSibling.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner1.jpg')"
-        // document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner1.jpg')"
-        // document.querySelector('.fundo').style.backgroundImage = "url('banner1.jpg')"
+        // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner1.jpg')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner1.jpg')"
         document.querySelector('.fundo').style.backgroundPositionY = '0'
-        // document.getElementById('banner').setAttribute('src', './IMG/banner1.jpg')
     }
 }
 
@@ -65,21 +61,18 @@ function prevBan() {
     if (document.querySelector('.fundo').querySelector('div').firstElementChild.classList.contains('on')) {
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').lastElementChild.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/ChatGPT Image.png')"
-        // document.querySelector('.fundo').style.backgroundImage = "url('../IMG/ChatGPT Image.png')"
-        // document.getElementById('banner').setAttribute('src', './IMG/banner2.jpg')
+        // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/ChatGPT Image.png')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/ChatGPT Image.png')"
     } else if (document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.contains('on')) {
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner1.jpg')"
-        // document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner1.jpg')"
-        // document.getElementById('banner').setAttribute('src', './IMG/banner3.jpg')
+        // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner1.jpg')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner1.jpg')"
     } else {
         document.querySelector('.fundo').querySelector('div').lastElementChild.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner2.jpg')"
-        // document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner2.jpg')"
-        // document.getElementById('banner').setAttribute('src', './IMG/banner1.jpg')
+        // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner2.jpg')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner2.jpg')"
     }
 }
 const trocaBanner = setInterval(proxBan, 20000)

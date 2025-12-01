@@ -96,7 +96,7 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
     nav {
         display: none;
     }
@@ -130,23 +130,39 @@ body {
 
 .config .idioma {
     cursor: pointer;
-    /* background-image: url(/ISOKAN/IMG/brasil.jpg); */
-    background-image: url('../IMG/brasil.jpg');
     background-size: cover;
-    /* background-image: url(../IMG/eua.png);
-    background-size: 160%; */
     background-position: center;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
 
-.config .idioma:hover {
+.config .idioma.pt-br {
+    /* background-image: url(/ISOKAN/IMG/brasil.jpg); */
+    background-image: url('../IMG/brasil.jpg');
+    /* background-image: url(../IMG/eua.png);
+    background-size: 160%; */
+}
+
+.config .idioma.en {
     background-color: green;
+    background-image: url(../IMG/eua.png);
+    background-size: 160%;
+}
+
+.config .idioma:hover {
+    background-position: center;
+    cursor: pointer;
+}
+
+.config .idioma.pt-br:hover {
     /* background-image: url(/ISOKAN/IMG/eua.png); */
     background-image: url('../IMG/eua.png');
     background-size: 160%;
-    background-position: center;
-    cursor: pointer;
+}
+
+.config .idioma.en:hover {
+    background-image: url('../IMG/brasil.jpg');
+    background-size: cover;
 }
 
 .config .darkmode {
@@ -294,7 +310,7 @@ button.botao-amarelo a {
     color: #ef9c13;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .fundo {
         height: 40%;
         max-height: 900px;
@@ -353,7 +369,7 @@ button.botao-amarelo a {
     height: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #sobre-nos {
         grid-template-columns: 1fr;
     }
@@ -407,7 +423,7 @@ button.botao-amarelo a {
     text-align: justify;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #our-mission-text {
         flex-direction: column;
     }
@@ -531,7 +547,7 @@ button.botao-amarelo a {
     background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23071a22'/></svg>");
 }
 
-@media(max-width:850px) {
+@media(max-width:800px) {
     .wave-container::before {
         height: 43.5px
     }
@@ -554,14 +570,14 @@ button.botao-amarelo a {
     transition: all 0.5s ease-in-out;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #parallax {
         background-image: url('../IMG/banner5\ \(completo\).jpg');
     }
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
     .our-mission #titulo {
         width: 30%;
     }
@@ -616,7 +632,7 @@ button.botao-amarelo a {
     margin-right: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .galery h2 {
         font-size: 300%
     }
@@ -666,6 +682,7 @@ button.botao-amarelo a {
 .slider, .slider1 {
     display: flex;
     flex: 0 0 calc(33.333% - 1rem);
+    max-height: 400px;
     box-sizing: border-box;
     margin: 0 0.5rem;
     background-color: white;
@@ -679,8 +696,26 @@ button.botao-amarelo a {
 .slider img, .slider1 img{
     /* width: 100%;
     height: 400px; */
+    max-height: 80%;
     object-fit: contain;
     margin-bottom: 1rem;
+}
+
+.descricao-livro .desk {
+    display: block;
+}
+
+.descricao-livro .mobile {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .descricao-livro .desk {
+        display: none;
+    }
+    .descricao-livro .mobile {
+        display: block;
+    }
 }
 
 /* --- Botões do Slider --- */
@@ -701,11 +736,26 @@ button.botao-amarelo a {
 .btn-voltar img, .btn-avancar img {
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
-.btn-voltar img:hover,
-.btn-avancar img:hover {
-    filter: invert(1);
+@media (hover: hover) and (pointer: fine) {
+    .btn-voltar img:hover,
+    .btn-avancar img:hover {
+        filter: invert(0.4);
+    }
+
+    .btn-voltar img:focus,
+    .btn-avancar img:focus {
+        filter: invert(0.4);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .btn-voltar img,
+    .btn-avancar img {
+        filter: invert(0);
+    }
 }
 
 .btn-voltar img {
@@ -713,7 +763,7 @@ button.botao-amarelo a {
 }
 
 /* Responsivo */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .btn-voltar, .btn-avancar {
         width: 30px;
         height: 30px;
@@ -769,7 +819,7 @@ button.botao-amarelo a {
     }
 } */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .container-slider, .container-slider1 {
         gap: 2px;
     }
@@ -809,13 +859,17 @@ button.botao-amarelo a {
 
 /* Torna o slider clicável visualmente */
 .slider, .slider1 {
-    cursor: pointer;
     transition: transform 0.2s;
 }
 
 .slider:hover {
+    cursor: pointer;
     transform: scale(1); /* Pequeno efeito de zoom ao passar o mouse */
     border-radius: 4%;
+}
+
+.slider:hover * {
+    cursor: pointer;
 }
 
 /* Fundo escuro do modal */
@@ -904,7 +958,7 @@ button.botao-amarelo a {
 }
 
 /* Responsivo do Modal */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .modal-content {
         width: 90%;
         margin: 20% auto;
@@ -1069,7 +1123,7 @@ footer #parte-2 {
     padding: 5px 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
     footer #parte-1 {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -1084,7 +1138,7 @@ footer #parte-2 {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     footer #parte-1 {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: 6fr 4fr 6fr;
@@ -1098,7 +1152,7 @@ footer #parte-2 {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     h1, h2, h3 {
         animation: diminuirFonte 0s ease-in-out;
     }
