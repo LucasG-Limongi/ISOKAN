@@ -343,6 +343,7 @@ button.botao-amarelo a {
     gap: 20px;
     grid-template-columns: 38% 62%;
     align-items: stretch;
+    margin-bottom: 100px;
 }
 
 .about-us #titulo {
@@ -604,6 +605,10 @@ button.botao-amarelo a {
     text-align: center;
     box-sizing: border-box;
     /* Garante que o padding não estoure a largura */
+}
+
+#galeria {
+    margin-bottom: 100px;
 }
 
 .galery h2 {

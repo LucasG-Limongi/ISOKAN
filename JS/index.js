@@ -76,8 +76,6 @@ function prevBan() {
     }
 }
 const trocaBanner = setInterval(proxBan, 20000)
-
-
 // Carrosel do index 
 
 /* Adicionamos um 'DOMContentLoaded' para garantir que o script

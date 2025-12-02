@@ -16,7 +16,7 @@ main {
     margin-left: 20px;
 }
 
-.quem-somos-nos .container-conteudo {
+.quem-somos-nos :is(.container-conteudo, .container-imagens) {
     flex: 1;
 }
 
@@ -30,12 +30,12 @@ main {
 @media (min-width: 1000px) {
     .quem-somos-nos .container-imagens #imagem-maior {
         grid-column: 2 / 9;
-        grid-row: 2 / 7;
+        grid-row: 1 / 6;
         }
 
     .quem-somos-nos .container-imagens #imagem-menor {
         grid-column: 5 / 9;
-        grid-row: 14 / 19;
+        grid-row: 11 / 16;
     }
 }
 
@@ -76,7 +76,7 @@ main {
 }
 
 .sobre-nos p {
-    font-size: 2rem;
+    font-size: 1rem;
     word-break: normal;
 }
 
@@ -102,3 +102,15 @@ main {
 /*Fim Seção quem somos nós*/
 
 
+section.nosso-trabalho {
+    display: none;
+}
+
+@media (max-width: 1400px) {
+    section.nosso-trabalho {
+        display: block;
+    }
+    .trabalho {
+        display: none;
+    }
+}

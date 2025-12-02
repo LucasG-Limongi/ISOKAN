@@ -74,154 +74,170 @@
         </div>
     </header>
     <main class="corpo">
-        <div class="fundo">
+        <!-- <div class="fundo"> -->
             <!-- <img src="./IMG/banner1.jpg" alt="Banner" id="banner"> -->
+            <!-- <div class="barraBanner">
+                <div class="on"></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div> -->
+        <div class="fundo">
+            <div class="banner-slider-track">
+                <div class="banner-slide" style="background-image: url('./IMG/banner1.jpg');"></div>
+                <div class="banner-slide" style="background-image: url('./IMG/banner2.jpg');"></div>
+                <div class="banner-slide" style="background-image: url('./IMG/ChatGPT Image.png'); background-position-y: 20%;"></div>
+            </div>
             <div class="barraBanner">
                 <div class="on"></div>
                 <div></div>
                 <div></div>
             </div>
         </div>
+
+    
+    
         <div id="botoesFundo">
             <button id="btnBanner1" onclick="prevBan()"><img src="./IMG/arrow2.png" alt="Avançar"></button>
             <button id="btnBanner2" onclick="proxBan()"><img src="./IMG/arrow2.png" alt="Voltar"></button>
         </div>
         <section class="galery">
-            <div class="galery-titulo">
-                <h2><a href="./galeria.html">Galeria</a></h2>
-            </div>
-            <div class="galery-text">
-                <p><a href="./galeria.html">Clique aqui</a> para acessar nossa galeria e veja nossos diversos conteúdos e
-                    recomendações.</p>
+            <div id="galeria">
+                <div class="galery-titulo">
+                    <h2><a href="./galeria.html">Galeria</a></h2>
+                </div>
+                <div class="galery-text">
+                    <p><a href="./galeria.html">Clique aqui</a> para acessar nossa galeria e veja nossos diversos conteúdos e
+                        recomendações.</p>
 
-            </div>
-            <ul>
-                <li>Livros</li>
-            </ul>
-            <div class="container-slider">
-                <button class="btn-voltar"><img src="./IMG/arrow.png" alt="Voltar"></button>
-                <div class="slider-viewport">
-                    <div class="slider-track">
-                        <div class="slider on" data-descricao="O livro A terra dá, a terra quer evidencia a relação profunda entre território, ancestralidade e identidades negras e indígenas, mostrando a terra como espaço de vida, memória e resistência. A obra discute os impactos históricos da colonização sobre povos tradicionais e valoriza saberes ancestrais como formas de sustentar a vida e o equilíbrio ambiental. Ao mesmo tempo, destaca o pertencimento como elemento central das comunidades. Assim, convida o leitor a refletir sobre o cuidado com os territórios e sua dimensão simbólica.">
-                            <img src="./IMG/Aterradaaterraquer.png" alt="Livro A terra dá, A terra quer">
-                            <div class="descricao-livro">
-                                <h4>A terra dá, A terra quer</h4>
-                                <p>Uma história sobre a relação de uma menina com sua avó e a terra...</p>
+                </div>
+                <ul>
+                    <li>Livros</li>
+                </ul>
+                <div class="container-slider">
+                    <button class="btn-voltar"><img src="./IMG/arrow.png" alt="Voltar"></button>
+                    <div class="slider-viewport">
+                        <div class="slider-track">
+                            <div class="slider on" data-descricao="O livro A terra dá, a terra quer evidencia a relação profunda entre território, ancestralidade e identidades negras e indígenas, mostrando a terra como espaço de vida, memória e resistência. A obra discute os impactos históricos da colonização sobre povos tradicionais e valoriza saberes ancestrais como formas de sustentar a vida e o equilíbrio ambiental. Ao mesmo tempo, destaca o pertencimento como elemento central das comunidades. Assim, convida o leitor a refletir sobre o cuidado com os territórios e sua dimensão simbólica.">
+                                <img src="./IMG/Aterradaaterraquer.png" alt="Livro A terra dá, A terra quer">
+                                <div class="descricao-livro">
+                                    <h4>A terra dá, A terra quer</h4>
+                                    <p>Uma história sobre a relação de uma menina com sua avó e a terra...</p>
+                                </div>
+                            </div>
+                            <div class="slider" data-descricao="Como ser um educador antirracista apresenta fundamentos teóricos essenciais para compreender o racismo estrutural na educação e propõe práticas pedagógicas para promover equidade racial em sala de aula. A obra incentiva a revisão crítica de currículos e materiais didáticos e orienta docentes a adotarem uma postura ética e transformadora. Valoriza a escuta das vivências de estudantes negros e evidencia a importância da representatividade. Com isso, defende que o antirracismo deve ser um compromisso cotidiano de quem educa.">
+                                <img src="./IMG/ComoSerUmEducadorantirracista-fotor.png"
+                                    alt="Livro Como ser um educador antirracista">
+                                <div class="descricao-livro">
+                                    <h4>Como Ser Um Educador Antirracista</h4>
+                                    <p>Um convite para repensar a educação...</p>
+                                </div>
+                            </div>
+                            <div class="slider" data-descricao="Em Relações étnico-raciais: práticas, saberes, conceitos…, os autores exploram conceitos-chave sobre raça e racismo no Brasil, articulando teoria e prática. O livro analisa práticas sociais e educativas que reforçam ou combatem desigualdades raciais, trazendo estudos de caso e reflexões críticas. Integra saberes acadêmicos e populares, mostrando como experiências diversas revelam tensões raciais presentes na sociedade. A obra evidencia avanços e desafios no enfrentamento do racismo. Dessa forma, defende a formação crítica como caminho para transformar as relações étnico-raciais.">
+                                <img src="./IMG/relacoesetinicosraciaislivro-fotor.png" alt="Livro Relações Étnico-Raciais">
+                                <div class="descricao-livro">
+                                    <h4>Relações Étnico-Raciais</h4>
+                                    <p>Coletânea que aborda conceitos e práticas...</p>
+                                </div>
+                            </div>
+                            <div class="slider" data-descricao="O livro Língua, discursos e relações étnico-raciais investiga como a linguagem pode tanto reproduzir quanto combater o racismo, analisando discursos, mídias e práticas comunicativas. Mostra que palavras, narrativas e silêncios constroem representações sociais e podem sustentar discriminações. Também valoriza expressões linguísticas de resistência produzidas por grupos racializados. A obra propõe uma abordagem crítica da linguagem para revelar desigualdades simbólicas. Assim, enfatiza práticas discursivas que promovam justiça e igualdade racial.">
+                                <img src="./IMG/Linguaediscursos-fotor.png"
+                                    alt="Livro Língua, Discursos, Relações Étnico-Raciais E De Gênero">
+                                <div class="descricao-livro">
+                                    <h4 class="desk">Língua, Discursos, Relações Étnico-Raciais e de Gênero</h4>
+                                    <h4 class="mobile">Língua, Discursos, Relações...</h4>
+                                    <p>Material de formação que analisa os discursos no ensino da língua...</p>
+                                </div>
+                            </div>
+                            <div class="slider" data-descricao="Relações étnico-raciais e outros marcadores sociais da diferença discute como raça, gênero, classe, sexualidade e território se articulam na formação das desigualdades sociais. Utiliza a interseccionalidade como principal instrumento de análise, evidenciando que diferentes opressões se sobrepõem e intensificam injustiças. O livro apresenta pesquisas e reflexões que tornam visíveis essas múltiplas camadas de discriminação. Ao mesmo tempo, destaca a importância de políticas que considerem todos esses marcadores. Assim, defende práticas sociais mais amplas e inclusivas, orientadas pela justiça social.">
+                                <img src="./IMG/RelacoeseMarcadoresdaDiferenca-fotor.png"
+                                    alt="Livro Relações Étnico-Raciais E outros Marcadores Sociais Da Diferença">
+                                <div class="descricao-livro">
+                                    <h4 class="desk">Relações Étnico-Raciais e Outros Marcadores Sociais da Diferença</h4>
+                                    <h4 class="mobile">Relações Étnico-Raciais e O...</h4>
+                                    <p>Obra interdisciplinar que analisa os marcadores sociais...</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="slider" data-descricao="Como ser um educador antirracista apresenta fundamentos teóricos essenciais para compreender o racismo estrutural na educação e propõe práticas pedagógicas para promover equidade racial em sala de aula. A obra incentiva a revisão crítica de currículos e materiais didáticos e orienta docentes a adotarem uma postura ética e transformadora. Valoriza a escuta das vivências de estudantes negros e evidencia a importância da representatividade. Com isso, defende que o antirracismo deve ser um compromisso cotidiano de quem educa.">
-                            <img src="./IMG/ComoSerUmEducadorantirracista-fotor.png"
-                                alt="Livro Como ser um educador antirracista">
-                            <div class="descricao-livro">
-                                <h4>Como Ser Um Educador Antirracista</h4>
-                                <p>Um convite para repensar a educação...</p>
+                    </div>
+                    <button class="btn-avancar"><img src="./IMG/arrow.png" alt="Avançar"></button>
+                </div>
+                <ul>
+                    <li>Audio-visual</li>
+                </ul>
+                <div class="container-slider">
+                    
+                    <button class="btn-voltar"><img src="./IMG/arrow.png" alt="Voltar"></button>
+
+                    <div class="slider-viewport">
+
+                        <div class="slider-track">
+
+                            <div class="slider on" data-descricao="">
+                                <img src="./IMG/Aterradaaterraquer.png" alt="Livro A terra dá, A terra quer">
+                                <div class="descricao-livro">
+                                    <h4>A terra dá, A terra quer</h4>
+                                    <p>Uma história sobre a relação de uma menina com sua avó e a terra...</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slider" data-descricao="Em Relações étnico-raciais: práticas, saberes, conceitos…, os autores exploram conceitos-chave sobre raça e racismo no Brasil, articulando teoria e prática. O livro analisa práticas sociais e educativas que reforçam ou combatem desigualdades raciais, trazendo estudos de caso e reflexões críticas. Integra saberes acadêmicos e populares, mostrando como experiências diversas revelam tensões raciais presentes na sociedade. A obra evidencia avanços e desafios no enfrentamento do racismo. Dessa forma, defende a formação crítica como caminho para transformar as relações étnico-raciais.">
-                            <img src="./IMG/relacoesetinicosraciaislivro-fotor.png" alt="Livro Relações Étnico-Raciais">
-                            <div class="descricao-livro">
-                                <h4>Relações Étnico-Raciais</h4>
-                                <p>Coletânea que aborda conceitos e práticas...</p>
+
+                            <div class="slider" data-descricao="">
+                                <img src="./IMG/ComoSerUmEducadorantirracista-fotor.png"
+                                    alt="Livro Como ser um educador antirracista">
+                                <div class="descricao-livro">
+                                    <h4>Como Ser Um Educador Antirracista</h4>
+                                    <p>Um convite para repensar a educação...</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slider" data-descricao="O livro Língua, discursos e relações étnico-raciais investiga como a linguagem pode tanto reproduzir quanto combater o racismo, analisando discursos, mídias e práticas comunicativas. Mostra que palavras, narrativas e silêncios constroem representações sociais e podem sustentar discriminações. Também valoriza expressões linguísticas de resistência produzidas por grupos racializados. A obra propõe uma abordagem crítica da linguagem para revelar desigualdades simbólicas. Assim, enfatiza práticas discursivas que promovam justiça e igualdade racial.">
-                            <img src="./IMG/Linguaediscursos-fotor.png"
-                                alt="Livro Língua, Discursos, Relações Étnico-Raciais E De Gênero">
-                            <div class="descricao-livro">
-                                <h4 class="desk">Língua, Discursos, Relações Étnico-Raciais e de Gênero</h4>
-                                <h4 class="mobile">Língua, Discursos, Relações...</h4>
-                                <p>Material de formação que analisa os discursos no ensino da língua...</p>
+
+                            <div class="slider" data-descricao="">
+                                <img src="./IMG/relacoesetinicosraciaislivro-fotor.png" alt="Livro Relações Étnico-Raciais">
+                                <div class="descricao-livro">
+                                    <h4>Relações Étnico-Raciais</h4>
+                                    <p>Coletânea que aborda conceitos e práticas...</p>
+                                </div>
                             </div>
+
+                            <div class="slider" data-descricao="">
+                                <img src="./IMG/Linguaediscursos-fotor.png"
+                                    alt="Livro Língua, Discursos, Relações Étnico-Raciais E De Gênero">
+                                <div class="descricao-livro">
+                                    <h4 class="desk">Língua, Discursos, Relações Étnico-Raciais e de Gênero</h4>
+                                    <h4 class="mobile">Língua, Discursos, Relações...</h4>
+                                    <p>Material de formação que analisa os discursos no ensino da língua...</p>
+                                </div>
+                            </div>
+
+                            <div class="slider" data-descricao="">
+                                <img src="./IMG/RelacoeseMarcadoresdaDiferenca-fotor.png"
+                                    alt="Livro Relações Étnico-Raciais E outros Marcadores Sociais Da Diferença">
+                                <div class="descricao-livro">
+                                    <h4 class="desk">Relações Étnico-Raciais e Outros Marcadores Sociais da Diferença</h4>
+                                    <h4 class="mobile">Relações Étnico-Raciais e O...</h4>
+                                    <p>Obra interdisciplinar que analisa os marcadores sociais...</p>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="slider" data-descricao="Relações étnico-raciais e outros marcadores sociais da diferença discute como raça, gênero, classe, sexualidade e território se articulam na formação das desigualdades sociais. Utiliza a interseccionalidade como principal instrumento de análise, evidenciando que diferentes opressões se sobrepõem e intensificam injustiças. O livro apresenta pesquisas e reflexões que tornam visíveis essas múltiplas camadas de discriminação. Ao mesmo tempo, destaca a importância de políticas que considerem todos esses marcadores. Assim, defende práticas sociais mais amplas e inclusivas, orientadas pela justiça social.">
-                            <img src="./IMG/RelacoeseMarcadoresdaDiferenca-fotor.png"
-                                alt="Livro Relações Étnico-Raciais E outros Marcadores Sociais Da Diferença">
-                            <div class="descricao-livro">
-                                <h4 class="desk">Relações Étnico-Raciais e Outros Marcadores Sociais da Diferença</h4>
-                                <h4 class="mobile">Relações Étnico-Raciais e O...</h4>
-                                <p>Obra interdisciplinar que analisa os marcadores sociais...</p>
+                    </div>
+
+                    <button class="btn-avancar"><img src="./IMG/arrow.png" alt="Avançar"></button>
+
+                </div>
+
+                <div id="modal-galeria" class="modal-container">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <div class="modal-body">
+                            <img id="modal-img" src="" alt="">
+                            <div class="modal-info">
+                                <h3 id="modal-titulo"></h3>
+                                <p id="modal-descricao"></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="btn-avancar"><img src="./IMG/arrow.png" alt="Avançar"></button>
             </div>
-            <ul>
-                <li>Audio-Visual</li>
-            </ul>
-            <div class="container-slider">
-                
-                <button class="btn-voltar"><img src="./IMG/arrow.png" alt="Voltar"></button>
-
-                <div class="slider-viewport">
-
-                    <div class="slider-track">
-
-                        <div class="slider on" data-descricao="">
-                            <img src="./IMG/Aterradaaterraquer.png" alt="Livro A terra dá, A terra quer">
-                            <div class="descricao-livro">
-                                <h4>A terra dá, A terra quer</h4>
-                                <p>Uma história sobre a relação de uma menina com sua avó e a terra...</p>
-                            </div>
-                        </div>
-
-                        <div class="slider" data-descricao="">
-                            <img src="./IMG/ComoSerUmEducadorantirracista-fotor.png"
-                                alt="Livro Como ser um educador antirracista">
-                            <div class="descricao-livro">
-                                <h4>Como Ser Um Educador Antirracista</h4>
-                                <p>Um convite para repensar a educação...</p>
-                            </div>
-                        </div>
-
-                        <div class="slider" data-descricao="">
-                            <img src="./IMG/relacoesetinicosraciaislivro-fotor.png" alt="Livro Relações Étnico-Raciais">
-                            <div class="descricao-livro">
-                                <h4>Relações Étnico-Raciais</h4>
-                                <p>Coletânea que aborda conceitos e práticas...</p>
-                            </div>
-                        </div>
-
-                        <div class="slider" data-descricao="">
-                            <img src="./IMG/Linguaediscursos-fotor.png"
-                                alt="Livro Língua, Discursos, Relações Étnico-Raciais E De Gênero">
-                            <div class="descricao-livro">
-                                <h4 class="desk">Língua, Discursos, Relações Étnico-Raciais e de Gênero</h4>
-                                <h4 class="mobile">Língua, Discursos, Relações...</h4>
-                                <p>Material de formação que analisa os discursos no ensino da língua...</p>
-                            </div>
-                        </div>
-
-                        <div class="slider" data-descricao="">
-                            <img src="./IMG/RelacoeseMarcadoresdaDiferenca-fotor.png"
-                                alt="Livro Relações Étnico-Raciais E outros Marcadores Sociais Da Diferença">
-                            <div class="descricao-livro">
-                                <h4 class="desk">Relações Étnico-Raciais e Outros Marcadores Sociais da Diferença</h4>
-                                <h4 class="mobile">Relações Étnico-Raciais e O...</h4>
-                                <p>Obra interdisciplinar que analisa os marcadores sociais...</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <button class="btn-avancar"><img src="./IMG/arrow.png" alt="Avançar"></button>
-
-            </div>
-
-            <div id="modal-galeria" class="modal-container">
-                <div class="modal-content">
-                    <span class="close-btn">&times;</span>
-                    <div class="modal-body">
-                        <img id="modal-img" src="" alt="">
-                        <div class="modal-info">
-                            <h3 id="modal-titulo"></h3>
-                            <p id="modal-descricao"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </section>
         <div class="wave-container blue" style="background-color: #eba743;"></div>
         <section class="review">
@@ -327,7 +343,7 @@
                     <button>Política de privacidade</button>
                 </div>
                 <div id="redes-sociais">
-                    <h3>Contate-nos ou nos acompanhe pelas redes sociais</h3>
+                    <h3>Contate ou acompanhe-nos pelas redes sociais</h3>
                     <div>
                         <a href="#"><img src="./IMG/facebook.png" alt="Facebook"></a>
                         <a href="#"><img src="./IMG/instagram-branco.png" alt="Instagram"></a>

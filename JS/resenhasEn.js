@@ -53,7 +53,7 @@ function enviarResenha() {
     let texto = document.getElementById("texto-resenha").value
 
     if (autor == '' || texto == '') {
-        alert('Por favor, preencha o nome e o texto da resenha!');
+        alert('Please fill in the name and review text!');
         return;
     }
 
@@ -62,7 +62,7 @@ function enviarResenha() {
     let dia = String(dataAtual.getDate()).padStart(2, '0')
     let mes = String(dataAtual.getMonth() + 1).padStart(2, '0')
     let ano = dataAtual.getFullYear()
-    let dataFormatada = dia + '/' + mes + '/' + ano
+    let dataFormatada = mes + '/' + dia + '/' + ano
 
     let container = document.getElementById("containerResenha")
 

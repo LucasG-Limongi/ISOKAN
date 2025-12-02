@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/resenhas.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/resenhas.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="./IMG/logo-contraste.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,24 +32,22 @@
             <i class="material-icons">menu</i>
         </div>
         <div class="nav-mobile">
-            <div class="en">
+            <div>
                 <a href="./index.html">Home</a>
                 <hr>
-                <a href="./about-us.html">About-us</a>
+                <a href="./about-us.html">About us</a>
                 <hr>
                 <a href="./galery.html">Galery</a>
                 <hr>
-                <!-- <a href="./contacts.html">Contatos</a> -->
-                <a href="./reviews.html">Reviews</a>
+                <a href="./reviews.html">Review</a>
             </div>
         </div>
         <nav class="nav">
-            <div class="en">
+            <div>
                 <a href="./index.html">Home</a>
-                <a href="./about-us.html">About-us</a>
+                <a href="./about-us.html">About us</a>
                 <a href="./galery.html">Galery</a>
-                <!-- <a href="./contacts.html">Contatos</a> -->
-                <a href="./reviews.html">Reviews</a>
+                <a href="./reviews.html">Review</a>
             </div>
         </nav>
         <div class="config">
@@ -58,19 +56,15 @@
                     <img src="">
                 </div>
             </a>
-            <!-- <div class="darkmode">
-                <img src="">
-            </div> -->
         </div>
     </header>
     <main>
         <div class="container-externo-fullpage">
-            <h1 class="titulo-pagina">Resenhas</h1>
-            <p class="introducao-resenhas">Nessa página você pode conferir resenhas, opiniões, ideias e propostas
-                deixadas por outros usuários após conhecerem nosso acervo digital! Além disso, você também pode deixar a
-                sua.</p>
+            <h1 class="titulo-pagina">Reviews</h1>
+            <p class="introducao-resenhas">On this page you can check reviews, opinions, ideas and proposals
+                left by other users after knowing our digital collection! In addition, you can also leave yours.</p>
             <br>
-            <h4 class="deixe-resenha">Deixe sua resenha:</h4>
+            <h4 class="deixe-resenha">Leave your review:</h4>
             <br>
             <div class="container-inputs">
                 <!-- <div class="input">
@@ -79,7 +73,7 @@
                 </div> -->
 
                 <div class="input">
-                    <label class="label-estrelas titulo-resenha-classe">Avalie nosso site com estrelas:</label>
+                    <label class="label-estrelas titulo-resenha-classe">Rate our site with stars:</label>
                     <div class="container-estrelas">
                         <span class="estrela" data-valor="1">★</span>
                         <span class="estrela" data-valor="2">★</span>
@@ -91,26 +85,26 @@
                 </div>
 
                 <div class="input">
-                    <input type="text" id="nome-autor" class="autor-resenha-classe" placeholder="Seu nome">
+                    <input type="text" id="nome-autor" class="autor-resenha-classe" placeholder="Your name">
                 </div>
 
-                <div class="input">
+                <!-- <div class="input">
                     <input type="date" id="data-resenha" class="titulo-resenha-classe">
-                </div>
+                </div> -->
 
                 <div class="input">
-                    <textarea id="texto-resenha" class="texto-resenha-classe" placeholder="Suas opiniões"></textarea>
+                    <textarea id="texto-resenha" class="texto-resenha-classe" placeholder="Your opinions"></textarea>
                     <!-- <input type="text" id="texto-resenha" class="texto-resenha-classe" placeholder="Suas opiniões"> -->
                 </div>
 
                 <div class="botao-enviar-resenha">
                     <button onclick="enviarResenha()" class="botao">
-                        Enviar resenha
+                        Send review
                     </button>
                 </div>
             </div>
             <br>
-            <h4 class="deixe-resenha">Confira as resenhas anteriores:</h4>
+            <h4 class="deixe-resenha">Check out the previous reviews:</h4>
             <br>
             <div class="container-externo-card">
                 
@@ -118,17 +112,15 @@
                     <div class="estilo-card-ficticio">
                         <div class="estrelas-card">★★★☆☆</div>
                         <p class="texto-card-ficticio">Gostei do site, porém achei que falta conteúdo!</p>
-                        <p class="autor-card-ficticio">Maria Luíza, 21/12/2024</p>
+                        <p class="autor-card-ficticio">Maria Luíza, 12/21/2024</p>
                     </div>
                 </div>
 
                 <div class="containerResenhaFicticia">
                     <div class="estilo-card-ficticio">
                         <div class="estrelas-card">★★★★★</div>
-                        <p class="texto-card-ficticio">Gostei muito do objetivo do site. Está tudo muito bem feito e
-                            organizado. O layout do site também está incrível. Com certeza voltarei para ver novas
-                            atualizações!</p>
-                        <p class="autor-card-ficticio">Alice, 10/02/2025</p>
+                        <p class="texto-card-ficticio">I really liked the purpose of the site. It’s all very well done and organized. The layout of the site is also amazing. For sure I will come back to see new updates!</p>
+                        <p class="autor-card-ficticio">Alice, 02/10/2025</p>
                     </div>
                 </div>
             
@@ -136,7 +128,7 @@
                     <div class="estilo-card-ficticio">
                         <div class="estrelas-card">☆☆☆☆☆</div>
                         <p class="texto-card-ficticio">Não achei o conteúdo relevante e não me senti representado.</p>
-                        <p class="autor-card-ficticio">Anônimo, 13/04/2025</p>
+                        <p class="autor-card-ficticio">Anônimo, 04/13/2025</p>
                     </div>
                 </div>
             
@@ -145,7 +137,7 @@
                         <div class="estrelas-card">★★★★☆</div>
                         <p class="texto-card-ficticio">Já li a maioria dos livros indicados nesse site e são todos muito
                             bons. Ótimas escolhas! </p>
-                        <p class="autor-card-ficticio">Márcio, 29/08/2025</p>
+                        <p class="autor-card-ficticio">Márcio, 08/29/2025</p>
                     </div>
             
                 </div>
@@ -168,10 +160,10 @@
                 <div id="isokan-2">
                     <img src="../IMG/tecendo laços branco.png" alt="Logo ISOKAN">
                     <!-- <p>ISOKAN é uma instituição comprometida com a valorização e difusão da cultura africana e afro-brasileira. Nosso trabalho promove educação, conscientização e inclusão social, fortalecendo identidades e conectando pessoas a informações, recursos e iniciativas que celebram a riqueza cultural africana no Brasil.</p> -->
-                    <button>Política de privacidade</button>
+                    <button>Privacy policy</button>
                 </div>
                 <div id="redes-sociais-2">
-                    <h3>Nossos contatos e redes sociais</h3>
+                    <h3>Our contacts and social medias</h3>
                     <div>
                         <a href="#"><img src="../IMG/facebook.png" alt="Facebook"></a>
                         <a href="#"><img src="../IMG/instagram-branco.png" alt="Instagram"></a>
@@ -182,22 +174,22 @@
                     </div>
                 </div>
                 <div id="cadastro">
-                    <h3>Faça parte da nossa história</h3>
+                    <h3>Be part of our history</h3>
                     <form action="">
-                        <label for="name">Nome:</label>
+                        <label for="name">Name:</label>
                         <input type="text"><br>
                         <label for="name">E-mail:</label>
                         <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
-                        <button type="submit" id="cadastroIndex">Cadastre-se</button>
+                        <button type="submit" id="cadastroIndex">Join</button>
                     </form>
                 </div>
                 <div id="isokan">
                     <img src="../IMG/tecendo laços branco.png" alt="Logo ISOKAN">
                     <!-- <p>ISOKAN é uma instituição comprometida com a valorização e difusão da cultura africana e afro-brasileira. Nosso trabalho promove educação, conscientização e inclusão social, fortalecendo identidades e conectando pessoas a informações, recursos e iniciativas que celebram a riqueza cultural africana no Brasil.</p> -->
-                    <button>Política de privacidade</button>
+                    <button>Privacy policy</button>
                 </div>
                 <div id="redes-sociais">
-                    <h3>Contate-nos ou nos acompanhe pelas redes sociais</h3>
+                    <h3>Contact or follow us on social media</h3>
                     <div>
                         <a href="#"><img src="../IMG/facebook.png" alt="Facebook"></a>
                         <a href="#"><img src="../IMG/instagram-branco.png" alt="Instagram"></a>
@@ -212,7 +204,7 @@
 
 
         <div id="parte-2">
-            <p>&copy; 2025 ISOKAN. Todos os direitos reservados.</p>
+            <p>&copy; 2025 ISOKAN. All rights reserved.</p>
         </div>
     </footer>
 
@@ -222,6 +214,6 @@
 
     <script src="../JS/jquery-3.6.0.min.js"></script>
     <script src="../JS/menu-mobile.js"></script>
-    <script src="../JS/resenhas.js"></script>
+    <script src="../JS/resenhasEn.js"></script>
 </body>
 </html>
