@@ -163,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- CÓDIGO DO MODAL
     const modal = document.getElementById("modal-galeria")
     const modalImg = document.getElementById("modal-img")
+    const modalFrame = document.getElementById("player")
     const modalTitulo = document.getElementById("modal-titulo")
     const modalDescricao = document.getElementById("modal-descricao")
     const closeBtn = document.querySelector(".close-btn")
@@ -171,18 +172,80 @@ document.addEventListener('DOMContentLoaded', () => {
 
     allSlides.forEach(slide => {
         slide.addEventListener('click', () => {
-            const imgElement = slide.querySelector('img');
-            const tituloElement = slide.querySelector('h4');
-            const textoLongo = slide.getAttribute('data-descricao');
-            const textoCurto = slide.querySelector('p') ? slide.querySelector('p').textContent : ''
+            if (slide.classList.contains('img')) {
+                const imgElement = slide.querySelector('img');
+                const tituloElement = slide.querySelector('h4');
+                const textoLongo = slide.getAttribute('data-descricao');
+                const textoCurto = slide.querySelector('p') ? slide.querySelector('p').textContent : ''
 
-            if (imgElement && tituloElement) {
-                modalImg.src = imgElement.src
-                modalImg.alt = imgElement.alt
-                modalTitulo.textContent = tituloElement.textContent
-                modalDescricao.textContent = textoLongo || textoCurto
-                modal.style.display = "flex"
+                if (imgElement && tituloElement) {
+                    modalImg.src = imgElement.src
+                    modalImg.style.display = 'block'
+                    modalFrame.style.display = 'none'
+                    modalImg.alt = imgElement.alt
+                    modalTitulo.textContent = tituloElement.textContent
+                    modalDescricao.textContent = textoLongo || textoCurto
+                    modal.style.display = "flex"
+                }
+            } else if (slide.classList.contains('mp4')) {
+                const imgElement = slide.querySelector('img');
+                const tituloElement = slide.querySelector('h4');
+                const textoLongo = slide.getAttribute('data-descricao');
+                const textoCurto = slide.querySelector('p') ? slide.querySelector('p').textContent : ''
+
+                if (imgElement && tituloElement) {
+                    modalFrame.src = imgElement.alt
+                    modalFrame.style.display = 'block'
+                    modalImg.style.display = 'none'
+                    modalTitulo.textContent = tituloElement.textContent
+                    modalDescricao.textContent = textoLongo || textoCurto
+                    modal.style.display = "flex"
+                }
             }
+            //     // 2. This code loads the IFrame Player API code asynchronously.
+            //     var tag = document.createElement('script');
+
+            //     tag.src = "https://www.youtube.com/iframe_api";
+            //     var firstScriptTag = document.getElementsByTagName('script')[0];
+            //     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            //     // 3. This function creates an <iframe> (and YouTube player)
+            //     //    after the API code downloads.
+            //     var player;
+            //     function onYouTubeIframeAPIReady() {
+            //         player = new YT.Player('player', {
+            //             height: '390',
+            //             width: '640',
+            //             videoId: 'M7lc1UVf-VE',
+            //             playerVars: {
+            //             'playsinline': 1
+            //             },
+            //             events: {
+            //             'onReady': onPlayerReady,
+            //             'onStateChange': onPlayerStateChange
+            //             }
+            //         });
+            //     }
+
+            //     // 4. The API will call this function when the video player is ready.
+            //     function onPlayerReady(event) {
+            //         event.target.playVideo();
+            //     }
+
+            //     // 5. The API calls this function when the player's state changes.
+            //     //    The function indicates that when playing a video (state=1),
+            //     //    the player should play for six seconds and then stop.
+            //     var done = false;
+            //     function onPlayerStateChange(event) {
+            //         if (event.data == YT.PlayerState.PLAYING && !done) {
+            //             setTimeout(stopVideo, 6000);
+            //             done = true;
+            //         }
+            //     }
+            //     function stopVideo() {
+            //         player.stopVideo();
+            //     }
+            // }
         })
     })
 
