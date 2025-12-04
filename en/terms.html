@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/resenhas.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="shortcut icon" href="./IMG/logo-contraste.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../IMG/logo-contraste.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
@@ -15,14 +14,34 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
     </style>
+    <style>
+        body {
+            background-color: #eba743;
+        }
+        main {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            margin-top: 130px;
+        }
+
+        h1, h2 {
+            color: #222;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
     <title>ISOKAN</title>
 </head>
 
 <body>
-
-    <!-- Plano de Fundo -->
-    <img src="" alt="">
-
     <header class="header">
         <a class="logo" href="./index.html">
             <img src="../IMG/logo.png">
@@ -51,7 +70,7 @@
             </div>
         </nav>
         <div class="config">
-            <a href="../resenhas.html">
+            <a href="../termos.html">
                 <div class="idioma en">
                     <img src="">
                 </div>
@@ -59,101 +78,32 @@
         </div>
     </header>
     <main>
-        <div class="container-externo-fullpage">
-            <h1 class="titulo-pagina">Reviews</h1>
-            <p class="introducao-resenhas">On this page you can check reviews, opinions, ideas and proposals
-                left by other users after knowing our digital collection! In addition, you can also leave yours.</p>
-            <br>
-            <h4 class="deixe-resenha">Leave your review:</h4>
-            <br>
-            <div class="container-inputs">
-                <!-- <div class="input">
-                    <input type="text" id="titulo-resenha" class="titulo-resenha-classe"
-                        placeholder="Título da resenha">
-                </div> -->
+    <div class="container">
+        <h1>Terms of Use</h1>
+            <p>These Terms of Use set the rules for using our website. By accessing or using this site, you agree to these terms.</p>
 
-                <div class="input">
-                    <label class="label-estrelas titulo-resenha-classe">Rate our site with stars:</label>
-                    <div class="container-estrelas">
-                        <span class="estrela" data-valor="1">★</span>
-                        <span class="estrela" data-valor="2">★</span>
-                        <span class="estrela" data-valor="3">★</span>
-                        <span class="estrela" data-valor="4">★</span>
-                        <span class="estrela" data-valor="5">★</span>
-                    </div>
-                    <input type="hidden" id="avaliacao-estrelas" value="0">
-                </div>
+            <h2>1. Acceptance of Terms</h2>
+            <p>By using this website, you agree to comply with all terms and conditions outlined in this document. If you do not agree, please do not use the site.</p>
 
-                <div class="input">
-                    <input type="text" id="nome-autor" class="autor-resenha-classe" placeholder="Your name">
-                </div>
+            <h2>2. Use of the Site</h2>
+            <p>The user agrees to use the site only for lawful purposes and in accordance with applicable laws. Any activity that may harm other users or the platform is prohibited.</p>
 
-                <!-- <div class="input">
-                    <input type="date" id="data-resenha" class="titulo-resenha-classe">
-                </div> -->
+            <h2>3. Site Content</h2>
+            <p>All content on the site, including text, images, videos, and other materials, is protected by copyright and cannot be copied or distributed without authorization.</p>
 
-                <div class="input">
-                    <textarea id="texto-resenha" class="texto-resenha-classe" placeholder="Your opinions"></textarea>
-                    <!-- <input type="text" id="texto-resenha" class="texto-resenha-classe" placeholder="Suas opiniões"> -->
-                </div>
+            <h2>4. Responsibilities</h2>
+            <p>We are not responsible for any direct or indirect damages resulting from the use of the site. Users are responsible for proper use of the information and services available.</p>
 
-                <div class="botao-enviar-resenha">
-                    <button onclick="enviarResenha()" class="botao">
-                        Send review
-                    </button>
-                </div>
-            </div>
-            <br>
-            <h4 class="deixe-resenha">Check out the previous reviews:</h4>
-            <br>
-            <div class="container-externo-card">
-                
-                <div class="containerResenhaFicticia">
-                    <div class="estilo-card-ficticio">
-                        <div class="estrelas-card">★★★☆☆</div>
-                        <p class="texto-card-ficticio">Gostei do site, porém achei que falta conteúdo!</p>
-                        <p class="autor-card-ficticio">Maria Luíza, 12/21/2024</p>
-                    </div>
-                </div>
+            <h2>5. Changes</h2>
+            <p>We may modify these Terms of Use at any time. Users are encouraged to review this document periodically.</p>
 
-                <div class="containerResenhaFicticia">
-                    <div class="estilo-card-ficticio">
-                        <div class="estrelas-card">★★★★★</div>
-                        <p class="texto-card-ficticio">I really liked the purpose of the site. It’s all very well done and organized. The layout of the site is also amazing. For sure I will come back to see new updates!</p>
-                        <p class="autor-card-ficticio">Alice, 02/10/2025</p>
-                    </div>
-                </div>
-            
-                <div class="containerResenhaFicticia">
-                    <div class="estilo-card-ficticio">
-                        <div class="estrelas-card">☆☆☆☆☆</div>
-                        <p class="texto-card-ficticio">Não achei o conteúdo relevante e não me senti representado.</p>
-                        <p class="autor-card-ficticio">Anônimo, 04/13/2025</p>
-                    </div>
-                </div>
-            
-                <div class="containerResenhaFicticia">
-                    <div class="estilo-card-ficticio">
-                        <div class="estrelas-card">★★★★☆</div>
-                        <p class="texto-card-ficticio">Já li a maioria dos livros indicados nesse site e são todos muito
-                            bons. Ótimas escolhas! </p>
-                        <p class="autor-card-ficticio">Márcio, 08/29/2025</p>
-                    </div>
-            
-                </div>
-            
-                <div id="containerResenha">
-                    <div class="estilo-card">
-                        <h3 class="titulo-card">Título da Resenha</h3>
-                        <p class="texto-card">Texto da Resenha</p>
-                        <p class="autor-card">Nome do Autor</p>
-                    </div>
-                </div>
-            
-            </div>
+            <h2>6. Privacy</h2>
+            <p>The use of personal information is subject to our <a href="privacy.html">Privacy Policy</a>.</p>
+
+            <p><strong>Last updated:</strong> 03/12/2025</p>
+            <p>If you have questions about the Terms of Use, contact us at: <a href="mailto:gabriel.limongi@aluno.ifsp.edu.br" style="cursor: pointer; text-decoration: underline;">gabriel.limongi@aluno.ifsp.edu.br</a>.</p>
         </div>
     </main>
-
     <footer>
         <div id="parte-1-pai">
             <div id="parte-1">
@@ -164,7 +114,7 @@
                     <button onclick="window.open('./terms.html')">Terms of use</button>
                 </div>
                 <div id="redes-sociais-2">
-                    <h3>Our contacts and social medias</h3>
+                    <h3>Nossos contatos e redes sociais</h3>
                     <div>
                         <a href="https://www.facebook.com/ifspcaraguatatuba/?locale=pt_BR"><img src="../IMG/facebook.png" alt="Facebook"></a>
                         <a href="https://www.instagram.com/ifspcaraguatatuba/"><img src="../IMG/instagram-branco.png" alt="Instagram"></a>
@@ -175,13 +125,13 @@
                     </div>
                 </div>
                 <div id="cadastro">
-                    <h3>Be part of our history</h3>
+                    <h3>Faça parte da nossa história</h3>
                     <form action="">
-                        <label for="name">Name:</label>
+                        <label for="name">Nome:</label>
                         <input type="text"><br>
                         <label for="name">E-mail:</label>
                         <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
-                        <button type="submit" id="cadastroIndex">Join</button>
+                        <button type="submit" id="cadastroIndex">Cadastre-se</button>
                     </form>
                 </div>
                 <div id="isokan">
@@ -191,7 +141,7 @@
                     <button onclick="window.open('./terms.html')">Terms of use</button>
                 </div>
                 <div id="redes-sociais">
-                    <h3>Our contacts and social medias</h3>
+                    <h3>Nossos contatos e redes sociais</h3>
                     <div>
                         <a href="https://www.facebook.com/ifspcaraguatatuba/?locale=pt_BR"><img src="../IMG/facebook.png" alt="Facebook"></a>
                         <a href="https://www.instagram.com/ifspcaraguatatuba/"><img src="../IMG/instagram-branco.png" alt="Instagram"></a>
@@ -206,12 +156,12 @@
 
 
         <div id="parte-2">
-            <p>&copy; 2025 ISOKAN. All rights reserved.</p>
+            <p>&copy; 2025 ISOKAN. Todos os direitos reservados.</p>
         </div>
     </footer>
-
     <script src="../JS/jquery-3.6.0.min.js"></script>
     <script src="../JS/menu-mobile.js"></script>
-    <script src="../JS/resenhasEn.js"></script>
-</body>
+    <script src="../JS/index.js"></script>
+    <script src="../JS/galery.js"></script>
+
 </html>

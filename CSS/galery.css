@@ -6,7 +6,7 @@
 }
 
 .body-container {
-    background-color: #f4ebd0; /* Mantive sua cor bege */
+    background-color: #ffba48; /* Alterei pra cor do index */
     width: 100%;
     min-height: 90vh; /* Alterado de height para min-height para evitar cortes em telas pequenas */
     display: flex;
@@ -39,7 +39,8 @@
     font-size: 300%;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 30px; /* Espaço entre o título e o slider */
+    margin-top: 80px; 
+    margin-bottom: 30px; 
 }
 
 /* --- COMPONENTE SLIDER (Carrossel) --- */

@@ -706,6 +706,10 @@ button.botao-amarelo a {
     margin-bottom: 1rem;
 }
 
+.slider p, .slider1 p {
+    display: none;
+}
+
 .descricao-livro .desk {
     display: block;
 }

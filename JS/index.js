@@ -47,7 +47,13 @@ function proxBan() {
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.nextElementSibling.classList.add('on')
         // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/ChatGPT Image.png')"
         document.querySelector('.fundo').style.backgroundImage = "url('../IMG/ChatGPT Image.png')"
-        document.querySelector('.fundo').style.backgroundPositionY = '20%'
+        if (window.innerWidth < 600) {
+            document.querySelector('.fundo').style.backgroundPositionY = '-20%'
+        } else if (window.innerWidth < 1200) {
+            document.querySelector('.fundo').style.backgroundPositionY = '0%'
+        } else {
+            document.querySelector('.fundo').style.backgroundPositionY = '20%'
+        }
     } else {
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.nextElementSibling.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.add('on')
@@ -63,16 +69,25 @@ function prevBan() {
         document.querySelector('.fundo').querySelector('div').lastElementChild.classList.add('on')
         // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/ChatGPT Image.png')"
         document.querySelector('.fundo').style.backgroundImage = "url('../IMG/ChatGPT Image.png')"
+        if (window.innerWidth < 600) {
+            document.querySelector('.fundo').style.backgroundPositionY = '-20%'
+        } else if (window.innerWidth < 1200) {
+            document.querySelector('.fundo').style.backgroundPositionY = '0%'
+        } else {
+            document.querySelector('.fundo').style.backgroundPositionY = '20%'
+        }
     } else if (document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.contains('on')) {
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.add('on')
         // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner1.jpg')"
         document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner1.jpg')"
+        document.querySelector('.fundo').style.backgroundPositionY = '0'
     } else {
         document.querySelector('.fundo').querySelector('div').lastElementChild.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.add('on')
         // document.querySelector('.fundo').style.backgroundImage = "url('/ISOKAN/IMG/banner2.jpg')"
         document.querySelector('.fundo').style.backgroundImage = "url('../IMG/banner2.jpg')"
+        document.querySelector('.fundo').style.backgroundPositionY = '0'
     }
 }
 const trocaBanner = setInterval(proxBan, 20000)
@@ -128,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             track.style.transform = `translateX(-${distancia}px)`
         }
-
         // Evento Botão Avançar
         btnNext.addEventListener('click', () => {
             // Se tiver menos slides que a visão, não faz nada
@@ -136,9 +150,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             currentIndex++;
             // Lógica de Loop infinito ajustada
-            if (currentIndex > totalSlides - slidesPorVez) {
-                currentIndex = 0
+            if (window.innerWidth <= 900) {
+                if (currentIndex > totalSlides - slidesPorVez + 1) {
+                    currentIndex = 0
+                }
+            } else {
+                if (currentIndex > totalSlides - slidesPorVez) {
+                    currentIndex = 0
+                }
             }
+            
             updateSlider()
         });
 
@@ -148,9 +169,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (totalSlides <= slidesPorVez) return
 
             currentIndex--
-            if (currentIndex < 0) {
-                currentIndex = totalSlides - slidesPorVez
+            if (window.innerWidth <= 900) {
+                if (currentIndex < 0) {
+                    currentIndex = totalSlides - slidesPorVez + 1
+                }
+            } else {
+                if (currentIndex < 0) {
+                    currentIndex = totalSlides - slidesPorVez
+                }
             }
+            
             updateSlider()
         });
 
@@ -158,7 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
         checkWidth()
         window.addEventListener('resize', checkWidth);
     });
-
 
     // --- CÓDIGO DO MODAL
     const modal = document.getElementById("modal-galeria")
@@ -177,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tituloElement = slide.querySelector('h4');
                 const textoLongo = slide.getAttribute('data-descricao');
                 const textoCurto = slide.querySelector('p') ? slide.querySelector('p').textContent : ''
+                document.getElementById('dica-modal').style.display = 'none'
 
                 if (imgElement && tituloElement) {
                     modalImg.src = imgElement.src
@@ -192,6 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tituloElement = slide.querySelector('h4');
                 const textoLongo = slide.getAttribute('data-descricao');
                 const textoCurto = slide.querySelector('p') ? slide.querySelector('p').textContent : ''
+                document.getElementById('dica-modal').style.display = 'block'
 
                 if (imgElement && tituloElement) {
                     modalFrame.src = imgElement.alt
@@ -200,6 +229,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     modalTitulo.textContent = tituloElement.textContent
                     modalDescricao.textContent = textoLongo || textoCurto
                     modal.style.display = "flex"
+                }
+
+                if (window.innerWidth <= 1200) {
+                    modalFrame.style.display = 'none'
+                    modalImg.style.display = 'block'
+                    modalImg.src = imgElement.src
+                    modalImg.onclick = () => {
+                        window.open(imgElement.alt, "_blank");
+                    }
                 }
             }
             //     // 2. This code loads the IFrame Player API code asynchronously.

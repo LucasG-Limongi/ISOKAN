@@ -1,0 +1,212 @@
+window.addEventListener('resize', function () {
+    if (window.innerWidth > 900) {
+        document.querySelector('.nav-mobile').style.display = 'none'
+        document.querySelector('.menu-mobile').style.display = 'none'
+        document.querySelector('.nav').style.display = 'flex'
+        // console.log('ok1')
+    } else {
+        document.querySelector('.menu-mobile').style.display = 'block'
+        document.querySelector('.nav').style.display = 'none'
+        // console.log('ok2')
+    }
+})
+
+/* Adicionamos um 'DOMContentLoaded' para garantir que o script
+  só rode depois que todo o HTML foi carregado.
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Seleciona TODOS os containers de slider na página
+    const slidersContainers = document.querySelectorAll('.container-slider')
+
+    // 2. Para cada container encontrado, aplica a lógica independentemente
+    slidersContainers.forEach(container => {
+
+        // Busca elementos DENTRO deste container específico
+        const track = container.querySelector('.slider-track')
+        const btnPrev = container.querySelector('.btn-voltar')
+        const btnNext = container.querySelector('.btn-avancar')
+        // Pega apenas os slides deste container
+        const slides = Array.from(track.querySelectorAll('.slider'))
+
+        if (slides.length === 0) return; // Segurança caso esteja vazio
+
+        let currentIndex = 0
+        let slidesPorVez = 3
+        const totalSlides = slides.length
+
+        // Função para verificar tamanho da tela (Interna ao loop)
+        function checkWidth() {
+            if (window.innerWidth <= 600) {
+                slidesPorVez = 2;
+            } else {
+                slidesPorVez = 3;
+            }
+            updateSlider() // Realinha ao redimensionar
+        }
+
+        // Pega a largura do primeiro slide deste grupo
+        function getSlideWidth() {
+            return slides[0].offsetWidth
+        }
+
+        // Move o trilho
+        function updateSlider() {
+            // margin-left ou gap precisa ser considerado. 
+            // Se o CSS tem margin: 0 0.5rem, o espaço total é largura + 16px (aprox)
+            const gap = 15
+            const slideWidth = getSlideWidth()
+            const distancia = (slideWidth + gap) * currentIndex
+
+            track.style.transform = `translateX(-${distancia}px)`
+        }
+        // Evento Botão Avançar
+        btnNext.addEventListener('click', () => {
+            // Se tiver menos slides que a visão, não faz nada
+            if (totalSlides <= slidesPorVez) return
+
+            currentIndex++;
+            // Lógica de Loop infinito ajustada
+            if (window.innerWidth <= 900) {
+                if (currentIndex > totalSlides - slidesPorVez + 1) {
+                    currentIndex = 0
+                }
+            } else {
+                if (currentIndex > totalSlides - slidesPorVez) {
+                    currentIndex = 0
+                }
+            }
+            
+            updateSlider()
+        });
+
+        // Evento Botão Voltar
+        btnPrev.addEventListener('click', () => {
+            // Se tiver menos slides que a visão, não faz nada
+            if (totalSlides <= slidesPorVez) return
+
+            currentIndex--
+            if (window.innerWidth <= 900) {
+                if (currentIndex < 0) {
+                    currentIndex = totalSlides - slidesPorVez + 1
+                }
+            } else {
+                if (currentIndex < 0) {
+                    currentIndex = totalSlides - slidesPorVez
+                }
+            }
+            
+            updateSlider()
+        });
+
+        // Inicializa e observa redimensionamento
+        checkWidth()
+        window.addEventListener('resize', checkWidth);
+    });
+
+    // --- CÓDIGO DO MODAL
+    const modal = document.getElementById("modal-galeria")
+    const modalImg = document.getElementById("modal-img")
+    const modalFrame = document.getElementById("player")
+    const modalTitulo = document.getElementById("modal-titulo")
+    const modalDescricao = document.getElementById("modal-descricao")
+    const closeBtn = document.querySelector(".close-btn")
+
+    const allSlides = document.querySelectorAll('.slider')
+
+    allSlides.forEach(slide => {
+        slide.addEventListener('click', () => {
+            if (slide.classList.contains('img')) {
+                const imgElement = slide.querySelector('img');
+                const tituloElement = slide.querySelector('h4');
+                const textoLongo = slide.getAttribute('data-descricao');
+                const textoCurto = slide.querySelector('p') ? slide.querySelector('p').textContent : ''
+                document.getElementById('dica-modal').style.display = 'none'
+
+                if (imgElement && tituloElement) {
+                    modalImg.src = imgElement.src
+                    modalImg.style.display = 'block'
+                    modalFrame.style.display = 'none'
+                    modalImg.alt = imgElement.alt
+                    modalTitulo.textContent = tituloElement.textContent
+                    modalDescricao.textContent = textoLongo || textoCurto
+                    modal.style.display = "flex"
+                }
+            } else if (slide.classList.contains('mp4')) {
+                const imgElement = slide.querySelector('img');
+                const tituloElement = slide.querySelector('h4');
+                const textoLongo = slide.getAttribute('data-descricao');
+                const textoCurto = slide.querySelector('p') ? slide.querySelector('p').textContent : ''
+                document.getElementById('dica-modal').style.display = 'block'
+
+                if (imgElement && tituloElement) {
+                    modalFrame.src = imgElement.alt
+                    modalFrame.style.display = 'block'
+                    modalImg.style.display = 'none'
+                    modalTitulo.textContent = tituloElement.textContent
+                    modalDescricao.textContent = textoLongo || textoCurto
+                    modal.style.display = "flex"
+                }
+
+                if (window.innerWidth <= 1200) {
+                    modalFrame.style.display = 'none'
+                    modalImg.style.display = 'block'
+                    modalImg.src = imgElement.src
+                    modalImg.onclick = () => {
+                        window.open(imgElement.alt, "_blank");
+                    }
+                }
+            }
+            //     // 2. This code loads the IFrame Player API code asynchronously.
+            //     var tag = document.createElement('script');
+
+            //     tag.src = "https://www.youtube.com/iframe_api";
+            //     var firstScriptTag = document.getElementsByTagName('script')[0];
+            //     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            //     // 3. This function creates an <iframe> (and YouTube player)
+            //     //    after the API code downloads.
+            //     var player;
+            //     function onYouTubeIframeAPIReady() {
+            //         player = new YT.Player('player', {
+            //             height: '390',
+            //             width: '640',
+            //             videoId: 'M7lc1UVf-VE',
+            //             playerVars: {
+            //             'playsinline': 1
+            //             },
+            //             events: {
+            //             'onReady': onPlayerReady,
+            //             'onStateChange': onPlayerStateChange
+            //             }
+            //         });
+            //     }
+
+            //     // 4. The API will call this function when the video player is ready.
+            //     function onPlayerReady(event) {
+            //         event.target.playVideo();
+            //     }
+
+            //     // 5. The API calls this function when the player's state changes.
+            //     //    The function indicates that when playing a video (state=1),
+            //     //    the player should play for six seconds and then stop.
+            //     var done = false;
+            //     function onPlayerStateChange(event) {
+            //         if (event.data == YT.PlayerState.PLAYING && !done) {
+            //             setTimeout(stopVideo, 6000);
+            //             done = true;
+            //         }
+            //     }
+            //     function stopVideo() {
+            //         player.stopVideo();
+            //     }
+            // }
+        })
+    })
+
+    closeBtn.addEventListener('click', () => modal.style.display = "none");
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = "none"
+    })
+})
