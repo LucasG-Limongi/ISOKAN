@@ -137,15 +137,15 @@ body {
 }
 
 .config .idioma.pt-br {
-    /* background-image: url(/ISOKAN/IMG/brasil.jpg); */
-    background-image: url('../IMG/brasil.jpg');
-    /* background-image: url(../IMG/eua.png);
+    /* background-image: url(/ISOKAN/img/brasil.jpg); */
+    background-image: url('../img/brasil.jpg');
+    /* background-image: url(../img/eua.png);
     background-size: 160%; */
 }
 
 .config .idioma.en {
     background-color: green;
-    background-image: url(../IMG/eua.png);
+    background-image: url(../img/eua.png);
     background-size: 160%;
 }
 
@@ -155,19 +155,19 @@ body {
 }
 
 .config .idioma.pt-br:hover {
-    /* background-image: url(/ISOKAN/IMG/eua.png); */
-    background-image: url('../IMG/eua.png');
+    /* background-image: url(/ISOKAN/img/eua.png); */
+    background-image: url('../img/eua.png');
     background-size: 160%;
 }
 
 .config .idioma.en:hover {
-    background-image: url('../IMG/brasil.jpg');
+    background-image: url('../img/brasil.jpg');
     background-size: cover;
 }
 
 .config .darkmode {
-    /* background-image: url(/ISOKAN/IMG/darkmode.png); */
-    background-image: url('../IMG/darkmode.png');
+    /* background-image: url(/ISOKAN/img/darkmode.png); */
+    background-image: url('../img/darkmode.png');
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -175,8 +175,8 @@ body {
 }
 
 .config .darkmode:hover {
-    /* background-image: url(/ISOKAN/IMG/darkmode-branco.png); */
-    background-image: url('../IMG/darkmode-branco.png');
+    /* background-image: url(/ISOKAN/img/darkmode-branco.png); */
+    background-image: url('../img/darkmode-branco.png');
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -200,8 +200,8 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     height: 900px;
-    /* background-image: url('/ISOKAN/IMG/banner1.jpg'); */
-    background-image: url('../IMG/banner1.jpg');
+    /* background-image: url('/ISOKAN/img/banner1.jpg'); */
+    background-image: url('../img/banner1.jpg');
     background-size: cover;
     display: block;
     transition: all 0.4s ease-in-out;
@@ -557,7 +557,7 @@ button.botao-amarelo a {
 #parallax {
     width: 100%;
     min-height: 100vh;
-    background-image: url('../IMG/banner2.jpg');
+    background-image: url('../img/banner2.jpg');
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -573,7 +573,7 @@ button.botao-amarelo a {
 
 @media (max-width: 800px) {
     #parallax {
-        background-image: url('../IMG/banner5\ \(completo\).jpg');
+        background-image: url('../img/banner5\ \(completo\).jpg');
     }
 }
 
