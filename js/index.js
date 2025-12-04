@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Função para verificar tamanho da tela (Interna ao loop)
         function checkWidth() {
-            if (window.innerWidth <= 600) {
+            if (window.innerWidth <= 800) {
                 slidesPorVez = 2;
             } else {
                 slidesPorVez = 3;
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             currentIndex++;
             // Lógica de Loop infinito ajustada
-            if (window.innerWidth <= 900) {
+            if (window.innerWidth > 900) {
                 if (currentIndex > totalSlides - slidesPorVez + 1) {
                     currentIndex = 0
                 }
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (totalSlides <= slidesPorVez) return
 
             currentIndex--
-            if (window.innerWidth <= 900) {
+            if (window.innerWidth > 900) {
                 if (currentIndex < 0) {
                     currentIndex = totalSlides - slidesPorVez + 1
                 }
