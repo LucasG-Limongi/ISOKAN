@@ -39,13 +39,13 @@ function proxBan() {
     if (document.querySelector('.fundo').querySelector('div').firstElementChild.classList.contains('on')) {
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('./img/banner2.jpg')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../img/banner2.jpg')"
         // document.querySelector('.fundo').style.backgroundImage = "url('ISOKAN/img/banner2.jpg')"
         document.querySelector('.fundo').style.backgroundPositionY = '0'
     } else if (document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.contains('on')) {
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.nextElementSibling.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('./img/ChatGPT Image.png')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../img/ChatGPT Image.png')"
         // document.querySelector('.fundo').style.backgroundImage = "url('ISOKAN/img/ChatGPT Image.png')"
         if (window.innerWidth < 600) {
             document.querySelector('.fundo').style.backgroundPositionY = '-20%'
@@ -57,7 +57,7 @@ function proxBan() {
     } else {
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.nextElementSibling.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('./img/banner1.jpg')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../img/banner1.jpg')"
         // document.querySelector('.fundo').style.backgroundImage = "url('ISOKAN/img/banner1.jpg')"
         document.querySelector('.fundo').style.backgroundPositionY = '0'
     }
@@ -67,7 +67,7 @@ function prevBan() {
     if (document.querySelector('.fundo').querySelector('div').firstElementChild.classList.contains('on')) {
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').lastElementChild.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('./img/ChatGPT Image.png')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../img/ChatGPT Image.png')"
         // document.querySelector('.fundo').style.backgroundImage = "url('ISOKAN/img/ChatGPT Image.png')"
         if (window.innerWidth < 600) {
             document.querySelector('.fundo').style.backgroundPositionY = '-20%'
@@ -79,13 +79,13 @@ function prevBan() {
     } else if (document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.contains('on')) {
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('./img/banner1.jpg')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../img/banner1.jpg')"
         // document.querySelector('.fundo').style.backgroundImage = "url('ISOKAN/img/banner1.jpg')"
         document.querySelector('.fundo').style.backgroundPositionY = '0'
     } else {
         document.querySelector('.fundo').querySelector('div').lastElementChild.classList.remove('on')
         document.querySelector('.fundo').querySelector('div').firstElementChild.nextElementSibling.classList.add('on')
-        document.querySelector('.fundo').style.backgroundImage = "url('./img/banner2.jpg')"
+        document.querySelector('.fundo').style.backgroundImage = "url('../img/banner2.jpg')"
         // document.querySelector('.fundo').style.backgroundImage = "url('ISOKAN/img/banner2.jpg')"
         document.querySelector('.fundo').style.backgroundPositionY = '0'
     }
